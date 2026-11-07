@@ -5,3 +5,6 @@
 .DS_Store
 *.fkf.saving
 *.familyfile.saving
+
+# Claude Code local settings (may contain passwords or tokens)
+.claude/
