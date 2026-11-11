@@ -110,6 +110,16 @@ fn menu_bar(app: &mut FamilyApp, ui: &mut egui::Ui) {
                 app.actions.extend(selected.map(Action::AskDeletePerson));
                 ui.close();
             }
+            ui.separator();
+            let is_home = selected.is_some() && selected == app.db.home_person();
+            if ui.add_enabled(selected.is_some() && !is_home, egui::Button::new("Make this person the home person")).clicked() {
+                app.actions.extend(selected.map(Action::SetHome));
+                ui.close();
+            }
+            if ui.add_enabled(!app.db.people.is_empty(), egui::Button::new("Renumber people…")).clicked() {
+                app.actions.push(Action::AskRenumber);
+                ui.close();
+            }
         });
         ui.menu_button("View", |ui| {
             for (tab, label) in Tab::ALL {
@@ -161,6 +171,11 @@ fn tabs_row(app: &mut FamilyApp, ui: &mut egui::Ui) {
     ui.horizontal(|ui| {
         if ui.add_enabled(app.can_go_back(), egui::Button::new("Back")).clicked() {
             app.go_back();
+        }
+        let home = app.db.home_person();
+        let tip = home.map(|h| format!("Go to the home person, {}", app.db.name_of(h))).unwrap_or_default();
+        if ui.add_enabled(home.is_some(), egui::Button::new("Home")).on_hover_text(tip).clicked() {
+            app.actions.push(Action::GoHome);
         }
         ui.add_space(10.0);
         for (tab, label) in Tab::ALL {
@@ -400,7 +415,14 @@ fn family_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
                     }
                     ui.vertical(|ui| {
                         ui.label(RichText::new(person.name()).size(21.0).strong());
-                        ui.label(RichText::new(format!("{}  ·  ID {}", person.sex.label(), person.id)).small().color(theme::pal().muted));
+                        let mut line = format!("{}  ·  ID {}", person.sex.label(), person.id);
+                        if let Some(old) = Database::old_id(person) {
+                            line.push_str(&format!(" (old ID {old})"));
+                        }
+                        if db.home_person() == Some(id) {
+                            line.push_str("  ·  Home person");
+                        }
+                        ui.label(RichText::new(line).small().color(theme::pal().muted));
                         person_facts(ui, person);
                         ui.horizontal(|ui| {
                             if ui.button("Edit").clicked() {

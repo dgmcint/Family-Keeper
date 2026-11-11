@@ -86,6 +86,9 @@ pub enum Action {
     Import,
     NewFile,
     SortPeople(SortBy),
+    GoHome,
+    SetHome(u32),
+    AskRenumber,
 }
 
 #[derive(Clone, Copy)]
@@ -101,6 +104,8 @@ pub enum Confirm {
     DeletePerson(u32),
     DeleteSource(u32),
     Merge { keep: u32, drop: u32 },
+    /// Renumber people, in the order chosen (0 family, 1 present, 2 alphabetical).
+    Renumber { how: u8 },
 }
 
 pub struct ReportState {
@@ -336,7 +341,7 @@ impl FamilyApp {
 
     fn fix_selection(&mut self) {
         if !self.selected.is_some_and(|s| self.db.people.contains_key(&s)) {
-            self.selected = self.db.people.keys().next().copied();
+            self.selected = self.db.home_person();
         }
     }
 
@@ -381,7 +386,7 @@ impl FamilyApp {
         self.search.clear();
         self.revision += 1;
         self.duplicates = None;
-        self.selected = self.db.people.keys().next().copied();
+        self.selected = self.db.home_person();
         self.tab = Tab::Family;
     }
 
@@ -615,6 +620,21 @@ impl FamilyApp {
                 Action::Import => self.request(Pending::Import, ctx),
                 Action::NewFile => self.request(Pending::NewFile, ctx),
                 Action::SortPeople(by) => self.sort = by,
+                Action::GoHome => {
+                    if let Some(h) = self.db.home_person() {
+                        self.select(h);
+                        self.tab = Tab::Family;
+                    }
+                }
+                Action::SetHome(id) => {
+                    let name = self.db.name_of(id);
+                    self.change(&format!("{name} is now the home person."), |db| {
+                        db.people.contains_key(&id).then_some(()).ok_or("That person is gone.")?;
+                        db.home = Some(id);
+                        Ok(())
+                    });
+                }
+                Action::AskRenumber => self.confirm = Some(Confirm::Renumber { how: 0 }),
             }
         }
     }
@@ -675,6 +695,22 @@ impl FamilyApp {
                     Ok(())
                 });
             }
+            (Confirm::Renumber { how }, Yes) => {
+                let order = self.db.renumber_order(renumber_how(how));
+                let mut ids = HashMap::new();
+                let done = self.change("Renumbered everyone. Undo puts the old IDs back.", |db| {
+                    ids = db.renumber(&order);
+                    Ok(())
+                });
+                if done {
+                    // Follow the person on screen; IDs remembered elsewhere no longer apply.
+                    self.selected = self.selected.and_then(|s| ids.get(&s).copied()).or(self.db.home_person());
+                    self.history.clear();
+                    self.family_choice.clear();
+                    self.ignored_duplicates.clear();
+                    self.duplicates = None;
+                }
+            }
             (Confirm::Merge { keep, drop }, Yes) => {
                 if self.change("Merged. Undo separates them again.", |db| db.merge_people(keep, drop)) {
                     self.selected = Some(keep);
@@ -686,6 +722,7 @@ impl FamilyApp {
     }
 
     // ---------- Keys, title, closing ----------
+
 
     fn shortcuts(&mut self, ctx: &egui::Context) {
         if self.busy() {
@@ -790,6 +827,14 @@ impl FamilyApp {
 
 /// Writes a new file and swaps it in, trying a few times: a synced folder can briefly
 /// refuse to open the file being replaced.
+pub fn renumber_how(how: u8) -> RenumberOrder {
+    match how {
+        0 => RenumberOrder::Family,
+        1 => RenumberOrder::Present,
+        _ => RenumberOrder::Alphabetical,
+    }
+}
+
 fn write_picture(path: &std::path::Path, bytes: &[u8]) -> Result<(), String> {
     let temp = path.with_extension(format!("{}.png", std::process::id()));
     let mut last = String::new();

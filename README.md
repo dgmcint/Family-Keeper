@@ -57,6 +57,11 @@ GitHub builds all three systems and attaches the downloads to a new release.
   program was renamed, still open. Each save keeps the previous version beside it as `.backup`.
 - GEDCOM import reads ANSEL, UTF-8, UTF-16 and Windows Latin. Details the program has no field
   for are kept and written back out on export.
+- Each file has a home person: the person the file opens on and the first one in exported
+  GEDCOM files (marked in the header as `_HOME`). Imported files keep theirs, or else the first
+  person in the file. Change it with Edit, then Make this person the home person.
+- Edit, then Renumber people gives everyone new IDs 1, 2, 3... (family, present or alphabetical
+  order); each person keeps their old ID, and Undo puts everything back.
 - Files from other genealogy programs can't be opened directly. Export them as GEDCOM from that
   program first, then import the GEDCOM here.
 

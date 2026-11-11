@@ -245,11 +245,23 @@ fn number_in(xref: &str) -> Option<u32> {
     digits.parse().ok().filter(|n| *n > 0 && *n < u32::MAX / 2)
 }
 
-/// Gives each record a number, keeping its old number when that's free.
+/// Gives each record a number. The numbers in the file's IDs are kept when they look like record
+/// numbers (no bigger than ten times the number of records), as in files from this program and
+/// PAF; the long IDs of Ancestry and other websites are replaced by 1, 2, 3... in file order.
 fn assign(roots: &[Node], tag: &str) -> HashMap<String, u32> {
     let mut used = HashSet::new();
     let mut map = HashMap::new();
     let records: Vec<&String> = roots.iter().filter(|r| r.tag == tag).filter_map(|r| r.xref.as_ref()).collect();
+    let limit = (records.len() as u64).saturating_mul(10).max(100);
+    if records.iter().any(|x| number_in(x).is_none_or(|n| n as u64 > limit)) {
+        for x in &records {
+            if !map.contains_key(*x) {
+                let n = map.len() as u32 + 1;
+                map.insert((*x).clone(), n);
+            }
+        }
+        return map;
+    }
     for x in &records {
         if map.contains_key(*x) {
             continue;
@@ -628,6 +640,15 @@ pub fn import(bytes: &[u8]) -> Result<Imported, String> {
     if dup > 0 {
         warnings.push(format!("{dup} records repeated an ID already used; only the first of each was kept."));
     }
+    // The home person: the one the file names in its header (as this program, PAF Classic and
+    // Gilded Roots write it), otherwise the first person in the file, as PAF and Ancestry do.
+    let named = roots
+        .first()
+        .and_then(|h| h.child("_HOME"))
+        .and_then(|k| pointer_target(&k.value))
+        .and_then(|x| people.get(x).copied());
+    let first = roots.iter().find(|r| r.tag == "INDI").and_then(|r| r.xref.as_ref()).and_then(|x| people.get(x).copied());
+    db.home = named.or(first);
     Ok(Imported { db, warnings })
 }
 
@@ -746,12 +767,19 @@ pub fn export(db: &Database) -> String {
     out.push_str("0 HEAD\r\n1 SOUR FAMILY-FILE\r\n2 NAME Family Keeper\r\n2 VERS ");
     out.push_str(env!("CARGO_PKG_VERSION"));
     out.push_str("\r\n1 GEDC\r\n2 VERS 5.5.1\r\n2 FORM LINEAGE-LINKED\r\n1 CHAR UTF-8\r\n");
+    let home = db.home.filter(|h| db.people.contains_key(h));
+    if let Some(h) = home {
+        // Read back by this program, PAF Classic and Gilded Roots, so the home person stays.
+        out.push_str(&format!("1 _HOME @I{h}@\r\n"));
+    }
     out.push_str(&format!("1 SUBM @{}@\r\n", submitter.as_deref().unwrap_or("SUBM1")));
     if submitter.is_none() {
         out.push_str("0 @SUBM1@ SUBM\r\n1 NAME Family Keeper user\r\n");
     }
 
-    for p in db.people.values() {
+    // The home person first, so programs that take the first person as home agree.
+    let first = home.and_then(|h| db.people.get(&h));
+    for p in first.into_iter().chain(db.people.values().filter(|p| Some(p.id) != home)) {
         out.push_str(&format!("0 @I{}@ INDI\r\n", p.id));
         let surname = p.surname.trim();
         let mut name = format!("{} /{surname}/", p.given.trim());
@@ -935,6 +963,27 @@ mod tests {
         assert!(got.db.ancestors(2).contains(&2));
         assert!(!crate::reports::descendants(&got.db, 2, 50).blocks.is_empty());
         import(export(&got.db).as_bytes()).unwrap();
+    }
+
+    #[test]
+    fn home_person_comes_from_the_file_and_survives_export() {
+        let text = "0 HEAD\n1 CHAR UTF-8\n0 @I900000001@ INDI\n1 NAME Ann /Lee/\n1 FAMC @F777777@\n0 @I12345678@ INDI\n1 NAME Joe /Lee/\n1 FAMS @F777777@\n0 @F777777@ FAM\n1 HUSB @I12345678@\n1 CHIL @I900000001@\n0 TRLR\n";
+        let db = import(text.as_bytes()).unwrap().db;
+        // Website IDs become 1, 2... in file order, and the first person is home.
+        assert_eq!(db.people.keys().copied().collect::<Vec<_>>(), vec![1, 2]);
+        assert_eq!(db.home, Some(1));
+        assert_eq!(db.people[&1].given, "Ann");
+        let mut db = db;
+        db.home = Some(2);
+        let out = export(&db);
+        assert!(out.contains("1 _HOME @I2@"), "{out}");
+        assert!(out.find("0 @I2@ INDI").unwrap() < out.find("0 @I1@ INDI").unwrap());
+        let again = import(out.as_bytes()).unwrap().db;
+        assert_eq!(again.name_of(again.home.unwrap()), "Joe Lee");
+        // Without a header mark, the first person in the file is home.
+        let plain = out.replace("1 _HOME @I2@\r\n", "");
+        let third = import(plain.as_bytes()).unwrap().db;
+        assert_eq!(third.name_of(third.home.unwrap()), "Joe Lee");
     }
 
     #[test]
