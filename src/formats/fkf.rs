@@ -1,14 +1,17 @@
 //! Saving and opening family files. A save either finishes completely or leaves the old file alone.
 
-use crate::model::Database;
+use crate::data::Database;
 use serde::{Deserialize, Serialize};
 use std::path::{Path, PathBuf};
 
 pub const FILE_EXTENSION: &str = "fkf";
+
 /// The ending used before the program was renamed. Those files still open.
 pub const OLD_EXTENSION: &str = "familyfile";
+
 // Kept from the program's first name, Family Keeper, so files saved before the rename still open.
 const FORMAT: &str = "family-file";
+
 const VERSION: u32 = 1;
 
 #[derive(Serialize)]
@@ -71,7 +74,7 @@ pub fn open(path: &Path) -> Result<Loaded, String> {
     }
     let bytes = std::fs::read(path).map_err(|e| format!("Couldn't open {name}: {e}"))?;
     if ext == "ged" || ext == "gedcom" {
-        let got = crate::gedcom::import(&bytes).map_err(|e| format!("Couldn't import {name}. {e}"))?;
+        let got = crate::formats::gedcom::import(&bytes).map_err(|e| format!("Couldn't import {name}. {e}"))?;
         return Ok(Loaded { db: got.db, path: None, warnings: got.warnings, imported: true });
     }
     let saved: Saved = serde_json::from_slice(&bytes)

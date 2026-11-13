@@ -1,15 +1,23 @@
+//! Family Keeper. Where things are:
+//!
+//! - `app`: the main window, its state, undo and redo, file handling and commands
+//! - `screens`: the Family, Pedigree, list, Duplicates and Reports screens
+//! - `dialogs`: the windows that open over the main screen
+//! - `data`: the family file and the records in it
+//! - `formats`: Family Keeper's own .fkf files and GEDCOM
+//! - `reports`: the printable reports
+
 // No black console window behind the program on Windows.
 #![cfg_attr(all(windows, not(debug_assertions)), windows_subsystem = "windows")]
 
 mod app;
-mod editors;
-mod gedcom;
-mod model;
+mod data;
+mod dialogs;
+mod formats;
 mod reports;
-mod storage;
-mod theme;
-mod views;
+mod screens;
 
+use app::colors;
 use std::path::PathBuf;
 
 fn main() -> eframe::Result {
@@ -27,7 +35,7 @@ fn main() -> eframe::Result {
         } else if arg == "--colors" {
             // Starts in a colour scheme by name, for pictures: Paper, Navy, Leather...
             if let Some(name) = args.next() {
-                theme::set_name(&name.to_string_lossy());
+                colors::set_name(&name.to_string_lossy());
             }
         } else if arg == "--show" {
             // Starts on a given screen: pedigree, people, reports, edit-person...

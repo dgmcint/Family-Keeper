@@ -1,6 +1,6 @@
 //! Printable reports. Each one is plain blocks, shown in the app or written as a web page to print.
 
-use crate::model::*;
+use crate::data::*;
 use std::collections::HashSet;
 
 pub enum Block {
