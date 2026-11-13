@@ -1,0 +1,1025 @@
+# Family Keeper: Norwegian (Bokmål).
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: nb\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Removed from the family. Undo brings them back."
+msgstr "Fjernet fra familien. Angre henter dem tilbake."
+
+msgid "Removed from the marriage. Undo brings them back."
+msgstr "Fjernet fra ekteskapet. Angre henter dem tilbake."
+
+msgid "Showing those parents first."
+msgstr "Viser de foreldrene først."
+
+msgid "Deleted. Undo brings them back."
+msgstr "Slettet. Angre henter dem tilbake."
+
+msgid "Deleted the source."
+msgstr "Slettet kilden."
+
+msgid "Renumbered everyone. Undo puts the old IDs back."
+msgstr "Nummererte alle på nytt. Angre setter tilbake de gamle ID-ene."
+
+msgid "Merged. Undo separates them again."
+msgstr "Slått sammen. Angre skiller dem igjen."
+
+msgid "The report opened in your web browser, ready to print."
+msgstr "Rapporten ble åpnet i nettleseren, klar til utskrift."
+
+msgid "Saved the report."
+msgstr "Lagret rapporten."
+
+msgid "Couldn't open the report"
+msgstr "Kunne ikke åpne rapporten"
+
+msgid "Couldn't save the report"
+msgstr "Kunne ikke lagre rapporten"
+
+msgid "That person is gone."
+msgstr "Den personen finnes ikke lenger."
+
+msgid "Started a new family file"
+msgstr "Startet en ny slektsfil"
+
+msgid "Import finished"
+msgstr "Import fullført"
+
+msgid "Couldn't open that file"
+msgstr "Kunne ikke åpne den filen"
+
+msgid "Couldn't save"
+msgstr "Kunne ikke lagre"
+
+msgid "Couldn't export"
+msgstr "Kunne ikke eksportere"
+
+msgid "Finish or cancel the open window first."
+msgstr "Fullfør eller avbryt det åpne vinduet først."
+
+msgid "Undid the last change"
+msgstr "Angret siste endring"
+
+msgid "Redid the change"
+msgstr "Gjorde endringen på nytt"
+
+msgid "That can't be done"
+msgstr "Det går ikke"
+
+msgid "Those are the same person."
+msgstr "Det er samme person."
+
+msgid "One of them is an ancestor of the other, so they can't be merged."
+msgstr "Den ene er ane til den andre, så de kan ikke slås sammen."
+
+msgid "A person can't be their own parent."
+msgstr "En person kan ikke være sin egen forelder."
+
+msgid "That parent is already filled in."
+msgstr "Den forelderen er allerede fylt inn."
+
+msgid "That person is listed as a sibling in this family."
+msgstr "Den personen står som søsken i denne familien."
+
+msgid "A person can't be their own spouse."
+msgstr "En person kan ikke være sin egen ektefelle."
+
+msgid "They are already listed as a couple."
+msgstr "De står allerede som et par."
+
+msgid "That person is a child in this family."
+msgstr "Den personen er et barn i denne familien."
+
+msgid "A person can't be their own sibling."
+msgstr "En person kan ikke være sitt eget søsken."
+
+msgid "Saved the source."
+msgstr "Lagret kilden."
+
+msgid "Title"
+msgstr "Tittel"
+
+msgid "Author"
+msgstr "Forfatter"
+
+msgid "Publication"
+msgstr "Utgivelse"
+
+msgid "Added a person."
+msgstr "La til en person."
+
+msgid "Saved the changes."
+msgstr "Lagret endringene."
+
+msgid "Saved the marriage."
+msgstr "Lagret ekteskapet."
+
+msgid "Linked them."
+msgstr "Koblet sammen."
+
+msgid "Given names"
+msgstr "Fornavn"
+
+msgid "Surname"
+msgstr "Etternavn"
+
+msgid "Suffix"
+msgstr "Tillegg"
+
+msgid "That marriage is gone."
+msgstr "Det ekteskapet finnes ikke lenger."
+
+msgid "About Family Keeper"
+msgstr "Om Family Keeper"
+
+msgid "Born"
+msgstr "Født"
+
+msgid "Christened"
+msgstr "Døpt"
+
+msgid "Died"
+msgstr "Død"
+
+msgid "Buried"
+msgstr "Begravet"
+
+msgid "PARENTS"
+msgstr "FORELDRE"
+
+msgid "THIS PERSON AND SPOUSE"
+msgstr "DENNE PERSONEN OG EKTEFELLEN"
+
+msgid "FATHER"
+msgstr "FAR"
+
+msgid "MOTHER"
+msgstr "MOR"
+
+msgid "SPOUSE"
+msgstr "EKTEFELLE"
+
+msgid "CHILDREN"
+msgstr "BARN"
+
+msgid "BROTHERS AND SISTERS"
+msgstr "SØSKEN"
+
+msgid "Family"
+msgstr "Familie"
+
+msgid "Pedigree"
+msgstr "Anetavle"
+
+msgid "People"
+msgstr "Personer"
+
+msgid "Marriages"
+msgstr "Ekteskap"
+
+msgid "Sources"
+msgstr "Kilder"
+
+msgid "Duplicates"
+msgstr "Duplikater"
+
+msgid "Reports"
+msgstr "Rapporter"
+
+msgid "Add father"
+msgstr "Legg til far"
+
+msgid "Add mother"
+msgstr "Legg til mor"
+
+msgid "Add spouse"
+msgstr "Legg til ektefelle"
+
+msgid "Add child"
+msgstr "Legg til barn"
+
+msgid "Add brother or sister"
+msgstr "Legg til bror eller søster"
+
+msgid "Add father for {name}"
+msgstr "Legg til far for {name}"
+
+msgid "Add mother for {name}"
+msgstr "Legg til mor for {name}"
+
+msgid "Add spouse for {name}"
+msgstr "Legg til ektefelle for {name}"
+
+msgid "Add child for {name}"
+msgstr "Legg til barn for {name}"
+
+msgid "Add brother or sister for {name}"
+msgstr "Legg til bror eller søster for {name}"
+
+msgid "Paper"
+msgstr "Papir"
+
+msgid "Original"
+msgstr "Original"
+
+msgid "Slate Blue"
+msgstr "Skiferblå"
+
+msgid "Tree pictures"
+msgstr "Trebilder"
+
+msgid "Navy"
+msgstr "Marineblå"
+
+msgid "Parchment"
+msgstr "Pergament"
+
+msgid "Blue Linen"
+msgstr "Blått lin"
+
+msgid "Leather"
+msgstr "Lær"
+
+msgid "Leaf Green"
+msgstr "Løvgrønn"
+
+msgid "Genealogy sites"
+msgstr "Slektsnettsteder"
+
+msgid "Fresh Green"
+msgstr "Friskgrønn"
+
+msgid "Deep Green"
+msgstr "Dypgrønn"
+
+msgid "Sage"
+msgstr "Salvie"
+
+msgid "Earth tones"
+msgstr "Jordfarger"
+
+msgid "Olive"
+msgstr "Oliven"
+
+msgid "Moss"
+msgstr "Mose"
+
+msgid "Forest Green"
+msgstr "Skoggrønn"
+
+msgid "Terracotta"
+msgstr "Terrakotta"
+
+msgid "Clay"
+msgstr "Leire"
+
+msgid "Burgundy"
+msgstr "Burgunder"
+
+msgid "Popular colors"
+msgstr "Populære farger"
+
+msgid "Teal"
+msgstr "Blågrønn"
+
+msgid "Plum"
+msgstr "Plomme"
+
+msgid "Charcoal"
+msgstr "Kullgrå"
+
+msgid "Midnight"
+msgstr "Midnatt"
+
+msgid "Sky"
+msgstr "Himmel"
+
+msgid "Rose"
+msgstr "Rosa"
+
+msgid "Ivory"
+msgstr "Elfenben"
+
+msgid "Neutrals"
+msgstr "Nøytrale"
+
+msgid "Linen"
+msgstr "Lin"
+
+msgid "Stone"
+msgstr "Stein"
+
+msgid "Taupe"
+msgstr "Gråbrun"
+
+msgid "Birth"
+msgstr "Fødsel"
+
+msgid "Christening"
+msgstr "Barnedåp"
+
+msgid "Death"
+msgstr "Død"
+
+msgid "Burial"
+msgstr "Begravelse"
+
+msgid "Cremation"
+msgstr "Kremasjon"
+
+msgid "Adoption"
+msgstr "Adopsjon"
+
+msgid "Baptism"
+msgstr "Dåp"
+
+msgid "Bar mitzvah"
+msgstr "Bar mitsva"
+
+msgid "Bat mitzvah"
+msgstr "Bat mitsva"
+
+msgid "Blessing"
+msgstr "Velsignelse"
+
+msgid "Adult christening"
+msgstr "Voksendåp"
+
+msgid "Confirmation"
+msgstr "Konfirmasjon"
+
+msgid "First communion"
+msgstr "Første nattverd"
+
+msgid "Ordination"
+msgstr "Ordinasjon"
+
+msgid "Naturalization"
+msgstr "Statsborgerskap"
+
+msgid "Emigration"
+msgstr "Utvandring"
+
+msgid "Immigration"
+msgstr "Innvandring"
+
+msgid "Census"
+msgstr "Folketelling"
+
+msgid "Probate"
+msgstr "Skifte"
+
+msgid "Will"
+msgstr "Testament"
+
+msgid "Graduation"
+msgstr "Eksamen"
+
+msgid "Retirement"
+msgstr "Pensjonering"
+
+msgid "Residence"
+msgstr "Bosted"
+
+msgid "Occupation"
+msgstr "Yrke"
+
+msgid "Education"
+msgstr "Utdanning"
+
+msgid "Religion"
+msgstr "Religion"
+
+msgid "Nationality"
+msgstr "Nasjonalitet"
+
+msgid "Caste"
+msgstr "Kaste"
+
+msgid "Description"
+msgstr "Beskrivelse"
+
+msgid "ID number"
+msgstr "ID-nummer"
+
+msgid "Property"
+msgstr "Eiendom"
+
+msgid "Social Security number"
+msgstr "Personnummer"
+
+msgid "Other event"
+msgstr "Annen hendelse"
+
+msgid "Other fact"
+msgstr "Annet faktum"
+
+msgid "Baptism (LDS)"
+msgstr "Dåp (SDH)"
+
+msgid "Confirmation (LDS)"
+msgstr "Konfirmasjon (SDH)"
+
+msgid "Endowment (LDS)"
+msgstr "Begavelse (SDH)"
+
+msgid "Sealing to parents (LDS)"
+msgstr "Besegling til foreldre (SDH)"
+
+msgid "Sealing to spouse (LDS)"
+msgstr "Besegling til ektefelle (SDH)"
+
+msgid "Marriage"
+msgstr "Ekteskap"
+
+msgid "Engagement"
+msgstr "Forlovelse"
+
+msgid "Marriage banns"
+msgstr "Lysning"
+
+msgid "Marriage contract"
+msgstr "Ektepakt"
+
+msgid "Marriage license"
+msgstr "Vigselsbevilling"
+
+msgid "Marriage settlement"
+msgstr "Ekteskapsoppgjør"
+
+msgid "Divorce"
+msgstr "Skilsmisse"
+
+msgid "Divorce filed"
+msgstr "Begjæring om skilsmisse"
+
+msgid "Annulment"
+msgstr "Annullering"
+
+msgid "Male"
+msgstr "Mann"
+
+msgid "Female"
+msgstr "Kvinne"
+
+msgid "Unknown"
+msgstr "Ukjent"
+
+msgid "Pedigree chart"
+msgstr "Anetavle"
+
+msgid "Family group record"
+msgstr "Familiegruppeskjema"
+
+msgid "Ancestors, numbered"
+msgstr "Aner, nummerert"
+
+msgid "Descendants"
+msgstr "Etterkommere"
+
+msgid "Individual summary"
+msgstr "Personsammendrag"
+
+msgid "All surnames"
+msgstr "Alle etternavn"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Large"
+msgstr "Stor"
+
+msgid "Extra large"
+msgstr "Ekstra stor"
+
+msgid "Unsaved changes"
+msgstr "Ulagrede endringer"
+
+msgid "All changes saved"
+msgstr "Alle endringer er lagret"
+
+msgid "Sample, not saved"
+msgstr "Eksempel, ikke lagret"
+
+msgid "Nobody here yet."
+msgstr "Ingen her ennå."
+
+msgid "No one matches that search."
+msgstr "Ingen passer til det søket."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Name"
+msgstr "Navn"
+
+msgid "Sex"
+msgstr "Kjønn"
+
+msgid "Birth place"
+msgstr "Fødested"
+
+msgid "Husband"
+msgstr "Mann"
+
+msgid "Wife"
+msgstr "Kone"
+
+msgid "Married"
+msgstr "Gift"
+
+msgid "Place"
+msgstr "Sted"
+
+msgid "Children"
+msgstr "Barn"
+
+msgid "Family order: the home person, then parents, grandparents and the rest of the family"
+msgstr "Familierekkefølge: startpersonen, så foreldre, besteforeldre og resten av familien"
+
+msgid "Present order, closing the gaps"
+msgstr "Nåværende rekkefølge, uten hull"
+
+msgid "Alphabetical by surname"
+msgstr "Alfabetisk etter etternavn"
+
+msgid "Save your changes?"
+msgstr "Lagre endringene?"
+
+msgid "This family file has changes that haven't been saved."
+msgstr "Denne slektsfilen har endringer som ikke er lagret."
+
+msgid "Save"
+msgstr "Lagre"
+
+msgid "Don't save"
+msgstr "Ikke lagre"
+
+msgid "They'll be taken out of their families and their details removed. Undo brings them back until you close this file."
+msgstr "De blir tatt ut av familiene sine og opplysningene fjernet. Angre henter dem tilbake til du lukker denne filen."
+
+msgid "Delete"
+msgstr "Slett"
+
+msgid "Delete this source?"
+msgstr "Slette denne kilden?"
+
+msgid "Merge these two people?"
+msgstr "Slå sammen disse to personene?"
+
+msgid "Merge"
+msgstr "Slå sammen"
+
+msgid "Less"
+msgstr "Mindre"
+
+msgid "More"
+msgstr "Mer"
+
+msgid "Add a source"
+msgstr "Legg til en kilde"
+
+msgid "Edit source"
+msgstr "Rediger kilde"
+
+msgid " and "
+msgstr " og"
+
+msgid "(no title)"
+msgstr "(uten tittel)"
+
+msgid "Save the report"
+msgstr "Lagre rapporten"
+
+msgid "Web page"
+msgstr "Nettside"
+
+msgid "Opened {file}"
+msgstr "Åpnet {file}"
+
+msgid ""
+"Brought in {people}, {families} and {sources}. The original GEDCOM file wasn't changed.\n"
+"\n"
+"Choose File, then Save, to keep this as a family file."
+msgstr ""
+"Hentet inn {people}, {families} og {sources}. Den opprinnelige GEDCOM-filen ble ikke endret.\n"
+"\n"
+"Velg Fil og så Lagre for å beholde dette som en slektsfil."
+
+msgid "{n} person"
+msgid_plural "{n} people"
+msgstr[0] "{n} person"
+msgstr[1] "{n} personer"
+
+msgid "{n} family"
+msgid_plural "{n} families"
+msgstr[0] "{n} familie"
+msgstr[1] "{n} familier"
+
+msgid "{n} source"
+msgid_plural "{n} sources"
+msgstr[0] "{n} kilde"
+msgstr[1] "{n} kilder"
+
+msgid "Things to check:"
+msgstr "Ting å kontrollere:"
+
+msgid "and {n} more"
+msgid_plural "and {n} more"
+msgstr[0] "og {n} til"
+msgstr[1] "og {n} til"
+
+msgid "Open a family file"
+msgstr "Åpne en slektsfil"
+
+msgid "Family files and GEDCOM"
+msgstr "Slektsfiler og GEDCOM"
+
+msgid "Import a GEDCOM file"
+msgstr "Importer en GEDCOM-fil"
+
+msgid "GEDCOM"
+msgstr "GEDCOM"
+
+msgid "Save the family file"
+msgstr "Lagre slektsfilen"
+
+msgid "Family file"
+msgstr "Slektsfil"
+
+msgid "Saved {file}"
+msgstr "Lagret {file}"
+
+msgid "Export as GEDCOM"
+msgstr "Eksporter som GEDCOM"
+
+msgid "Exported {file}"
+msgstr "Eksporterte {file}"
+
+msgid "Sample family"
+msgstr "Eksempelfamilie"
+
+msgid "Not saved yet"
+msgstr "Ikke lagret ennå"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Delete {name}?"
+msgstr "Slette {name}?"
+
+msgid "{name} (ID {drop}) will be merged into {other} (ID {keep}). Their events, sources, notes and families carry over. Undo separates them again until you close this file."
+msgstr "{name} (ID {drop}) blir slått sammen med {other} (ID {keep}). Hendelser, kilder, notater og familier blir med. Angre skiller dem igjen til du lukker denne filen."
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Add a person"
+msgstr "Legg til en person"
+
+msgid "Edit person"
+msgstr "Rediger person"
+
+msgid "Events"
+msgstr "Hendelser"
+
+msgid "Dates can be written freely, such as 12 MAR 1850, ABT 1850 or BEF 1900."
+msgstr "Datoer kan skrives fritt, for eksempel 12 MAR 1850, ABT 1850 eller BEF 1900."
+
+msgid "Notes"
+msgstr "Notater"
+
+msgid "Sources for this person"
+msgstr "Kilder for denne personen"
+
+msgid "Photos"
+msgstr "Bilder"
+
+msgid "Remove"
+msgstr "Fjern"
+
+msgid "Add a photo…"
+msgstr "Legg til et bilde…"
+
+msgid "Choose a photo"
+msgstr "Velg et bilde"
+
+msgid "Pictures"
+msgstr "Bilder"
+
+msgid "Edit marriage"
+msgstr "Rediger ekteskap"
+
+msgid "Children, in order"
+msgstr "Barn, i rekkefølge"
+
+msgid "None recorded"
+msgstr "Ingenting registrert"
+
+msgid "Up"
+msgstr "Opp"
+
+msgid "Down"
+msgstr "Ned"
+
+msgid "Sources for this marriage"
+msgstr "Kilder for dette ekteskapet"
+
+msgid "Create a new person"
+msgstr "Opprett en ny person"
+
+msgid "Or choose someone already in this file:"
+msgstr "Eller velg noen som allerede er i denne filen:"
+
+msgid "Search names"
+msgstr "Søk etter navn"
+
+msgid "No one matches."
+msgstr "Ingen passer."
+
+msgid "Words from the source"
+msgstr "Ordlyd fra kilden"
+
+msgid "A source needs a title."
+msgstr "En kilde må ha en tittel."
+
+msgid "Renumber people"
+msgstr "Nummerer personer på nytt"
+
+msgid "Gives everyone new ID numbers 1, 2, 3... with no gaps, and numbers the marriages to match. Every link between people stays the same."
+msgstr "Gir alle nye ID-nummer 1, 2, 3... uten hull, og nummererer ekteskapene på samme måte. Alle koblinger mellom personer forblir de samme."
+
+msgid "Each person keeps their old ID, shown on their card and written to exported GEDCOM files. Undo puts everything back."
+msgstr "Hver person beholder sin gamle ID, som vises på kortet og skrives til eksporterte GEDCOM-filer. Angre setter alt tilbake."
+
+msgid "First people after renumbering:"
+msgstr "De første personene etter ny nummerering:"
+
+msgid "New ID"
+msgstr "Ny ID"
+
+msgid "Now"
+msgstr "Nå"
+
+msgid "Renumber"
+msgstr "Nummerer på nytt"
+
+msgid "Page or where in the source"
+msgstr "Side eller sted i kilden"
+
+msgid "Words from the source (optional)"
+msgstr "Ordlyd fra kilden (valgfritt)"
+
+msgid "Cite a source"
+msgstr "Henvis til en kilde"
+
+msgid "New source…"
+msgstr "Ny kilde…"
+
+msgid "Date"
+msgstr "Dato"
+
+msgid "Details"
+msgstr "Detaljer"
+
+msgid "What kind of event"
+msgstr "Hva slags hendelse"
+
+msgid "Temple"
+msgstr "Tempel"
+
+msgid "Note about this event"
+msgstr "Notat om denne hendelsen"
+
+msgid "Add event"
+msgstr "Legg til hendelse"
+
+msgid "{name} isn't a family file this program can read."
+msgstr "{name} er ikke en slektsfil dette programmet kan lese."
+
+msgid "{name} was saved by a newer version of this program. Please update it first."
+msgstr "{name} ble lagret av en nyere versjon av dette programmet. Oppdater programmet først."
+
+msgid "Possible duplicates"
+msgstr "Mulige duplikater"
+
+msgid "Finds people with the same name whose birth years don't rule out a match. You choose who to merge."
+msgstr "Finner personer med samme navn der fødselsårene ikke utelukker at det er samme person. Du velger hvem som slås sammen."
+
+msgid "Check for duplicates"
+msgstr "Se etter duplikater"
+
+msgid "No possible duplicates found."
+msgstr "Fant ingen mulige duplikater."
+
+msgid "Keep this one and merge"
+msgstr "Behold denne og slå sammen"
+
+msgid "These are different people"
+msgstr "Dette er forskjellige personer"
+
+msgid "This family file is empty"
+msgstr "Denne slektsfilen er tom"
+
+msgid "Add the first person, or import a GEDCOM file."
+msgstr "Legg til den første personen, eller importer en GEDCOM-fil."
+
+msgid "Add the first person"
+msgstr "Legg til den første personen"
+
+msgid "Also has parents: {names}"
+msgstr "Har også foreldrene: {names}"
+
+msgid "Show these first"
+msgstr "Vis disse først"
+
+msgid " (old ID {old})"
+msgstr " (gammel ID {old})"
+
+msgid "Edit"
+msgstr "Rediger"
+
+msgid "Delete…"
+msgstr "Slett…"
+
+msgid "Note: {note}"
+msgstr "Notat: {note}"
+
+msgid "No marriage details"
+msgstr "Ingen opplysninger om ekteskapet"
+
+msgid "Remove spouse"
+msgstr "Fjern ektefelle"
+
+msgid "Separates them. Nobody gets deleted."
+msgstr "Skiller dem. Ingen blir slettet."
+
+msgid "Marriage {at} of {count}"
+msgstr "Ekteskap {at} av {count}"
+
+msgid "Unknown spouse"
+msgstr "Ukjent ektefelle"
+
+msgid "Add another spouse"
+msgstr "Legg til en ektefelle til"
+
+msgid "Takes them out of this family. Nobody gets deleted."
+msgstr "Tar dem ut av denne familien. Ingen blir slettet."
+
+msgid "Nobody to show."
+msgstr "Ingen å vise."
+
+msgid "No marriages or families recorded yet."
+msgstr "Ingen ekteskap eller familier er registrert ennå."
+
+msgid "No sources yet. Sources record where your information came from."
+msgstr "Ingen kilder ennå. Kilder viser hvor opplysningene kom fra."
+
+msgid "Used {n} time"
+msgid_plural "Used {n} times"
+msgstr[0] "Brukt {n} gang"
+msgstr[1] "Brukt {n} ganger"
+
+msgid "People or events still cite this source."
+msgstr "Personer eller hendelser henviser fortsatt til denne kilden."
+
+msgid "File"
+msgstr "Fil"
+
+msgid "New family file"
+msgstr "Ny slektsfil"
+
+msgid "Open…"
+msgstr "Åpne…"
+
+msgid "Save as…"
+msgstr "Lagre som…"
+
+msgid "Import GEDCOM…"
+msgstr "Importer GEDCOM…"
+
+msgid "Export GEDCOM…"
+msgstr "Eksporter GEDCOM…"
+
+msgid "Quit"
+msgstr "Avslutt"
+
+msgid "Undo"
+msgstr "Angre"
+
+msgid "Redo"
+msgstr "Gjør om"
+
+msgid "Add a person…"
+msgstr "Legg til en person…"
+
+msgid "Edit this person…"
+msgstr "Rediger denne personen…"
+
+msgid "Delete this person…"
+msgstr "Slett denne personen…"
+
+msgid "Make this person the home person"
+msgstr "Gjør denne personen til startperson"
+
+msgid "Renumber people…"
+msgstr "Nummerer personer på nytt…"
+
+msgid "View"
+msgstr "Vis"
+
+msgid "Text size"
+msgstr "Tekststørrelse"
+
+msgid "Colors"
+msgstr "Farger"
+
+msgid "Language"
+msgstr "Språk"
+
+msgid "Help"
+msgstr "Hjelp"
+
+msgid ""
+"Version {version}\n"
+"\n"
+"Keep your family history: people, marriages, events, sources, notes and photos. Share it with other family history programs using GEDCOM files."
+msgstr ""
+"Versjon {version}\n"
+"\n"
+"Ta vare på slektshistorien din: personer, ekteskap, hendelser, kilder, notater og bilder. Del den med andre slektsprogrammer gjennom GEDCOM-filer."
+
+msgid "Back"
+msgstr "Tilbake"
+
+msgid "Go to the home person, {name}"
+msgstr "Gå til startpersonen, {name}"
+
+msgid "Home"
+msgstr "Start"
+
+msgid "{n} marriage"
+msgid_plural "{n} marriages"
+msgstr[0] "{n} ekteskap"
+msgstr[1] "{n} ekteskap"
+
+msgid "This is a made-up sample family, here to show how things work."
+msgstr "Dette er en oppdiktet eksempelfamilie som viser hvordan ting virker."
+
+msgid "Import my GEDCOM file"
+msgstr "Importer GEDCOM-filen min"
+
+msgid "Start a new file"
+msgstr "Start en ny fil"
+
+msgid "Search names, places, years"
+msgstr "Søk i navn, steder, år"
+
+msgid "{shown} of {n} person"
+msgid_plural "{shown} of {n} people"
+msgstr[0] "{shown} av {n} person"
+msgstr[1] "{shown} av {n} personer"
+
+msgid "Not recorded"
+msgstr "Ikke registrert"
+
+msgid "Choose a person to see their ancestors."
+msgstr "Velg en person for å se anene."
+
+msgid "Ancestors of {name}"
+msgstr "Anene til {name}"
+
+msgid "Generations"
+msgstr "Generasjoner"
+
+msgid "Click someone to move them to the front. Double-click to see their family."
+msgstr "Klikk på noen for å flytte dem fremst. Dobbeltklikk for å se familien."
+
+msgid "Print…"
+msgstr "Skriv ut…"
+
+msgid "Opens in your web browser, where you can print or save a PDF."
+msgstr "Åpnes i nettleseren, der du kan skrive ut eller lagre som PDF."
+
+msgid "Save as web page…"
+msgstr "Lagre som nettside…"
+
+msgid "Choose a person first."
+msgstr "Velg en person først."
+
+msgid "Ready"
+msgstr "Klar"
+
+msgid "b. {year}"
+msgstr "f. {year}"
+
+msgid "d. {year}"
+msgstr "d. {year}"
+
+msgid "Home person"
+msgstr "Startperson"
+
+msgid "generations"
+msgstr "generasjoner"

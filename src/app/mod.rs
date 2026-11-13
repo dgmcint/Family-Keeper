@@ -1,8 +1,10 @@
 //! The main window: its state, undo and redo, and the frame-by-frame loop.
 
+use crate::i18n::tr;
 pub mod colors;
 mod commands;
 mod files;
+mod fonts;
 mod screenshot;
 mod window;
 
@@ -51,13 +53,25 @@ pub enum Relation {
 }
 
 impl Relation {
-    pub fn label(self) -> &'static str {
+    /// The button text for adding this relative.
+    pub fn add_label(self) -> &'static str {
         match self {
-            Relation::Father => "father",
-            Relation::Mother => "mother",
-            Relation::Spouse => "spouse",
-            Relation::Child(_) => "child",
-            Relation::Sibling => "brother or sister",
+            Relation::Father => "Add father",
+            Relation::Mother => "Add mother",
+            Relation::Spouse => "Add spouse",
+            Relation::Child(_) => "Add child",
+            Relation::Sibling => "Add brother or sister",
+        }
+    }
+
+    /// The window title for adding this relative to someone, with `{name}` for that person.
+    pub fn add_for_label(self) -> &'static str {
+        match self {
+            Relation::Father => "Add father for {name}",
+            Relation::Mother => "Add mother for {name}",
+            Relation::Spouse => "Add spouse for {name}",
+            Relation::Child(_) => "Add child for {name}",
+            Relation::Sibling => "Add brother or sister for {name}",
         }
     }
 }
@@ -179,12 +193,16 @@ impl FamilyApp {
         if let Some(name) = saved("colors") {
             colors::set_name(&name);
         }
+        if let Some(code) = saved("language") {
+            crate::i18n::set_code(&code);
+        }
         let zoom = saved("zoom").and_then(|z| z.parse().ok()).filter(|z| (0.75..=2.0).contains(z)).unwrap_or(1.0);
         let last_file = saved("last_file").map(PathBuf::from);
         Self::start(&cc.egui_ctx, zoom, last_file, screenshot, open)
     }
 
     pub fn start(ctx: &egui::Context, zoom: f32, last_file: Option<PathBuf>, screenshot: Option<PathBuf>, open: Option<PathBuf>) -> Self {
+        fonts::install(ctx);
         colors::apply(ctx);
         ctx.set_zoom_factor(zoom);
         let db = Database::sample();
@@ -268,11 +286,11 @@ impl FamilyApp {
 
     pub fn file_label(&self) -> String {
         if self.is_sample {
-            return "Sample family".into();
+            return tr("Sample family").into();
         }
         match &self.path {
             Some(p) => p.file_name().map(|n| n.to_string_lossy().into_owned()).unwrap_or_default(),
-            None => "Not saved yet".into(),
+            None => tr("Not saved yet").into(),
         }
     }
 
@@ -308,7 +326,7 @@ impl FamilyApp {
                 self.before_change();
                 self.db = next;
                 self.after_change();
-                self.status = what.to_string();
+                self.status = tr(what).to_string();
                 self.fix_selection();
                 true
             }
@@ -414,6 +432,7 @@ impl eframe::App for FamilyApp {
         }
         storage.set_string("zoom", self.zoom.to_string());
         storage.set_string("colors", colors::name().to_string());
+        storage.set_string("language", crate::i18n::code().to_string());
         match &self.path {
             Some(p) => storage.set_string("last_file", p.to_string_lossy().into_owned()),
             None => storage.set_string("last_file", String::new()),

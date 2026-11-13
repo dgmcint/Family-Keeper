@@ -1,5 +1,6 @@
 //! The main window's screens and what they share: menu bar, tabs, people list and status bar.
 
+use crate::i18n::{tr, tr_n, trf};
 mod duplicates;
 mod family;
 mod lists;
@@ -64,111 +65,120 @@ pub fn show(app: &mut FamilyApp, ui: &mut egui::Ui) {
 fn menu_bar(app: &mut FamilyApp, ui: &mut egui::Ui) {
     let ctx = ui.ctx().clone();
     egui::MenuBar::new().ui(ui, |ui| {
-        ui.menu_button("File", |ui| {
-            if ui.button("New family file").clicked() {
+        ui.menu_button(tr("File"), |ui| {
+            if ui.button(tr("New family file")).clicked() {
                 app.request(Pending::NewFile, &ctx);
                 ui.close();
             }
-            if ui.button("Open…").clicked() {
+            if ui.button(tr("Open…")).clicked() {
                 app.request(Pending::Open, &ctx);
                 ui.close();
             }
             ui.separator();
-            if ui.button("Save").clicked() {
+            if ui.button(tr("Save")).clicked() {
                 app.save();
                 ui.close();
             }
-            if ui.button("Save as…").clicked() {
+            if ui.button(tr("Save as…")).clicked() {
                 app.save_as();
                 ui.close();
             }
             ui.separator();
-            if ui.button("Import GEDCOM…").clicked() {
+            if ui.button(tr("Import GEDCOM…")).clicked() {
                 app.request(Pending::Import, &ctx);
                 ui.close();
             }
-            if ui.button("Export GEDCOM…").clicked() {
+            if ui.button(tr("Export GEDCOM…")).clicked() {
                 app.export_gedcom();
                 ui.close();
             }
             ui.separator();
-            if ui.button("Quit").clicked() {
+            if ui.button(tr("Quit")).clicked() {
                 ctx.send_viewport_cmd(egui::ViewportCommand::Close);
                 ui.close();
             }
         });
-        ui.menu_button("Edit", |ui| {
-            if ui.add_enabled(app.can_undo(), egui::Button::new("Undo")).clicked() {
+        ui.menu_button(tr("Edit"), |ui| {
+            if ui.add_enabled(app.can_undo(), egui::Button::new(tr("Undo"))).clicked() {
                 app.undo();
                 ui.close();
             }
-            if ui.add_enabled(app.can_redo(), egui::Button::new("Redo")).clicked() {
+            if ui.add_enabled(app.can_redo(), egui::Button::new(tr("Redo"))).clicked() {
                 app.redo();
                 ui.close();
             }
             ui.separator();
-            if ui.button("Add a person…").clicked() {
+            if ui.button(tr("Add a person…")).clicked() {
                 app.actions.push(Action::NewPerson);
                 ui.close();
             }
             let selected = app.selected;
-            if ui.add_enabled(selected.is_some(), egui::Button::new("Edit this person…")).clicked() {
+            if ui.add_enabled(selected.is_some(), egui::Button::new(tr("Edit this person…"))).clicked() {
                 app.actions.extend(selected.map(Action::EditPerson));
                 ui.close();
             }
-            if ui.add_enabled(selected.is_some(), egui::Button::new("Delete this person…")).clicked() {
+            if ui.add_enabled(selected.is_some(), egui::Button::new(tr("Delete this person…"))).clicked() {
                 app.actions.extend(selected.map(Action::AskDeletePerson));
                 ui.close();
             }
             ui.separator();
             let is_home = selected.is_some() && selected == app.db.home_person();
-            if ui.add_enabled(selected.is_some() && !is_home, egui::Button::new("Make this person the home person")).clicked() {
+            if ui.add_enabled(selected.is_some() && !is_home, egui::Button::new(tr("Make this person the home person"))).clicked() {
                 app.actions.extend(selected.map(Action::SetHome));
                 ui.close();
             }
-            if ui.add_enabled(!app.db.people.is_empty(), egui::Button::new("Renumber people…")).clicked() {
+            if ui.add_enabled(!app.db.people.is_empty(), egui::Button::new(tr("Renumber people…"))).clicked() {
                 app.actions.push(Action::AskRenumber);
                 ui.close();
             }
         });
-        ui.menu_button("View", |ui| {
+        ui.menu_button(tr("View"), |ui| {
             for (tab, label) in Tab::ALL {
-                if ui.selectable_label(app.tab == tab, label).clicked() {
+                if ui.selectable_label(app.tab == tab, tr(label)).clicked() {
                     app.tab = tab;
                     ui.close();
                 }
             }
             ui.separator();
-            ui.label(RichText::new("Text size").color(colors::pal().muted));
+            ui.label(RichText::new(tr("Text size")).color(colors::pal().muted));
             for (zoom, label) in [(1.0, "Normal"), (1.25, "Large"), (1.5, "Extra large")] {
-                if ui.selectable_label(app.zoom == zoom, label).clicked() {
+                if ui.selectable_label(app.zoom == zoom, tr(label)).clicked() {
                     app.set_zoom(&ctx, zoom);
                     ui.close();
                 }
             }
             ui.separator();
-            ui.menu_button("Colors", |ui| {
+            ui.menu_button(tr("Colors"), |ui| {
                 for (i, (name, group, _)) in colors::SCHEMES.iter().enumerate() {
                     if i == 0 || colors::SCHEMES[i - 1].1 != *group {
                         if i > 0 {
                             ui.separator();
                         }
-                        ui.label(RichText::new(*group).color(colors::pal().muted));
+                        ui.label(RichText::new(tr(group)).color(colors::pal().muted));
                     }
-                    if ui.selectable_label(colors::current() == i, *name).clicked() {
+                    if ui.selectable_label(colors::current() == i, tr(name)).clicked() {
                         colors::choose(&ctx, i);
                         ui.close();
                     }
                 }
             });
+            ui.menu_button(tr("Language"), |ui| {
+                for (i, name) in crate::i18n::LANGUAGES.iter().enumerate() {
+                    if ui.selectable_label(crate::i18n::current() == i, *name).clicked() {
+                        crate::i18n::set(i);
+                        app.refresh_rows();
+                        ui.close();
+                    }
+                }
+            });
         });
-        ui.menu_button("Help", |ui| {
-            if ui.button("About Family Keeper").clicked() {
+        ui.menu_button(tr("Help"), |ui| {
+            if ui.button(tr("About Family Keeper")).clicked() {
                 app.message = Some((
                     "About Family Keeper".into(),
-                    format!(
-                        "Version {}\n\nKeep your family history: people, marriages, events, sources, notes and photos. Share it with other family history programs using GEDCOM files.",
-                        env!("CARGO_PKG_VERSION")
+                    trf(
+                        "Version {version}\n\nKeep your family history: people, marriages, events, sources, notes and photos. Share it with other family history programs using GEDCOM files.",
+                        &[("version", &env!("CARGO_PKG_VERSION"))],
                     ),
                 ));
                 ui.close();
@@ -179,20 +189,20 @@ fn menu_bar(app: &mut FamilyApp, ui: &mut egui::Ui) {
 
 fn tabs_row(app: &mut FamilyApp, ui: &mut egui::Ui) {
     ui.horizontal(|ui| {
-        if ui.add_enabled(app.can_go_back(), egui::Button::new("Back")).clicked() {
+        if ui.add_enabled(app.can_go_back(), egui::Button::new(tr("Back"))).clicked() {
             app.go_back();
         }
         let home = app.db.home_person();
-        let tip = home.map(|h| format!("Go to the home person, {}", app.db.name_of(h))).unwrap_or_default();
-        if ui.add_enabled(home.is_some(), egui::Button::new("Home")).on_hover_text(tip).clicked() {
+        let tip = home.map(|h| trf("Go to the home person, {name}", &[("name", &app.db.name_of(h))])).unwrap_or_default();
+        if ui.add_enabled(home.is_some(), egui::Button::new(tr("Home"))).on_hover_text(tip).clicked() {
             app.actions.push(Action::GoHome);
         }
         ui.add_space(10.0);
         for (tab, label) in Tab::ALL {
-            ui.selectable_value(&mut app.tab, tab, label);
+            ui.selectable_value(&mut app.tab, tab, tr(label));
         }
         ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-            if ui.button("Add a person").clicked() {
+            if ui.button(tr("Add a person")).clicked() {
                 app.actions.push(Action::NewPerson);
             }
         });
@@ -201,26 +211,22 @@ fn tabs_row(app: &mut FamilyApp, ui: &mut egui::Ui) {
 
 fn status_bar(app: &FamilyApp, ui: &mut egui::Ui) {
     ui.horizontal(|ui| {
-        ui.label(RichText::new(&app.status).color(colors::pal().muted));
+        ui.label(RichText::new(tr(&app.status)).color(colors::pal().muted));
         ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
             let saved = if app.dirty { "Unsaved changes" } else { "All changes saved" };
             let saved = if app.is_sample && !app.dirty { "Sample, not saved" } else { saved };
-            ui.label(RichText::new(saved).color(if app.dirty { colors::pal().gold } else { colors::pal().muted }));
+            ui.label(RichText::new(tr(saved)).color(if app.dirty { colors::pal().gold } else { colors::pal().muted }));
             ui.label(
                 RichText::new(format!(
                     "{}  ·  {}  ·  {}  ·",
-                    count(app.db.people.len(), "person", "people"),
-                    count(app.db.families.len(), "marriage", "marriages"),
-                    count(app.db.sources.len(), "source", "sources"),
+                    tr_n("{n} person", "{n} people", app.db.people.len(), &[]),
+                    tr_n("{n} marriage", "{n} marriages", app.db.families.len(), &[]),
+                    tr_n("{n} source", "{n} sources", app.db.sources.len(), &[]),
                 ))
                 .color(colors::pal().muted),
             );
         });
     });
-}
-
-fn count(n: usize, one: &str, many: &str) -> String {
-    format!("{n} {}", if n == 1 { one } else { many })
 }
 
 fn sample_banner(app: &mut FamilyApp, ui: &mut egui::Ui) {
@@ -231,11 +237,11 @@ fn sample_banner(app: &mut FamilyApp, ui: &mut egui::Ui) {
         .inner_margin(Margin::symmetric(12, 8))
         .show(ui, |ui| {
             ui.horizontal_wrapped(|ui| {
-                ui.label("This is a made-up sample family, here to show how things work.");
-                if ui.button("Import my GEDCOM file").clicked() {
+                ui.label(tr("This is a made-up sample family, here to show how things work."));
+                if ui.button(tr("Import my GEDCOM file")).clicked() {
                     app.actions.push(Action::Import);
                 }
-                if ui.button("Start a new file").clicked() {
+                if ui.button(tr("Start a new file")).clicked() {
                     app.actions.push(Action::NewFile);
                 }
             });
@@ -246,17 +252,17 @@ fn sample_banner(app: &mut FamilyApp, ui: &mut egui::Ui) {
 fn people_list(app: &mut FamilyApp, ui: &mut egui::Ui) {
     ui.add(
         egui::TextEdit::singleline(&mut app.search)
-            .hint_text("Search names, places, years")
+            .hint_text(tr("Search names, places, years"))
             .desired_width(f32::INFINITY),
     );
     let shown = app.rows.len();
     let total = app.db.people.len();
-    let label = if shown == total { count(total, "person", "people") } else { format!("{shown} of {}", count(total, "person", "people")) };
+    let label = if shown == total { tr_n("{n} person", "{n} people", total, &[]) } else { tr_n("{shown} of {n} person", "{shown} of {n} people", total, &[("shown", &shown)]) };
     ui.label(RichText::new(label).small().color(colors::pal().muted));
     ui.separator();
     if app.rows.is_empty() {
         let text = if total == 0 { "Nobody here yet." } else { "No one matches that search." };
-        ui.label(RichText::new(text).color(colors::pal().muted));
+        ui.label(RichText::new(tr(text)).color(colors::pal().muted));
         return;
     }
     let row_height = ui.text_style_height(&egui::TextStyle::Body) + ui.spacing().button_padding.y * 2.0;
@@ -278,7 +284,7 @@ fn people_list(app: &mut FamilyApp, ui: &mut egui::Ui) {
 }
 
 fn section(ui: &mut egui::Ui, text: &str) {
-    ui.label(RichText::new(text).small().strong().color(colors::pal().muted));
+    ui.label(RichText::new(tr(text)).small().strong().color(colors::pal().muted));
 }
 
 fn card_frame(highlight: bool) -> egui::Frame {
@@ -294,7 +300,7 @@ fn fact_line(ui: &mut egui::Ui, label: &str, event: Option<&Event>) {
     ui.horizontal_wrapped(|ui| {
         ui.spacing_mut().item_spacing.x = 4.0;
         ui.spacing_mut().interact_size.y = 16.0;
-        ui.label(RichText::new(label).color(colors::pal().muted));
+        ui.label(RichText::new(tr(label)).color(colors::pal().muted));
         ui.label(e.summary());
     });
 }
@@ -331,10 +337,10 @@ fn relative_card(
                 person_facts(ui, p);
             }
             None => {
-                ui.label(RichText::new("Not recorded").color(colors::pal().muted));
+                ui.label(RichText::new(tr("Not recorded")).color(colors::pal().muted));
                 if let Some((anchor, relation)) = add {
                     ui.horizontal(|ui| {
-                        if ui.button(format!("Add {}", relation.label())).clicked() {
+                        if ui.button(tr(relation.add_label())).clicked() {
                             actions.push(Action::AddRelative(anchor, relation));
                         }
                     });
@@ -375,7 +381,7 @@ fn shorten(text: &str, max_chars: usize) -> String {
 
 fn table_heading(ui: &mut egui::Ui, text: &str) {
     ui.add_space(2.0);
-    ui.label(RichText::new(text).strong());
+    ui.label(RichText::new(tr(text)).strong());
 }
 
 /// Room for a dialog's text at the current window size.

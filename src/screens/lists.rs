@@ -1,5 +1,6 @@
 //! The People, Marriages and Sources lists.
 
+use crate::i18n::{tr, tr_n};
 use super::*;
 use crate::app::{Action, FamilyApp, SortBy, Tab};
 use crate::data::*;
@@ -10,7 +11,7 @@ use egui_extras::{Column, TableBuilder};
 pub(crate) fn people_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
     let (db, rows, actions, selected, sort) = (&app.db, &app.rows, &mut app.actions, app.selected, app.sort);
     if rows.is_empty() {
-        ui.label(RichText::new("Nobody to show.").color(colors::pal().muted));
+        ui.label(RichText::new(tr("Nobody to show.")).color(colors::pal().muted));
         return;
     }
     ui.style_mut().interaction.selectable_labels = false;
@@ -39,7 +40,7 @@ pub(crate) fn people_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
                 h.col(|ui| match by {
                     Some(by) => {
                         ui.spacing_mut().button_padding.x = 2.0;
-                        let text = if sort == by { format!("{label} ▾") } else { label.to_string() };
+                        let text = if sort == by { format!("{} ▾", tr(label)) } else { tr(label).to_string() };
                         if ui.selectable_label(sort == by, RichText::new(text).strong()).clicked() {
                             clicked_header.set(Some(by));
                         }
@@ -60,7 +61,7 @@ pub(crate) fn people_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
                     ui.label(p.list_name());
                 });
                 row.col(|ui| {
-                    ui.label(p.sex.label());
+                    ui.label(tr(p.sex.label()));
                 });
                 row.col(|ui| {
                     ui.label(p.date_of("BIRT"));
@@ -87,7 +88,7 @@ pub(crate) fn people_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
 pub(crate) fn families_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
     let (db, actions) = (&app.db, &mut app.actions);
     if db.families.is_empty() {
-        ui.label(RichText::new("No marriages or families recorded yet.").color(colors::pal().muted));
+        ui.label(RichText::new(tr("No marriages or families recorded yet.")).color(colors::pal().muted));
         return;
     }
     let families: Vec<&Family> = db.families.values().collect();
@@ -144,16 +145,16 @@ pub(crate) fn sources_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
     app.refresh_source_use();
     let (db, actions, uses) = (&app.db, &mut app.actions, &app.source_use);
     ui.horizontal(|ui| {
-        ui.label(RichText::new("Sources").size(18.0).strong());
+        ui.label(RichText::new(tr("Sources")).size(18.0).strong());
         ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-            if ui.button("Add a source").clicked() {
+            if ui.button(tr("Add a source")).clicked() {
                 actions.push(Action::NewSource);
             }
         });
     });
     ui.add_space(4.0);
     if db.sources.is_empty() {
-        ui.label(RichText::new("No sources yet. Sources record where your information came from.").color(colors::pal().muted));
+        ui.label(RichText::new(tr("No sources yet. Sources record where your information came from.")).color(colors::pal().muted));
         return;
     }
     egui::ScrollArea::vertical().auto_shrink(false).show(ui, |ui| {
@@ -162,21 +163,21 @@ pub(crate) fn sources_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
                 ui.set_width(ui.available_width());
                 ui.horizontal(|ui| {
                     ui.vertical(|ui| {
-                        let title = if s.title.trim().is_empty() { "(no title)" } else { s.title.as_str() };
+                        let title = if s.title.trim().is_empty() { tr("(no title)") } else { s.title.as_str() };
                         ui.label(RichText::new(title).strong());
                         if !s.author.is_empty() {
                             ui.label(RichText::new(&s.author).color(colors::pal().muted));
                         }
                         let n = uses.get(&s.id).copied().unwrap_or(0);
-                        ui.label(RichText::new(format!("Used {n} time{}", if n == 1 { "" } else { "s" })).small().color(colors::pal().muted));
+                        ui.label(RichText::new(tr_n("Used {n} time", "Used {n} times", n, &[])).small().color(colors::pal().muted));
                     });
                     ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
                         let used = uses.get(&s.id).copied().unwrap_or(0) > 0;
-                        let delete = ui.add_enabled(!used, egui::Button::new("Delete…"));
-                        if delete.on_disabled_hover_text("People or events still cite this source.").clicked() {
+                        let delete = ui.add_enabled(!used, egui::Button::new(tr("Delete…")));
+                        if delete.on_disabled_hover_text(tr("People or events still cite this source.")).clicked() {
                             actions.push(Action::AskDeleteSource(s.id));
                         }
-                        if ui.button("Edit").clicked() {
+                        if ui.button(tr("Edit")).clicked() {
                             actions.push(Action::EditSource(s.id));
                         }
                     });

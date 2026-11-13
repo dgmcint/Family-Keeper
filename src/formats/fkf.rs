@@ -1,5 +1,6 @@
 //! Saving and opening family files. A save either finishes completely or leaves the old file alone.
 
+use crate::i18n::trf;
 use crate::data::Database;
 use serde::{Deserialize, Serialize};
 use std::path::{Path, PathBuf};
@@ -80,10 +81,10 @@ pub fn open(path: &Path) -> Result<Loaded, String> {
     let saved: Saved = serde_json::from_slice(&bytes)
         .map_err(|_| format!("{name} isn't a family file this program can read."))?;
     if saved.format != FORMAT {
-        return Err(format!("{name} isn't a family file this program can read."));
+        return Err(trf("{name} isn't a family file this program can read.", &[("name", &name)]));
     }
     if saved.version > VERSION {
-        return Err(format!("{name} was saved by a newer version of this program. Please update it first."));
+        return Err(trf("{name} was saved by a newer version of this program. Please update it first.", &[("name", &name)]));
     }
     let mut db = saved.db;
     db.repair_links();

@@ -1,5 +1,6 @@
 //! Carrying out what the person asked for, and keeping the lists and reports up to date.
 
+use crate::i18n::tr;
 use super::*;
 use crate::dialogs::{self, FamilyEditor, PersonEditor, Picker};
 use crate::data::*;
@@ -153,9 +154,9 @@ impl FamilyApp {
     fn save_report(&mut self) {
         let Some(report) = &self.report.built else { return };
         let picked = rfd::FileDialog::new()
-            .set_title("Save the report")
+            .set_title(tr("Save the report"))
             .set_file_name(format!("{}.html", report.title.replace(['/', '\\', ':'], "-")))
-            .add_filter("Web page", &["html"])
+            .add_filter(tr("Web page"), &["html"])
             .save_file();
         if let Some(path) = picked {
             let path = with_extension(path, "html");

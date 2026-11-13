@@ -1,5 +1,6 @@
 //! The Pedigree screen.
 
+use crate::i18n::{tr, trf};
 use super::*;
 use crate::app::{Action, FamilyApp, Tab};
 use crate::app::colors;
@@ -7,19 +8,19 @@ use eframe::egui::{self, RichText, Sense, Stroke, StrokeKind, vec2};
 
 pub(crate) fn pedigree_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
     let Some(root) = app.selected else {
-        ui.label(RichText::new("Choose a person to see their ancestors.").color(colors::pal().muted));
+        ui.label(RichText::new(tr("Choose a person to see their ancestors.")).color(colors::pal().muted));
         return;
     };
     ui.horizontal(|ui| {
-        ui.label(RichText::new(format!("Ancestors of {}", app.db.name_of(root))).size(18.0).strong());
+        ui.label(RichText::new(trf("Ancestors of {name}", &[("name", &app.db.name_of(root))])).size(18.0).strong());
         ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
             for g in [5, 4, 3] {
                 ui.selectable_value(&mut app.pedigree_generations, g, format!("{g}"));
             }
-            ui.label(RichText::new("Generations").color(colors::pal().muted));
+            ui.label(RichText::new(tr("Generations")).color(colors::pal().muted));
         });
     });
-    ui.label(RichText::new("Click someone to move them to the front. Double-click to see their family.").small().color(colors::pal().muted));
+    ui.label(RichText::new(tr("Click someone to move them to the front. Double-click to see their family.")).small().color(colors::pal().muted));
     ui.add_space(4.0);
 
     let gens = app.pedigree_generations;
@@ -64,7 +65,7 @@ pub(crate) fn pedigree_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
             let chars = ((box_w - 20.0) / 7.2) as usize;
             let Some(p) = slots[n].and_then(|id| db.person(id)) else {
                 painter.rect(rect, 6.0, colors::pal().paper, Stroke::new(1.0, colors::pal().border), StrokeKind::Inside);
-                painter.text(rect.center(), egui::Align2::CENTER_CENTER, "Not recorded", egui::FontId::proportional(13.0), colors::pal().muted);
+                painter.text(rect.center(), egui::Align2::CENTER_CENTER, tr("Not recorded"), egui::FontId::proportional(13.0), colors::pal().muted);
                 continue;
             };
             let response = ui.interact(rect, ui.scope_id().with(("pedigree", n)), Sense::click());

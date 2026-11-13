@@ -1,0 +1,1018 @@
+# Family Keeper: Japanese.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Removed from the family. Undo brings them back."
+msgstr "家族から外しました。［元に戻す］で戻せます。"
+
+msgid "Removed from the marriage. Undo brings them back."
+msgstr "結婚から外しました。［元に戻す］で戻せます。"
+
+msgid "Showing those parents first."
+msgstr "その両親を先に表示しています。"
+
+msgid "Deleted. Undo brings them back."
+msgstr "削除しました。［元に戻す］で戻せます。"
+
+msgid "Deleted the source."
+msgstr "資料を削除しました。"
+
+msgid "Renumbered everyone. Undo puts the old IDs back."
+msgstr "全員の番号を付け直しました。［元に戻す］で古い ID に戻ります。"
+
+msgid "Merged. Undo separates them again."
+msgstr "統合しました。［元に戻す］で再び分けられます。"
+
+msgid "The report opened in your web browser, ready to print."
+msgstr "レポートをウェブブラウザで開きました。印刷できます。"
+
+msgid "Saved the report."
+msgstr "レポートを保存しました。"
+
+msgid "Couldn't open the report"
+msgstr "レポートを開けませんでした"
+
+msgid "Couldn't save the report"
+msgstr "レポートを保存できませんでした"
+
+msgid "That person is gone."
+msgstr "その人はもういません。"
+
+msgid "Started a new family file"
+msgstr "新しい家族ファイルを始めました"
+
+msgid "Import finished"
+msgstr "インポートが完了しました"
+
+msgid "Couldn't open that file"
+msgstr "そのファイルを開けませんでした"
+
+msgid "Couldn't save"
+msgstr "保存できませんでした"
+
+msgid "Couldn't export"
+msgstr "エクスポートできませんでした"
+
+msgid "Finish or cancel the open window first."
+msgstr "先に開いているウィンドウを完了するか、キャンセルしてください。"
+
+msgid "Undid the last change"
+msgstr "最後の変更を元に戻しました"
+
+msgid "Redid the change"
+msgstr "変更をやり直しました"
+
+msgid "That can't be done"
+msgstr "それはできません"
+
+msgid "Those are the same person."
+msgstr "同じ人です。"
+
+msgid "One of them is an ancestor of the other, so they can't be merged."
+msgstr "一方がもう一方の先祖なので、統合できません。"
+
+msgid "A person can't be their own parent."
+msgstr "人は自分自身の親にはなれません。"
+
+msgid "That parent is already filled in."
+msgstr "その親はすでに入力されています。"
+
+msgid "That person is listed as a sibling in this family."
+msgstr "その人はこの家族で兄弟姉妹として登録されています。"
+
+msgid "A person can't be their own spouse."
+msgstr "人は自分自身の配偶者にはなれません。"
+
+msgid "They are already listed as a couple."
+msgstr "すでに夫婦として登録されています。"
+
+msgid "That person is a child in this family."
+msgstr "その人はこの家族の子供です。"
+
+msgid "A person can't be their own sibling."
+msgstr "人は自分自身の兄弟姉妹にはなれません。"
+
+msgid "Saved the source."
+msgstr "資料を保存しました。"
+
+msgid "Title"
+msgstr "表題"
+
+msgid "Author"
+msgstr "著者"
+
+msgid "Publication"
+msgstr "出版"
+
+msgid "Added a person."
+msgstr "人を追加しました。"
+
+msgid "Saved the changes."
+msgstr "変更を保存しました。"
+
+msgid "Saved the marriage."
+msgstr "結婚を保存しました。"
+
+msgid "Linked them."
+msgstr "リンクしました。"
+
+msgid "Given names"
+msgstr "名"
+
+msgid "Surname"
+msgstr "姓"
+
+msgid "Suffix"
+msgstr "接尾辞"
+
+msgid "That marriage is gone."
+msgstr "その結婚はもうありません。"
+
+msgid "About Family Keeper"
+msgstr "Family Keeper について"
+
+msgid "Born"
+msgstr "出生"
+
+msgid "Christened"
+msgstr "洗礼"
+
+msgid "Died"
+msgstr "死亡"
+
+msgid "Buried"
+msgstr "埋葬"
+
+msgid "PARENTS"
+msgstr "両親"
+
+msgid "THIS PERSON AND SPOUSE"
+msgstr "本人と配偶者"
+
+msgid "FATHER"
+msgstr "父"
+
+msgid "MOTHER"
+msgstr "母"
+
+msgid "SPOUSE"
+msgstr "配偶者"
+
+msgid "CHILDREN"
+msgstr "子供"
+
+msgid "BROTHERS AND SISTERS"
+msgstr "兄弟姉妹"
+
+msgid "Family"
+msgstr "家族"
+
+msgid "Pedigree"
+msgstr "系図"
+
+msgid "People"
+msgstr "人"
+
+msgid "Marriages"
+msgstr "結婚"
+
+msgid "Sources"
+msgstr "情報源"
+
+msgid "Duplicates"
+msgstr "重複"
+
+msgid "Reports"
+msgstr "レポート"
+
+msgid "Add father"
+msgstr "父を追加"
+
+msgid "Add mother"
+msgstr "母を追加"
+
+msgid "Add spouse"
+msgstr "配偶者を追加"
+
+msgid "Add child"
+msgstr "子供を追加"
+
+msgid "Add brother or sister"
+msgstr "兄弟姉妹を追加"
+
+msgid "Add father for {name}"
+msgstr "{name} の父を追加"
+
+msgid "Add mother for {name}"
+msgstr "{name} の母を追加"
+
+msgid "Add spouse for {name}"
+msgstr "{name} の配偶者を追加"
+
+msgid "Add child for {name}"
+msgstr "{name} の子供を追加"
+
+msgid "Add brother or sister for {name}"
+msgstr "{name} の兄弟姉妹を追加"
+
+msgid "Paper"
+msgstr "紙"
+
+msgid "Original"
+msgstr "オリジナル"
+
+msgid "Slate Blue"
+msgstr "スレートブルー"
+
+msgid "Tree pictures"
+msgstr "木の絵"
+
+msgid "Navy"
+msgstr "ネイビー"
+
+msgid "Parchment"
+msgstr "羊皮紙"
+
+msgid "Blue Linen"
+msgstr "ブルーリネン"
+
+msgid "Leather"
+msgstr "レザー"
+
+msgid "Leaf Green"
+msgstr "リーフグリーン"
+
+msgid "Genealogy sites"
+msgstr "系図サイト"
+
+msgid "Fresh Green"
+msgstr "フレッシュグリーン"
+
+msgid "Deep Green"
+msgstr "ディープグリーン"
+
+msgid "Sage"
+msgstr "セージ"
+
+msgid "Earth tones"
+msgstr "アースカラー"
+
+msgid "Olive"
+msgstr "オリーブ"
+
+msgid "Moss"
+msgstr "モス"
+
+msgid "Forest Green"
+msgstr "フォレストグリーン"
+
+msgid "Terracotta"
+msgstr "テラコッタ"
+
+msgid "Clay"
+msgstr "クレイ"
+
+msgid "Burgundy"
+msgstr "バーガンディ"
+
+msgid "Popular colors"
+msgstr "人気の色"
+
+msgid "Teal"
+msgstr "ティール"
+
+msgid "Plum"
+msgstr "プラム"
+
+msgid "Charcoal"
+msgstr "チャコール"
+
+msgid "Midnight"
+msgstr "ミッドナイト"
+
+msgid "Sky"
+msgstr "スカイ"
+
+msgid "Rose"
+msgstr "ローズ"
+
+msgid "Ivory"
+msgstr "アイボリー"
+
+msgid "Neutrals"
+msgstr "ニュートラル"
+
+msgid "Linen"
+msgstr "リネン"
+
+msgid "Stone"
+msgstr "ストーン"
+
+msgid "Taupe"
+msgstr "トープ"
+
+msgid "Birth"
+msgstr "出生"
+
+msgid "Christening"
+msgstr "洗礼"
+
+msgid "Death"
+msgstr "死亡"
+
+msgid "Burial"
+msgstr "埋葬"
+
+msgid "Cremation"
+msgstr "火葬"
+
+msgid "Adoption"
+msgstr "養子縁組"
+
+msgid "Baptism"
+msgstr "バプテスマ"
+
+msgid "Bar mitzvah"
+msgstr "バル・ミツワー"
+
+msgid "Bat mitzvah"
+msgstr "バト・ミツワー"
+
+msgid "Blessing"
+msgstr "祝福"
+
+msgid "Adult christening"
+msgstr "成人の洗礼"
+
+msgid "Confirmation"
+msgstr "堅信礼"
+
+msgid "First communion"
+msgstr "初聖体"
+
+msgid "Ordination"
+msgstr "聖任"
+
+msgid "Naturalization"
+msgstr "帰化"
+
+msgid "Emigration"
+msgstr "出国移住"
+
+msgid "Immigration"
+msgstr "入国移住"
+
+msgid "Census"
+msgstr "国勢調査"
+
+msgid "Probate"
+msgstr "遺言検認"
+
+msgid "Will"
+msgstr "遺言"
+
+msgid "Graduation"
+msgstr "卒業"
+
+msgid "Retirement"
+msgstr "退職"
+
+msgid "Residence"
+msgstr "居住地"
+
+msgid "Occupation"
+msgstr "職業"
+
+msgid "Education"
+msgstr "学歴"
+
+msgid "Religion"
+msgstr "宗教"
+
+msgid "Nationality"
+msgstr "国籍"
+
+msgid "Caste"
+msgstr "カースト"
+
+msgid "Description"
+msgstr "記述"
+
+msgid "ID number"
+msgstr "ID 番号"
+
+msgid "Property"
+msgstr "財産"
+
+msgid "Social Security number"
+msgstr "社会保障番号"
+
+msgid "Other event"
+msgstr "その他の出来事"
+
+msgid "Other fact"
+msgstr "その他の事実"
+
+msgid "Baptism (LDS)"
+msgstr "バプテスマ（末日聖徒）"
+
+msgid "Confirmation (LDS)"
+msgstr "確認（末日聖徒）"
+
+msgid "Endowment (LDS)"
+msgstr "エンダウメント（末日聖徒）"
+
+msgid "Sealing to parents (LDS)"
+msgstr "両親への結び固め（末日聖徒）"
+
+msgid "Sealing to spouse (LDS)"
+msgstr "配偶者への結び固め（末日聖徒）"
+
+msgid "Marriage"
+msgstr "結婚"
+
+msgid "Engagement"
+msgstr "婚約"
+
+msgid "Marriage banns"
+msgstr "結婚の公示"
+
+msgid "Marriage contract"
+msgstr "婚姻契約"
+
+msgid "Marriage license"
+msgstr "結婚許可証"
+
+msgid "Marriage settlement"
+msgstr "婚姻財産契約"
+
+msgid "Divorce"
+msgstr "離婚"
+
+msgid "Divorce filed"
+msgstr "離婚申し立て"
+
+msgid "Annulment"
+msgstr "婚姻の無効"
+
+msgid "Male"
+msgstr "男性"
+
+msgid "Female"
+msgstr "女性"
+
+msgid "Unknown"
+msgstr "不明"
+
+msgid "Pedigree chart"
+msgstr "家系図表"
+
+msgid "Family group record"
+msgstr "家族グループ記録"
+
+msgid "Ancestors, numbered"
+msgstr "先祖（番号付き）"
+
+msgid "Descendants"
+msgstr "子孫"
+
+msgid "Individual summary"
+msgstr "個人の要約"
+
+msgid "All surnames"
+msgstr "すべての姓"
+
+msgid "Normal"
+msgstr "標準"
+
+msgid "Large"
+msgstr "大"
+
+msgid "Extra large"
+msgstr "特大"
+
+msgid "Unsaved changes"
+msgstr "未保存の変更があります"
+
+msgid "All changes saved"
+msgstr "すべての変更を保存済み"
+
+msgid "Sample, not saved"
+msgstr "サンプル（未保存）"
+
+msgid "Nobody here yet."
+msgstr "まだ誰もいません。"
+
+msgid "No one matches that search."
+msgstr "その検索に一致する人はいません。"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Sex"
+msgstr "性別"
+
+msgid "Birth place"
+msgstr "出生地"
+
+msgid "Husband"
+msgstr "夫"
+
+msgid "Wife"
+msgstr "妻"
+
+msgid "Married"
+msgstr "結婚"
+
+msgid "Place"
+msgstr "場所"
+
+msgid "Children"
+msgstr "子供"
+
+msgid "Family order: the home person, then parents, grandparents and the rest of the family"
+msgstr "家族順：ホームの人、次に両親、祖父母、そして家族のほかの人"
+
+msgid "Present order, closing the gaps"
+msgstr "現在の順番（欠番を詰める）"
+
+msgid "Alphabetical by surname"
+msgstr "姓のアルファベット順"
+
+msgid "Save your changes?"
+msgstr "変更を保存しますか？"
+
+msgid "This family file has changes that haven't been saved."
+msgstr "この家族ファイルには保存されていない変更があります。"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Don't save"
+msgstr "保存しない"
+
+msgid "They'll be taken out of their families and their details removed. Undo brings them back until you close this file."
+msgstr "その人は家族から外され、詳細は削除されます。このファイルを閉じるまでは［元に戻す］で戻せます。"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Delete this source?"
+msgstr "この資料を削除しますか？"
+
+msgid "Merge these two people?"
+msgstr "この二人を統合しますか？"
+
+msgid "Merge"
+msgstr "統合"
+
+msgid "Less"
+msgstr "閉じる"
+
+msgid "More"
+msgstr "詳細"
+
+msgid "Add a source"
+msgstr "資料を追加"
+
+msgid "Edit source"
+msgstr "資料の編集"
+
+msgid " and "
+msgstr " と"
+
+msgid "(no title)"
+msgstr "（表題なし）"
+
+msgid "Save the report"
+msgstr "レポートを保存"
+
+msgid "Web page"
+msgstr "ウェブページ"
+
+msgid "Opened {file}"
+msgstr "{file} を開きました"
+
+msgid ""
+"Brought in {people}, {families} and {sources}. The original GEDCOM file wasn't changed.\n"
+"\n"
+"Choose File, then Save, to keep this as a family file."
+msgstr ""
+"{people}、{families}、{sources} を取り込みました。元の GEDCOM ファイルは変更されていません。\n"
+"\n"
+"家族ファイルとして残すには、［ファイル］の［保存］を選んでください。"
+
+msgid "{n} person"
+msgid_plural "{n} people"
+msgstr[0] "{n} 人"
+
+msgid "{n} family"
+msgid_plural "{n} families"
+msgstr[0] "{n} 家族"
+
+msgid "{n} source"
+msgid_plural "{n} sources"
+msgstr[0] "{n} 件の資料"
+
+msgid "Things to check:"
+msgstr "確認すること："
+
+msgid "and {n} more"
+msgid_plural "and {n} more"
+msgstr[0] "ほか {n} 件"
+
+msgid "Open a family file"
+msgstr "家族ファイルを開く"
+
+msgid "Family files and GEDCOM"
+msgstr "家族ファイルと GEDCOM"
+
+msgid "Import a GEDCOM file"
+msgstr "GEDCOM ファイルをインポート"
+
+msgid "GEDCOM"
+msgstr "GEDCOM"
+
+msgid "Save the family file"
+msgstr "家族ファイルを保存"
+
+msgid "Family file"
+msgstr "家族ファイル"
+
+msgid "Saved {file}"
+msgstr "{file} を保存しました"
+
+msgid "Export as GEDCOM"
+msgstr "GEDCOM としてエクスポート"
+
+msgid "Exported {file}"
+msgstr "{file} をエクスポートしました"
+
+msgid "Sample family"
+msgstr "サンプルの家族"
+
+msgid "Not saved yet"
+msgstr "未保存"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Delete {name}?"
+msgstr "{name} を削除しますか？"
+
+msgid "{name} (ID {drop}) will be merged into {other} (ID {keep}). Their events, sources, notes and families carry over. Undo separates them again until you close this file."
+msgstr "{name} (ID {drop}) を {other} (ID {keep}) に統合します。出来事、資料、注釈、家族は引き継がれます。このファイルを閉じるまでは［元に戻す］で再び分けられます。"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Add a person"
+msgstr "人を追加"
+
+msgid "Edit person"
+msgstr "個人の編集"
+
+msgid "Events"
+msgstr "出来事"
+
+msgid "Dates can be written freely, such as 12 MAR 1850, ABT 1850 or BEF 1900."
+msgstr "日付は自由に書けます。例：12 MAR 1850、ABT 1850、BEF 1900。"
+
+msgid "Notes"
+msgstr "注釈"
+
+msgid "Sources for this person"
+msgstr "この人の資料"
+
+msgid "Photos"
+msgstr "写真"
+
+msgid "Remove"
+msgstr "削除"
+
+msgid "Add a photo…"
+msgstr "写真を追加…"
+
+msgid "Choose a photo"
+msgstr "写真を選ぶ"
+
+msgid "Pictures"
+msgstr "画像"
+
+msgid "Edit marriage"
+msgstr "結婚の編集"
+
+msgid "Children, in order"
+msgstr "子供（順番どおり）"
+
+msgid "None recorded"
+msgstr "記録なし"
+
+msgid "Up"
+msgstr "上"
+
+msgid "Down"
+msgstr "下"
+
+msgid "Sources for this marriage"
+msgstr "この結婚の資料"
+
+msgid "Create a new person"
+msgstr "新しい人を作成"
+
+msgid "Or choose someone already in this file:"
+msgstr "またはこのファイルにすでにいる人を選んでください："
+
+msgid "Search names"
+msgstr "名前を検索"
+
+msgid "No one matches."
+msgstr "一致する人はいません。"
+
+msgid "Words from the source"
+msgstr "資料の文言"
+
+msgid "A source needs a title."
+msgstr "資料には表題が必要です。"
+
+msgid "Renumber people"
+msgstr "人の番号の付け直し"
+
+msgid "Gives everyone new ID numbers 1, 2, 3... with no gaps, and numbers the marriages to match. Every link between people stays the same."
+msgstr "全員に 1, 2, 3... と欠番のない新しい ID 番号を付け、結婚にもそれに合わせて番号を付けます。人と人とのリンクはすべてそのままです。"
+
+msgid "Each person keeps their old ID, shown on their card and written to exported GEDCOM files. Undo puts everything back."
+msgstr "各人の古い ID は残り、カードに表示され、エクスポートした GEDCOM ファイルにも書き込まれます。［元に戻す］ですべて元に戻ります。"
+
+msgid "First people after renumbering:"
+msgstr "番号の付け直し後の最初の数人："
+
+msgid "New ID"
+msgstr "新しい ID"
+
+msgid "Now"
+msgstr "現在"
+
+msgid "Renumber"
+msgstr "番号の付け直し"
+
+msgid "Page or where in the source"
+msgstr "ページまたは資料の中の場所"
+
+msgid "Words from the source (optional)"
+msgstr "資料の文言（任意）"
+
+msgid "Cite a source"
+msgstr "資料を引用"
+
+msgid "New source…"
+msgstr "新しい資料…"
+
+msgid "Date"
+msgstr "日付"
+
+msgid "Details"
+msgstr "詳細"
+
+msgid "What kind of event"
+msgstr "出来事の種類"
+
+msgid "Temple"
+msgstr "神殿"
+
+msgid "Note about this event"
+msgstr "この出来事についての注釈"
+
+msgid "Add event"
+msgstr "出来事を追加"
+
+msgid "{name} isn't a family file this program can read."
+msgstr "{name} はこのプログラムで読める家族ファイルではありません。"
+
+msgid "{name} was saved by a newer version of this program. Please update it first."
+msgstr "{name} はこのプログラムの新しいバージョンで保存されています。先にプログラムを更新してください。"
+
+msgid "Possible duplicates"
+msgstr "重複の可能性"
+
+msgid "Finds people with the same name whose birth years don't rule out a match. You choose who to merge."
+msgstr "同じ名前で、出生年から同一人物の可能性を否定できない人を探します。統合する人はあなたが選びます。"
+
+msgid "Check for duplicates"
+msgstr "重複を探す"
+
+msgid "No possible duplicates found."
+msgstr "重複の可能性は見つかりませんでした。"
+
+msgid "Keep this one and merge"
+msgstr "こちらを残して統合"
+
+msgid "These are different people"
+msgstr "別の人です"
+
+msgid "This family file is empty"
+msgstr "この家族ファイルは空です"
+
+msgid "Add the first person, or import a GEDCOM file."
+msgstr "最初の人を追加するか、GEDCOM ファイルをインポートしてください。"
+
+msgid "Add the first person"
+msgstr "最初の人を追加"
+
+msgid "Also has parents: {names}"
+msgstr "ほかの両親：{names}"
+
+msgid "Show these first"
+msgstr "こちらを先に表示"
+
+msgid " (old ID {old})"
+msgstr " (旧 ID {old})"
+
+msgid "Edit"
+msgstr "編集"
+
+msgid "Delete…"
+msgstr "削除…"
+
+msgid "Note: {note}"
+msgstr "注釈：{note}"
+
+msgid "No marriage details"
+msgstr "結婚の詳細なし"
+
+msgid "Remove spouse"
+msgstr "配偶者を外す"
+
+msgid "Separates them. Nobody gets deleted."
+msgstr "二人を分けます。誰も削除されません。"
+
+msgid "Marriage {at} of {count}"
+msgstr "結婚 {count} 件中 {at} 件目"
+
+msgid "Unknown spouse"
+msgstr "不明の配偶者"
+
+msgid "Add another spouse"
+msgstr "別の配偶者を追加"
+
+msgid "Takes them out of this family. Nobody gets deleted."
+msgstr "この家族から外します。誰も削除されません。"
+
+msgid "Nobody to show."
+msgstr "表示する人はいません。"
+
+msgid "No marriages or families recorded yet."
+msgstr "結婚や家族はまだ記録されていません。"
+
+msgid "No sources yet. Sources record where your information came from."
+msgstr "資料はまだありません。資料には情報の出所を記録します。"
+
+msgid "Used {n} time"
+msgid_plural "Used {n} times"
+msgstr[0] "{n} 回使用"
+
+msgid "People or events still cite this source."
+msgstr "この資料をまだ引用している人や出来事があります。"
+
+msgid "File"
+msgstr "ファイル"
+
+msgid "New family file"
+msgstr "新しい家族ファイル"
+
+msgid "Open…"
+msgstr "開く…"
+
+msgid "Save as…"
+msgstr "名前を付けて保存…"
+
+msgid "Import GEDCOM…"
+msgstr "GEDCOM をインポート…"
+
+msgid "Export GEDCOM…"
+msgstr "GEDCOM をエクスポート…"
+
+msgid "Quit"
+msgstr "終了"
+
+msgid "Undo"
+msgstr "元に戻す"
+
+msgid "Redo"
+msgstr "やり直し"
+
+msgid "Add a person…"
+msgstr "人を追加…"
+
+msgid "Edit this person…"
+msgstr "この人を編集…"
+
+msgid "Delete this person…"
+msgstr "この人を削除…"
+
+msgid "Make this person the home person"
+msgstr "この人をホームの人にする"
+
+msgid "Renumber people…"
+msgstr "人の番号の付け直し…"
+
+msgid "View"
+msgstr "表示"
+
+msgid "Text size"
+msgstr "文字の大きさ"
+
+msgid "Colors"
+msgstr "配色"
+
+msgid "Language"
+msgstr "言語"
+
+msgid "Help"
+msgstr "ヘルプ"
+
+msgid ""
+"Version {version}\n"
+"\n"
+"Keep your family history: people, marriages, events, sources, notes and photos. Share it with other family history programs using GEDCOM files."
+msgstr ""
+"バージョン {version}\n"
+"\n"
+"家族の歴史を残しましょう：人、結婚、出来事、資料、注釈、写真。GEDCOM ファイルを使って、ほかの家族歴史プログラムと共有できます。"
+
+msgid "Back"
+msgstr "戻る"
+
+msgid "Go to the home person, {name}"
+msgstr "ホームの人 {name} へ移動"
+
+msgid "Home"
+msgstr "ホーム"
+
+msgid "{n} marriage"
+msgid_plural "{n} marriages"
+msgstr[0] "{n} 件の結婚"
+
+msgid "This is a made-up sample family, here to show how things work."
+msgstr "これは使い方を示すための架空のサンプルの家族です。"
+
+msgid "Import my GEDCOM file"
+msgstr "自分の GEDCOM ファイルをインポート"
+
+msgid "Start a new file"
+msgstr "新しいファイルを始める"
+
+msgid "Search names, places, years"
+msgstr "名前、場所、年を検索"
+
+msgid "{shown} of {n} person"
+msgid_plural "{shown} of {n} people"
+msgstr[0] "{n} 人中 {shown} 人"
+
+msgid "Not recorded"
+msgstr "記録なし"
+
+msgid "Choose a person to see their ancestors."
+msgstr "先祖を見るには人を選んでください。"
+
+msgid "Ancestors of {name}"
+msgstr "{name} の先祖"
+
+msgid "Generations"
+msgstr "世代"
+
+msgid "Click someone to move them to the front. Double-click to see their family."
+msgstr "人をクリックすると前に移動します。ダブルクリックするとその家族を表示します。"
+
+msgid "Print…"
+msgstr "印刷…"
+
+msgid "Opens in your web browser, where you can print or save a PDF."
+msgstr "ウェブブラウザで開きます。そこで印刷したり PDF として保存したりできます。"
+
+msgid "Save as web page…"
+msgstr "ウェブページとして保存…"
+
+msgid "Choose a person first."
+msgstr "先に人を選んでください。"
+
+msgid "Ready"
+msgstr "準備完了"
+
+msgid "b. {year}"
+msgstr "{year} 年生"
+
+msgid "d. {year}"
+msgstr "{year} 年没"
+
+msgid "Home person"
+msgstr "ホームの人"
+
+msgid "generations"
+msgstr "世代"

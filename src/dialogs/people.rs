@@ -1,5 +1,6 @@
 //! Editing people and marriages, and picking a relative.
 
+use crate::i18n::{tr, trf};
 use super::*;
 use crate::app::{Action, FamilyApp, Relation};
 use crate::data::*;
@@ -12,11 +13,11 @@ pub(crate) fn person_window(app: &mut FamilyApp, ctx: &egui::Context) {
     let mut finished = None;
     let title = if editor.is_new {
         match editor.link {
-            Some((_, relation)) => format!("Add {}", relation.label()),
-            None => "Add a person".to_string(),
+            Some((_, relation)) => tr(relation.add_label()).to_string(),
+            None => tr("Add a person").to_string(),
         }
     } else {
-        "Edit person".to_string()
+        tr("Edit person").to_string()
     };
     let (sources, actions) = (&app.db.sources, &mut app.actions);
     let size = dialog_size(ctx, vec2(760.0, 640.0));
@@ -30,10 +31,10 @@ pub(crate) fn person_window(app: &mut FamilyApp, ctx: &egui::Context) {
             egui::Panel::bottom("person buttons").frame(egui::Frame::new().fill(colors::pal().card)).show(ui, |ui| {
                 ui.add_space(6.0);
                 ui.horizontal(|ui| {
-                    if ui.button(RichText::new("Save").strong()).clicked() {
+                    if ui.button(RichText::new(tr("Save")).strong()).clicked() {
                         finished = Some(true);
                     }
-                    if ui.button("Cancel").clicked() {
+                    if ui.button(tr("Cancel")).clicked() {
                         finished = Some(false);
                     }
                 });
@@ -44,33 +45,33 @@ pub(crate) fn person_window(app: &mut FamilyApp, ctx: &egui::Context) {
                     field(ui, "Given names", &mut d.given);
                     field(ui, "Surname", &mut d.surname);
                     field(ui, "Suffix", &mut d.suffix);
-                    ui.label("Sex");
+                    ui.label(tr("Sex"));
                     ui.horizontal(|ui| {
                         for s in [Sex::Male, Sex::Female, Sex::Unknown] {
-                            ui.radio_value(&mut d.sex, s, s.label());
+                            ui.radio_value(&mut d.sex, s, tr(s.label()));
                         }
                     });
                     ui.end_row();
                 });
                 ui.add_space(6.0);
-                ui.label(RichText::new("Events").strong());
-                ui.label(RichText::new("Dates can be written freely, such as 12 MAR 1850, ABT 1850 or BEF 1900.").small().color(colors::pal().muted));
+                ui.label(RichText::new(tr("Events")).strong());
+                ui.label(RichText::new(tr("Dates can be written freely, such as 12 MAR 1850, ABT 1850 or BEF 1900.")).small().color(colors::pal().muted));
                 events_editor(ui, sources, &mut d.events, &mut editor.expanded, &CORE_EVENTS, PERSON_EVENTS, &mut editor.new_event, actions);
                 ui.add_space(8.0);
-                ui.label(RichText::new("Notes").strong());
+                ui.label(RichText::new(tr("Notes")).strong());
                 ui.add(egui::TextEdit::multiline(&mut d.notes).desired_rows(4).desired_width(f32::INFINITY));
                 ui.add_space(8.0);
-                ui.label(RichText::new("Sources for this person").strong());
+                ui.label(RichText::new(tr("Sources for this person")).strong());
                 citations_editor(ui, sources, &mut d.citations, actions);
                 ui.add_space(8.0);
-                ui.label(RichText::new("Photos").strong());
+                ui.label(RichText::new(tr("Photos")).strong());
                 let mut remove = None;
                 for (i, n) in d.extra.iter().enumerate().filter(|(_, n)| n.tag == "OBJE") {
                     ui.push_id(i, |ui| {
                         ui.horizontal(|ui| {
                             let file = n.child("FILE").map_or(n.value.as_str(), |f| f.value.as_str());
                             ui.add(egui::Label::new(file).truncate());
-                            if ui.small_button("Remove").clicked() {
+                            if ui.small_button(tr("Remove")).clicked() {
                                 remove = Some(i);
                             }
                         });
@@ -79,10 +80,10 @@ pub(crate) fn person_window(app: &mut FamilyApp, ctx: &egui::Context) {
                 if let Some(i) = remove {
                     d.extra.remove(i);
                 }
-                if ui.small_button("Add a photo…").clicked() {
+                if ui.small_button(tr("Add a photo…")).clicked() {
                     let picked = rfd::FileDialog::new()
-                        .set_title("Choose a photo")
-                        .add_filter("Pictures", &["jpg", "jpeg", "png", "gif", "bmp", "tif", "tiff"])
+                        .set_title(tr("Choose a photo"))
+                        .add_filter(tr("Pictures"), &["jpg", "jpeg", "png", "gif", "bmp", "tif", "tiff"])
                         .pick_file();
                     if let Some(path) = picked {
                         let mut object = Node::new("OBJE", "");
@@ -142,7 +143,7 @@ pub(crate) fn family_window(app: &mut FamilyApp, ctx: &egui::Context) {
     let mut finished = None;
     let (db, actions) = (&app.db, &mut app.actions);
     let size = dialog_size(ctx, vec2(720.0, 560.0));
-    egui::Window::new("Edit marriage")
+    egui::Window::new(tr("Edit marriage"))
         .id(egui::Id::unique("family editor"))
         .collapsible(false)
         .default_size(size)
@@ -152,10 +153,10 @@ pub(crate) fn family_window(app: &mut FamilyApp, ctx: &egui::Context) {
             egui::Panel::bottom("family buttons").frame(egui::Frame::new().fill(colors::pal().card)).show(ui, |ui| {
                 ui.add_space(6.0);
                 ui.horizontal(|ui| {
-                    if ui.button(RichText::new("Save").strong()).clicked() {
+                    if ui.button(RichText::new(tr("Save")).strong()).clicked() {
                         finished = Some(true);
                     }
-                    if ui.button("Cancel").clicked() {
+                    if ui.button(tr("Cancel")).clicked() {
                         finished = Some(false);
                     }
                 });
@@ -167,19 +168,19 @@ pub(crate) fn family_window(app: &mut FamilyApp, ctx: &egui::Context) {
                 ui.add_space(4.0);
                 events_editor(ui, &db.sources, &mut d.events, &mut editor.expanded, &["MARR"], FAMILY_EVENTS, &mut editor.new_event, actions);
                 ui.add_space(8.0);
-                ui.label(RichText::new("Children, in order").strong());
+                ui.label(RichText::new(tr("Children, in order")).strong());
                 if d.children.is_empty() {
-                    ui.label(RichText::new("None recorded").color(colors::pal().muted));
+                    ui.label(RichText::new(tr("None recorded")).color(colors::pal().muted));
                 }
                 let mut swap = None;
                 let count = d.children.len();
                 for (i, c) in d.children.iter().enumerate() {
                     ui.push_id(i, |ui| {
                         ui.horizontal(|ui| {
-                            if ui.add_enabled(i > 0, egui::Button::new("Up").small()).clicked() {
+                            if ui.add_enabled(i > 0, egui::Button::new(tr("Up")).small()).clicked() {
                                 swap = Some((i, i - 1));
                             }
-                            if ui.add_enabled(i + 1 < count, egui::Button::new("Down").small()).clicked() {
+                            if ui.add_enabled(i + 1 < count, egui::Button::new(tr("Down")).small()).clicked() {
                                 swap = Some((i, i + 1));
                             }
                             let life = db.person(*c).map(Person::lifespan).unwrap_or_default();
@@ -191,10 +192,10 @@ pub(crate) fn family_window(app: &mut FamilyApp, ctx: &egui::Context) {
                     d.children.swap(a, b);
                 }
                 ui.add_space(8.0);
-                ui.label(RichText::new("Notes").strong());
+                ui.label(RichText::new(tr("Notes")).strong());
                 ui.add(egui::TextEdit::multiline(&mut d.notes).desired_rows(3).desired_width(f32::INFINITY));
                 ui.add_space(8.0);
-                ui.label(RichText::new("Sources for this marriage").strong());
+                ui.label(RichText::new(tr("Sources for this marriage")).strong());
                 citations_editor(ui, &db.sources, &mut d.citations, actions);
             });
         });
@@ -243,19 +244,19 @@ pub(crate) fn picker_window(app: &mut FamilyApp, ctx: &egui::Context) {
         picker.results_for = Some(picker.query.clone());
     }
     let size = dialog_size(ctx, vec2(480.0, 480.0));
-    egui::Window::new(format!("Add {} for {}", picker.relation.label(), db.name_of(picker.anchor)))
+    egui::Window::new(trf(picker.relation.add_for_label(), &[("name", &db.name_of(picker.anchor))]))
         .id(egui::Id::unique("picker"))
         .collapsible(false)
         .default_size(size)
         .max_height(size.y)
         .anchor(egui::Align2::CENTER_CENTER, [0.0, 0.0])
         .show(ctx, |ui| {
-            if ui.button(RichText::new("Create a new person").strong()).clicked() {
+            if ui.button(RichText::new(tr("Create a new person")).strong()).clicked() {
                 create = true;
             }
             ui.add_space(4.0);
-            ui.label("Or choose someone already in this file:");
-            ui.add(egui::TextEdit::singleline(&mut picker.query).hint_text("Search names").desired_width(f32::INFINITY));
+            ui.label(tr("Or choose someone already in this file:"));
+            ui.add(egui::TextEdit::singleline(&mut picker.query).hint_text(tr("Search names")).desired_width(f32::INFINITY));
             egui::ScrollArea::vertical().auto_shrink(false).max_height(size.y - 170.0).show(ui, |ui| {
                 ui.with_layout(egui::Layout::top_down_justified(egui::Align::LEFT), |ui| {
                     for id in &picker.results {
@@ -267,12 +268,12 @@ pub(crate) fn picker_window(app: &mut FamilyApp, ctx: &egui::Context) {
                         }
                     }
                     if picker.results.is_empty() {
-                        ui.label(RichText::new("No one matches.").color(colors::pal().muted));
+                        ui.label(RichText::new(tr("No one matches.")).color(colors::pal().muted));
                     }
                 });
             });
             ui.separator();
-            if ui.button("Cancel").clicked() {
+            if ui.button(tr("Cancel")).clicked() {
                 close = true;
             }
         });

@@ -1,5 +1,6 @@
 //! The Family screen.
 
+use crate::i18n::{tr, trf};
 use super::*;
 use crate::app::{Action, FamilyApp, Relation};
 use crate::data::*;
@@ -10,13 +11,13 @@ pub(crate) fn family_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
     let Some(id) = app.selected.filter(|s| app.db.people.contains_key(s)) else {
         ui.add_space(60.0);
         ui.vertical_centered(|ui| {
-            ui.heading("This family file is empty");
-            ui.label(RichText::new("Add the first person, or import a GEDCOM file.").color(colors::pal().muted));
+            ui.heading(tr("This family file is empty"));
+            ui.label(RichText::new(tr("Add the first person, or import a GEDCOM file.")).color(colors::pal().muted));
             ui.add_space(8.0);
-            if ui.button("Add the first person").clicked() {
+            if ui.button(tr("Add the first person")).clicked() {
                 app.actions.push(Action::NewPerson);
             }
-            if ui.button("Import a GEDCOM file").clicked() {
+            if ui.button(tr("Import a GEDCOM file")).clicked() {
                 app.actions.push(Action::Import);
             }
         });
@@ -38,9 +39,9 @@ pub(crate) fn family_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
         for f in person.parent_families.iter().skip(1).filter_map(|f| db.families.get(f)) {
             ui.horizontal_wrapped(|ui| {
                 let names: Vec<String> = [f.husband, f.wife].into_iter().flatten().map(|p| db.name_of(p)).collect();
-                let names = if names.is_empty() { "Unknown".to_string() } else { names.join(" and ") };
-                ui.label(RichText::new(format!("Also has parents: {names}")).color(colors::pal().muted));
-                if ui.small_button("Show these first").clicked() {
+                let names = if names.is_empty() { tr("Unknown").to_string() } else { names.join(tr(" and ")) };
+                ui.label(RichText::new(trf("Also has parents: {names}", &[("names", &names)])).color(colors::pal().muted));
+                if ui.small_button(tr("Show these first")).clicked() {
                     actions.push(Action::PreferParents(id, f.id));
                 }
             });
@@ -65,20 +66,20 @@ pub(crate) fn family_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
                     }
                     ui.vertical(|ui| {
                         ui.label(RichText::new(person.name()).size(21.0).strong());
-                        let mut line = format!("{}  ·  ID {}", person.sex.label(), person.id);
+                        let mut line = format!("{}  ·  ID {}", tr(person.sex.label()), person.id);
                         if let Some(old) = Database::old_id(person) {
-                            line.push_str(&format!(" (old ID {old})"));
+                            line.push_str(&trf(" (old ID {old})", &[("old", &old)]));
                         }
                         if db.home_person() == Some(id) {
-                            line.push_str("  ·  Home person");
+                            line.push_str(&format!("  ·  {}", tr("Home person")));
                         }
                         ui.label(RichText::new(line).small().color(colors::pal().muted));
                         person_facts(ui, person);
                         ui.horizontal(|ui| {
-                            if ui.button("Edit").clicked() {
+                            if ui.button(tr("Edit")).clicked() {
                                 actions.push(Action::EditPerson(id));
                             }
-                            if ui.button("Delete…").clicked() {
+                            if ui.button(tr("Delete…")).clicked() {
                                 actions.push(Action::AskDeletePerson(id));
                             }
                         });
@@ -87,7 +88,7 @@ pub(crate) fn family_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
                 if !person.notes.trim().is_empty() {
                     ui.add_space(4.0);
                     let first = person.notes.lines().find(|l| !l.trim().is_empty()).unwrap_or("");
-                    ui.label(RichText::new(format!("Note: {first}")).italics().color(colors::pal().muted));
+                    ui.label(RichText::new(trf("Note: {note}", &[("note", &first)])).italics().color(colors::pal().muted));
                 }
             });
             let spouse = family.and_then(|f| f.partner_of(id));
@@ -101,18 +102,18 @@ pub(crate) fn family_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
                 let text = f.event("MARR").map(Event::summary).filter(|s| !s.is_empty());
                 match text {
                     Some(t) => {
-                        ui.label(RichText::new("Married").color(colors::pal().muted));
+                        ui.label(RichText::new(tr("Married")).color(colors::pal().muted));
                         ui.label(t);
                     }
                     None => {
-                        ui.label(RichText::new("No marriage details").color(colors::pal().muted));
+                        ui.label(RichText::new(tr("No marriage details")).color(colors::pal().muted));
                     }
                 }
-                if ui.small_button("Edit marriage").clicked() {
+                if ui.small_button(tr("Edit marriage")).clicked() {
                     actions.push(Action::EditFamily(f.id));
                 }
                 if let Some(s) = f.partner_of(id) {
-                    if ui.small_button("Remove spouse").on_hover_text("Separates them. Nobody gets deleted.").clicked() {
+                    if ui.small_button(tr("Remove spouse")).on_hover_text(tr("Separates them. Nobody gets deleted.")).clicked() {
                         actions.push(Action::RemovePartner(f.id, s));
                     }
                 }
@@ -120,10 +121,10 @@ pub(crate) fn family_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
             if families.len() > 1 {
                 let mut chosen = index;
                 egui::ComboBox::from_id_salt("which family")
-                    .selected_text(format!("Marriage {} of {}", index + 1, families.len()))
+                    .selected_text(trf("Marriage {at} of {count}", &[("at", &(index + 1)), ("count", &families.len())]))
                     .show_ui(ui, |ui| {
                         for (i, f) in families.iter().enumerate() {
-                            let name = f.partner_of(id).map_or("Unknown spouse".to_string(), |s| db.name_of(s));
+                            let name = f.partner_of(id).map_or(tr("Unknown spouse").to_string(), |s| db.name_of(s));
                             ui.selectable_value(&mut chosen, i, format!("{}. {name}", i + 1));
                         }
                     });
@@ -131,7 +132,7 @@ pub(crate) fn family_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
                     choice.insert(id, chosen);
                 }
             }
-            if family.is_some_and(|f| f.partner_of(id).is_some()) && ui.small_button("Add another spouse").clicked() {
+            if family.is_some_and(|f| f.partner_of(id).is_some()) && ui.small_button(tr("Add another spouse")).clicked() {
                 actions.push(Action::AddRelative(id, Relation::Spouse));
             }
         });
@@ -163,7 +164,7 @@ fn kin_list(
         ui.set_min_height(120.0);
         section(ui, title);
         if ids.is_empty() {
-            ui.label(RichText::new("None recorded").color(colors::pal().muted));
+            ui.label(RichText::new(tr("None recorded")).color(colors::pal().muted));
         }
         for (i, kid) in ids.iter().enumerate() {
             let Some(p) = db.person(*kid) else { continue };
@@ -175,7 +176,7 @@ fn kin_list(
                 ui.label(RichText::new(p.lifespan()).color(colors::pal().muted));
                 if let Some(f) = family {
                     ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                        if ui.small_button("Remove").on_hover_text("Takes them out of this family. Nobody gets deleted.").clicked() {
+                        if ui.small_button(tr("Remove")).on_hover_text(tr("Takes them out of this family. Nobody gets deleted.")).clicked() {
                             actions.push(Action::RemoveChild(f, *kid));
                         }
                     });
@@ -183,7 +184,7 @@ fn kin_list(
             });
         }
         ui.horizontal(|ui| {
-            if ui.small_button(format!("Add {}", add.1.label())).clicked() {
+            if ui.small_button(tr(add.1.add_label())).clicked() {
                 actions.push(Action::AddRelative(add.0, add.1));
             }
         });

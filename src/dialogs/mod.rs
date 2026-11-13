@@ -1,5 +1,6 @@
 //! The windows that open over the main screen: shared types and the window loop.
 
+use crate::i18n::{tr, trf};
 mod people;
 mod sources;
 mod tools;
@@ -116,13 +117,13 @@ fn message_window(app: &mut FamilyApp, ctx: &egui::Context) {
     let mut close = false;
     egui::Modal::new(egui::Id::unique("message")).show(ctx, |ui| {
         ui.set_max_width(460.0);
-        ui.label(RichText::new(title).size(17.0).strong());
+        ui.label(RichText::new(tr(title)).size(17.0).strong());
         ui.add_space(4.0);
         egui::ScrollArea::vertical().max_height(320.0).show(ui, |ui| {
-            ui.label(text);
+            ui.label(tr(text));
         });
         ui.add_space(6.0);
-        if ui.button("OK").clicked() {
+        if ui.button(tr("OK")).clicked() {
             close = true;
         }
     });
@@ -145,7 +146,7 @@ fn confirm_window(app: &mut FamilyApp, ctx: &egui::Context) -> Option<Answer> {
             Some("Don't save"),
         ),
         Confirm::DeletePerson(id) => (
-            format!("Delete {}?", db.name_of(*id)),
+            trf("Delete {name}?", &[("name", &db.name_of(*id))]),
             "They'll be taken out of their families and their details removed. Undo brings them back until you close this file.".to_string(),
             "Delete",
             None,
@@ -158,10 +159,9 @@ fn confirm_window(app: &mut FamilyApp, ctx: &egui::Context) -> Option<Answer> {
         ),
         Confirm::Merge { keep, drop } => (
             "Merge these two people?".to_string(),
-            format!(
-                "{} (ID {drop}) will be merged into {} (ID {keep}). Their events, sources, notes and families carry over. Undo separates them again until you close this file.",
-                db.name_of(*drop),
-                db.name_of(*keep)
+            trf(
+                "{name} (ID {drop}) will be merged into {other} (ID {keep}). Their events, sources, notes and families carry over. Undo separates them again until you close this file.",
+                &[("name", &db.name_of(*drop)), ("drop", drop), ("other", &db.name_of(*keep)), ("keep", keep)],
             ),
             "Merge",
             None,
@@ -171,20 +171,20 @@ fn confirm_window(app: &mut FamilyApp, ctx: &egui::Context) -> Option<Answer> {
     let mut answer = None;
     egui::Modal::new(egui::Id::unique("confirm")).show(ctx, |ui| {
         ui.set_max_width(440.0);
-        ui.label(RichText::new(title).size(17.0).strong());
+        ui.label(RichText::new(tr(&title)).size(17.0).strong());
         ui.add_space(4.0);
-        ui.label(text);
+        ui.label(tr(&text));
         ui.add_space(8.0);
         ui.horizontal(|ui| {
-            if ui.button(RichText::new(yes).strong()).clicked() {
+            if ui.button(RichText::new(tr(yes)).strong()).clicked() {
                 answer = Some(Answer::Yes);
             }
             if let Some(no) = no {
-                if ui.button(no).clicked() {
+                if ui.button(tr(no)).clicked() {
                     answer = Some(Answer::No);
                 }
             }
-            if ui.button("Cancel").clicked() {
+            if ui.button(tr("Cancel")).clicked() {
                 answer = Some(Answer::Cancel);
             }
         });

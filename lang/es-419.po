@@ -1,0 +1,63 @@
+# Family Keeper: Spanish (Latin America).
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: es-419\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Added a person."
+msgstr "Se agregó una persona."
+
+msgid "Add father"
+msgstr "Agregar padre"
+
+msgid "Add mother"
+msgstr "Agregar madre"
+
+msgid "Add spouse"
+msgstr "Agregar cónyuge"
+
+msgid "Add child"
+msgstr "Agregar hijo"
+
+msgid "Add brother or sister"
+msgstr "Agregar hermano o hermana"
+
+msgid "Add father for {name}"
+msgstr "Agregar padre de {name}"
+
+msgid "Add mother for {name}"
+msgstr "Agregar madre de {name}"
+
+msgid "Add spouse for {name}"
+msgstr "Agregar cónyuge de {name}"
+
+msgid "Add child for {name}"
+msgstr "Agregar hijo de {name}"
+
+msgid "Add brother or sister for {name}"
+msgstr "Agregar hermano o hermana de {name}"
+
+msgid "Add a source"
+msgstr "Agregar una fuente"
+
+msgid "Add a person"
+msgstr "Agregar una persona"
+
+msgid "Add a photo…"
+msgstr "Agregar una foto…"
+
+msgid "Add event"
+msgstr "Agregar acontecimiento"
+
+msgid "Add the first person, or import a GEDCOM file."
+msgstr "Agregue la primera persona o importe un archivo GEDCOM."
+
+msgid "Add the first person"
+msgstr "Agregar la primera persona"
+
+msgid "Add another spouse"
+msgstr "Agregar otro cónyuge"
+
+msgid "Add a person…"
+msgstr "Agregar una persona…"

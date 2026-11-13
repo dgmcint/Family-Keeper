@@ -1,0 +1,1018 @@
+# Family Keeper: Chinese (Traditional).
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: zh-Hant\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Removed from the family. Undo brings them back."
+msgstr "已從家庭中移除。「復原」可以恢復。"
+
+msgid "Removed from the marriage. Undo brings them back."
+msgstr "已從婚姻中移除。「復原」可以恢復。"
+
+msgid "Showing those parents first."
+msgstr "現在先顯示這對父母。"
+
+msgid "Deleted. Undo brings them back."
+msgstr "已刪除。「復原」可以恢復。"
+
+msgid "Deleted the source."
+msgstr "已刪除來源。"
+
+msgid "Renumbered everyone. Undo puts the old IDs back."
+msgstr "已為所有人重新編號。「復原」會換回舊 ID。"
+
+msgid "Merged. Undo separates them again."
+msgstr "已合併。「復原」可以再分開。"
+
+msgid "The report opened in your web browser, ready to print."
+msgstr "報告已在網頁瀏覽器中開啟，可以列印。"
+
+msgid "Saved the report."
+msgstr "已儲存報告。"
+
+msgid "Couldn't open the report"
+msgstr "無法開啟報告"
+
+msgid "Couldn't save the report"
+msgstr "無法儲存報告"
+
+msgid "That person is gone."
+msgstr "此人已不存在。"
+
+msgid "Started a new family file"
+msgstr "已開始新的家庭檔案"
+
+msgid "Import finished"
+msgstr "匯入完成"
+
+msgid "Couldn't open that file"
+msgstr "無法開啟該檔案"
+
+msgid "Couldn't save"
+msgstr "無法儲存"
+
+msgid "Couldn't export"
+msgstr "無法匯出"
+
+msgid "Finish or cancel the open window first."
+msgstr "請先完成或取消開啟中的視窗。"
+
+msgid "Undid the last change"
+msgstr "已復原上一個變更"
+
+msgid "Redid the change"
+msgstr "已重做變更"
+
+msgid "That can't be done"
+msgstr "無法這樣做"
+
+msgid "Those are the same person."
+msgstr "這是同一個人。"
+
+msgid "One of them is an ancestor of the other, so they can't be merged."
+msgstr "其中一人是另一人的祖先，因此無法合併。"
+
+msgid "A person can't be their own parent."
+msgstr "一個人不能是自己的父母。"
+
+msgid "That parent is already filled in."
+msgstr "該父親或母親已經填入。"
+
+msgid "That person is listed as a sibling in this family."
+msgstr "此人在這個家庭中列為兄弟姊妹。"
+
+msgid "A person can't be their own spouse."
+msgstr "一個人不能是自己的配偶。"
+
+msgid "They are already listed as a couple."
+msgstr "他們已列為一對夫妻。"
+
+msgid "That person is a child in this family."
+msgstr "此人是這個家庭的子女。"
+
+msgid "A person can't be their own sibling."
+msgstr "一個人不能是自己的兄弟姊妹。"
+
+msgid "Saved the source."
+msgstr "已儲存來源。"
+
+msgid "Title"
+msgstr "標題"
+
+msgid "Author"
+msgstr "作者"
+
+msgid "Publication"
+msgstr "出版"
+
+msgid "Added a person."
+msgstr "已增加一個人。"
+
+msgid "Saved the changes."
+msgstr "已儲存變更。"
+
+msgid "Saved the marriage."
+msgstr "已儲存婚姻。"
+
+msgid "Linked them."
+msgstr "已連結。"
+
+msgid "Given names"
+msgstr "名字"
+
+msgid "Surname"
+msgstr "姓"
+
+msgid "Suffix"
+msgstr "後綴"
+
+msgid "That marriage is gone."
+msgstr "該婚姻已不存在。"
+
+msgid "About Family Keeper"
+msgstr "關於 Family Keeper"
+
+msgid "Born"
+msgstr "出生"
+
+msgid "Christened"
+msgstr "已領洗"
+
+msgid "Died"
+msgstr "死亡"
+
+msgid "Buried"
+msgstr "埋葬"
+
+msgid "PARENTS"
+msgstr "父母"
+
+msgid "THIS PERSON AND SPOUSE"
+msgstr "此人與配偶"
+
+msgid "FATHER"
+msgstr "父親"
+
+msgid "MOTHER"
+msgstr "母親"
+
+msgid "SPOUSE"
+msgstr "配偶"
+
+msgid "CHILDREN"
+msgstr "子女"
+
+msgid "BROTHERS AND SISTERS"
+msgstr "兄弟姊妹"
+
+msgid "Family"
+msgstr "家庭"
+
+msgid "Pedigree"
+msgstr "世系表"
+
+msgid "People"
+msgstr "人"
+
+msgid "Marriages"
+msgstr "婚姻"
+
+msgid "Sources"
+msgstr "來源"
+
+msgid "Duplicates"
+msgstr "重複"
+
+msgid "Reports"
+msgstr "報告"
+
+msgid "Add father"
+msgstr "增加父親"
+
+msgid "Add mother"
+msgstr "增加母親"
+
+msgid "Add spouse"
+msgstr "增加配偶"
+
+msgid "Add child"
+msgstr "增加子女"
+
+msgid "Add brother or sister"
+msgstr "增加兄弟姊妹"
+
+msgid "Add father for {name}"
+msgstr "為 {name} 增加父親"
+
+msgid "Add mother for {name}"
+msgstr "為 {name} 增加母親"
+
+msgid "Add spouse for {name}"
+msgstr "為 {name} 增加配偶"
+
+msgid "Add child for {name}"
+msgstr "為 {name} 增加子女"
+
+msgid "Add brother or sister for {name}"
+msgstr "為 {name} 增加兄弟姊妹"
+
+msgid "Paper"
+msgstr "紙張"
+
+msgid "Original"
+msgstr "原始"
+
+msgid "Slate Blue"
+msgstr "石板藍"
+
+msgid "Tree pictures"
+msgstr "樹木圖案"
+
+msgid "Navy"
+msgstr "海軍藍"
+
+msgid "Parchment"
+msgstr "羊皮紙"
+
+msgid "Blue Linen"
+msgstr "藍色亞麻"
+
+msgid "Leather"
+msgstr "皮革"
+
+msgid "Leaf Green"
+msgstr "葉綠"
+
+msgid "Genealogy sites"
+msgstr "家譜網站"
+
+msgid "Fresh Green"
+msgstr "清新綠"
+
+msgid "Deep Green"
+msgstr "深綠"
+
+msgid "Sage"
+msgstr "鼠尾草綠"
+
+msgid "Earth tones"
+msgstr "大地色"
+
+msgid "Olive"
+msgstr "橄欖"
+
+msgid "Moss"
+msgstr "苔綠"
+
+msgid "Forest Green"
+msgstr "森林綠"
+
+msgid "Terracotta"
+msgstr "赤陶"
+
+msgid "Clay"
+msgstr "陶土"
+
+msgid "Burgundy"
+msgstr "酒紅"
+
+msgid "Popular colors"
+msgstr "熱門顏色"
+
+msgid "Teal"
+msgstr "藍綠"
+
+msgid "Plum"
+msgstr "梅紫"
+
+msgid "Charcoal"
+msgstr "炭灰"
+
+msgid "Midnight"
+msgstr "午夜藍"
+
+msgid "Sky"
+msgstr "天藍"
+
+msgid "Rose"
+msgstr "玫瑰"
+
+msgid "Ivory"
+msgstr "象牙"
+
+msgid "Neutrals"
+msgstr "中性色"
+
+msgid "Linen"
+msgstr "亞麻"
+
+msgid "Stone"
+msgstr "石灰"
+
+msgid "Taupe"
+msgstr "灰褐"
+
+msgid "Birth"
+msgstr "出生"
+
+msgid "Christening"
+msgstr "領洗"
+
+msgid "Death"
+msgstr "死亡"
+
+msgid "Burial"
+msgstr "埋葬"
+
+msgid "Cremation"
+msgstr "火葬"
+
+msgid "Adoption"
+msgstr "收養"
+
+msgid "Baptism"
+msgstr "洗禮"
+
+msgid "Bar mitzvah"
+msgstr "受誡禮（男）"
+
+msgid "Bat mitzvah"
+msgstr "受誡禮（女）"
+
+msgid "Blessing"
+msgstr "祝福"
+
+msgid "Adult christening"
+msgstr "成人領洗"
+
+msgid "Confirmation"
+msgstr "堅信禮"
+
+msgid "First communion"
+msgstr "初領聖體"
+
+msgid "Ordination"
+msgstr "按立"
+
+msgid "Naturalization"
+msgstr "歸化"
+
+msgid "Emigration"
+msgstr "移出"
+
+msgid "Immigration"
+msgstr "移入"
+
+msgid "Census"
+msgstr "人口普查"
+
+msgid "Probate"
+msgstr "遺囑認證"
+
+msgid "Will"
+msgstr "遺囑"
+
+msgid "Graduation"
+msgstr "畢業"
+
+msgid "Retirement"
+msgstr "退休"
+
+msgid "Residence"
+msgstr "居住地"
+
+msgid "Occupation"
+msgstr "職業"
+
+msgid "Education"
+msgstr "教育"
+
+msgid "Religion"
+msgstr "宗教"
+
+msgid "Nationality"
+msgstr "國籍"
+
+msgid "Caste"
+msgstr "種姓"
+
+msgid "Description"
+msgstr "描述"
+
+msgid "ID number"
+msgstr "身分證號碼"
+
+msgid "Property"
+msgstr "財產"
+
+msgid "Social Security number"
+msgstr "社會安全號碼"
+
+msgid "Other event"
+msgstr "其他事項"
+
+msgid "Other fact"
+msgstr "其他事實"
+
+msgid "Baptism (LDS)"
+msgstr "洗禮（後期聖徒）"
+
+msgid "Confirmation (LDS)"
+msgstr "證實（後期聖徒）"
+
+msgid "Endowment (LDS)"
+msgstr "恩道門（後期聖徒）"
+
+msgid "Sealing to parents (LDS)"
+msgstr "印證給父母（後期聖徒）"
+
+msgid "Sealing to spouse (LDS)"
+msgstr "印證給配偶（後期聖徒）"
+
+msgid "Marriage"
+msgstr "結婚"
+
+msgid "Engagement"
+msgstr "訂婚"
+
+msgid "Marriage banns"
+msgstr "結婚預告"
+
+msgid "Marriage contract"
+msgstr "婚約"
+
+msgid "Marriage license"
+msgstr "結婚許可證"
+
+msgid "Marriage settlement"
+msgstr "婚姻財產協議"
+
+msgid "Divorce"
+msgstr "離婚"
+
+msgid "Divorce filed"
+msgstr "申請離婚"
+
+msgid "Annulment"
+msgstr "婚姻無效"
+
+msgid "Male"
+msgstr "男性"
+
+msgid "Female"
+msgstr "女性"
+
+msgid "Unknown"
+msgstr "不詳"
+
+msgid "Pedigree chart"
+msgstr "世系表"
+
+msgid "Family group record"
+msgstr "家庭團體紀錄"
+
+msgid "Ancestors, numbered"
+msgstr "祖先（附編號）"
+
+msgid "Descendants"
+msgstr "子孫"
+
+msgid "Individual summary"
+msgstr "個人摘要"
+
+msgid "All surnames"
+msgstr "所有姓氏"
+
+msgid "Normal"
+msgstr "一般"
+
+msgid "Large"
+msgstr "大"
+
+msgid "Extra large"
+msgstr "特大"
+
+msgid "Unsaved changes"
+msgstr "有未儲存的變更"
+
+msgid "All changes saved"
+msgstr "所有變更皆已儲存"
+
+msgid "Sample, not saved"
+msgstr "範例，未儲存"
+
+msgid "Nobody here yet."
+msgstr "這裡還沒有人。"
+
+msgid "No one matches that search."
+msgstr "沒有人符合這個搜尋。"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Name"
+msgstr "姓名"
+
+msgid "Sex"
+msgstr "性別"
+
+msgid "Birth place"
+msgstr "出生地點"
+
+msgid "Husband"
+msgstr "丈夫"
+
+msgid "Wife"
+msgstr "妻子"
+
+msgid "Married"
+msgstr "結婚"
+
+msgid "Place"
+msgstr "地點"
+
+msgid "Children"
+msgstr "子女"
+
+msgid "Family order: the home person, then parents, grandparents and the rest of the family"
+msgstr "家庭順序：起始之人，然後是父母、祖父母和家中其他人"
+
+msgid "Present order, closing the gaps"
+msgstr "目前的順序，補滿空號"
+
+msgid "Alphabetical by surname"
+msgstr "依姓氏字母順序"
+
+msgid "Save your changes?"
+msgstr "要儲存變更嗎？"
+
+msgid "This family file has changes that haven't been saved."
+msgstr "這個家庭檔案有尚未儲存的變更。"
+
+msgid "Save"
+msgstr "儲存"
+
+msgid "Don't save"
+msgstr "不要儲存"
+
+msgid "They'll be taken out of their families and their details removed. Undo brings them back until you close this file."
+msgstr "他們會從家庭中移除，詳細資料也會刪除。在關閉這個檔案前，「復原」都可以恢復。"
+
+msgid "Delete"
+msgstr "刪除"
+
+msgid "Delete this source?"
+msgstr "要刪除這個來源嗎？"
+
+msgid "Merge these two people?"
+msgstr "要合併這兩個人嗎？"
+
+msgid "Merge"
+msgstr "合併"
+
+msgid "Less"
+msgstr "收起"
+
+msgid "More"
+msgstr "更多"
+
+msgid "Add a source"
+msgstr "增加來源"
+
+msgid "Edit source"
+msgstr "編輯來源"
+
+msgid " and "
+msgstr " 和"
+
+msgid "(no title)"
+msgstr "（無標題）"
+
+msgid "Save the report"
+msgstr "儲存報告"
+
+msgid "Web page"
+msgstr "網頁"
+
+msgid "Opened {file}"
+msgstr "已開啟 {file}"
+
+msgid ""
+"Brought in {people}, {families} and {sources}. The original GEDCOM file wasn't changed.\n"
+"\n"
+"Choose File, then Save, to keep this as a family file."
+msgstr ""
+"已匯入 {people}、{families} 和 {sources}。原來的 GEDCOM 檔案沒有變更。\n"
+"\n"
+"若要保留為家庭檔案，請選擇「檔案」，再選「儲存」。"
+
+msgid "{n} person"
+msgid_plural "{n} people"
+msgstr[0] "{n} 個人"
+
+msgid "{n} family"
+msgid_plural "{n} families"
+msgstr[0] "{n} 個家庭"
+
+msgid "{n} source"
+msgid_plural "{n} sources"
+msgstr[0] "{n} 個來源"
+
+msgid "Things to check:"
+msgstr "需要檢查的地方："
+
+msgid "and {n} more"
+msgid_plural "and {n} more"
+msgstr[0] "還有 {n} 項"
+
+msgid "Open a family file"
+msgstr "開啟家庭檔案"
+
+msgid "Family files and GEDCOM"
+msgstr "家庭檔案和 GEDCOM"
+
+msgid "Import a GEDCOM file"
+msgstr "匯入 GEDCOM 檔案"
+
+msgid "GEDCOM"
+msgstr "GEDCOM"
+
+msgid "Save the family file"
+msgstr "儲存家庭檔案"
+
+msgid "Family file"
+msgstr "家庭檔案"
+
+msgid "Saved {file}"
+msgstr "已儲存 {file}"
+
+msgid "Export as GEDCOM"
+msgstr "匯出為 GEDCOM"
+
+msgid "Exported {file}"
+msgstr "已匯出 {file}"
+
+msgid "Sample family"
+msgstr "範例家庭"
+
+msgid "Not saved yet"
+msgstr "尚未儲存"
+
+msgid "OK"
+msgstr "確定"
+
+msgid "Delete {name}?"
+msgstr "要刪除 {name} 嗎？"
+
+msgid "{name} (ID {drop}) will be merged into {other} (ID {keep}). Their events, sources, notes and families carry over. Undo separates them again until you close this file."
+msgstr "{name}（ID {drop}）將合併到 {other}（ID {keep}）。事項、來源、備註和家庭都會保留。在關閉這個檔案前，「復原」都可以再分開。"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Add a person"
+msgstr "增加一個人"
+
+msgid "Edit person"
+msgstr "編輯個人"
+
+msgid "Events"
+msgstr "事項"
+
+msgid "Dates can be written freely, such as 12 MAR 1850, ABT 1850 or BEF 1900."
+msgstr "日期可以自由書寫，例如 12 MAR 1850、ABT 1850 或 BEF 1900。"
+
+msgid "Notes"
+msgstr "備註"
+
+msgid "Sources for this person"
+msgstr "此人的來源"
+
+msgid "Photos"
+msgstr "相片"
+
+msgid "Remove"
+msgstr "移除"
+
+msgid "Add a photo…"
+msgstr "增加相片…"
+
+msgid "Choose a photo"
+msgstr "選擇相片"
+
+msgid "Pictures"
+msgstr "圖片"
+
+msgid "Edit marriage"
+msgstr "編輯婚姻"
+
+msgid "Children, in order"
+msgstr "子女，依順序"
+
+msgid "None recorded"
+msgstr "沒有紀錄"
+
+msgid "Up"
+msgstr "向上"
+
+msgid "Down"
+msgstr "向下"
+
+msgid "Sources for this marriage"
+msgstr "這次婚姻的來源"
+
+msgid "Create a new person"
+msgstr "建立新的人"
+
+msgid "Or choose someone already in this file:"
+msgstr "或選擇已在這個檔案中的人："
+
+msgid "Search names"
+msgstr "搜尋姓名"
+
+msgid "No one matches."
+msgstr "沒有人符合。"
+
+msgid "Words from the source"
+msgstr "來源中的文字"
+
+msgid "A source needs a title."
+msgstr "來源需要標題。"
+
+msgid "Renumber people"
+msgstr "為人重新編號"
+
+msgid "Gives everyone new ID numbers 1, 2, 3... with no gaps, and numbers the marriages to match. Every link between people stays the same."
+msgstr "為每個人重新編上 1、2、3... 不留空號的 ID 號碼，並為婚姻編上相對應的號碼。人與人之間的所有連結都保持不變。"
+
+msgid "Each person keeps their old ID, shown on their card and written to exported GEDCOM files. Undo puts everything back."
+msgstr "每個人的舊 ID 都會保留，顯示在卡片上，也會寫入匯出的 GEDCOM 檔案。「復原」會讓一切恢復原狀。"
+
+msgid "First people after renumbering:"
+msgstr "重新編號後的前幾個人："
+
+msgid "New ID"
+msgstr "新 ID"
+
+msgid "Now"
+msgstr "目前"
+
+msgid "Renumber"
+msgstr "重新編號"
+
+msgid "Page or where in the source"
+msgstr "頁碼或在來源中的位置"
+
+msgid "Words from the source (optional)"
+msgstr "來源中的文字（選填）"
+
+msgid "Cite a source"
+msgstr "引用來源"
+
+msgid "New source…"
+msgstr "新來源…"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Details"
+msgstr "詳細資料"
+
+msgid "What kind of event"
+msgstr "事項的種類"
+
+msgid "Temple"
+msgstr "聖殿"
+
+msgid "Note about this event"
+msgstr "關於這個事項的備註"
+
+msgid "Add event"
+msgstr "增加事項"
+
+msgid "{name} isn't a family file this program can read."
+msgstr "{name} 不是這個程式能讀取的家庭檔案。"
+
+msgid "{name} was saved by a newer version of this program. Please update it first."
+msgstr "{name} 是用這個程式的較新版本儲存的。請先更新程式。"
+
+msgid "Possible duplicates"
+msgstr "可能的重複"
+
+msgid "Finds people with the same name whose birth years don't rule out a match. You choose who to merge."
+msgstr "找出姓名相同、且出生年份不排除是同一人的人。由你決定合併誰。"
+
+msgid "Check for duplicates"
+msgstr "尋找重複"
+
+msgid "No possible duplicates found."
+msgstr "沒有找到可能的重複。"
+
+msgid "Keep this one and merge"
+msgstr "保留這位並合併"
+
+msgid "These are different people"
+msgstr "這是不同的人"
+
+msgid "This family file is empty"
+msgstr "這個家庭檔案是空的"
+
+msgid "Add the first person, or import a GEDCOM file."
+msgstr "請增加第一個人，或匯入 GEDCOM 檔案。"
+
+msgid "Add the first person"
+msgstr "增加第一個人"
+
+msgid "Also has parents: {names}"
+msgstr "另有父母：{names}"
+
+msgid "Show these first"
+msgstr "先顯示這對父母"
+
+msgid " (old ID {old})"
+msgstr " （舊 ID {old}）"
+
+msgid "Edit"
+msgstr "編輯"
+
+msgid "Delete…"
+msgstr "刪除…"
+
+msgid "Note: {note}"
+msgstr "備註：{note}"
+
+msgid "No marriage details"
+msgstr "沒有婚姻的詳細資料"
+
+msgid "Remove spouse"
+msgstr "移除配偶"
+
+msgid "Separates them. Nobody gets deleted."
+msgstr "將兩人分開。不會刪除任何人。"
+
+msgid "Marriage {at} of {count}"
+msgstr "第 {at} 次婚姻，共 {count} 次"
+
+msgid "Unknown spouse"
+msgstr "不明的配偶"
+
+msgid "Add another spouse"
+msgstr "增加另一位配偶"
+
+msgid "Takes them out of this family. Nobody gets deleted."
+msgstr "將他們移出這個家庭。不會刪除任何人。"
+
+msgid "Nobody to show."
+msgstr "沒有人可顯示。"
+
+msgid "No marriages or families recorded yet."
+msgstr "還沒有紀錄任何婚姻或家庭。"
+
+msgid "No sources yet. Sources record where your information came from."
+msgstr "還沒有來源。來源記錄你的資料從哪裡來。"
+
+msgid "Used {n} time"
+msgid_plural "Used {n} times"
+msgstr[0] "使用了 {n} 次"
+
+msgid "People or events still cite this source."
+msgstr "仍有人或事項引用這個來源。"
+
+msgid "File"
+msgstr "檔案"
+
+msgid "New family file"
+msgstr "新的家庭檔案"
+
+msgid "Open…"
+msgstr "開啟…"
+
+msgid "Save as…"
+msgstr "另存新檔…"
+
+msgid "Import GEDCOM…"
+msgstr "匯入 GEDCOM…"
+
+msgid "Export GEDCOM…"
+msgstr "匯出 GEDCOM…"
+
+msgid "Quit"
+msgstr "結束"
+
+msgid "Undo"
+msgstr "復原"
+
+msgid "Redo"
+msgstr "重做"
+
+msgid "Add a person…"
+msgstr "增加一個人…"
+
+msgid "Edit this person…"
+msgstr "編輯此人…"
+
+msgid "Delete this person…"
+msgstr "刪除此人…"
+
+msgid "Make this person the home person"
+msgstr "將此人設為起始之人"
+
+msgid "Renumber people…"
+msgstr "為人重新編號…"
+
+msgid "View"
+msgstr "檢視"
+
+msgid "Text size"
+msgstr "文字大小"
+
+msgid "Colors"
+msgstr "配色"
+
+msgid "Language"
+msgstr "語言"
+
+msgid "Help"
+msgstr "說明"
+
+msgid ""
+"Version {version}\n"
+"\n"
+"Keep your family history: people, marriages, events, sources, notes and photos. Share it with other family history programs using GEDCOM files."
+msgstr ""
+"版本 {version}\n"
+"\n"
+"保存你的家族歷史：人、婚姻、事項、來源、備註和相片。透過 GEDCOM 檔案與其他家族歷史程式分享。"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Go to the home person, {name}"
+msgstr "前往起始之人 {name}"
+
+msgid "Home"
+msgstr "起始"
+
+msgid "{n} marriage"
+msgid_plural "{n} marriages"
+msgstr[0] "{n} 次婚姻"
+
+msgid "This is a made-up sample family, here to show how things work."
+msgstr "這是一個虛構的範例家庭，用來展示各項功能。"
+
+msgid "Import my GEDCOM file"
+msgstr "匯入我的 GEDCOM 檔案"
+
+msgid "Start a new file"
+msgstr "開始新的檔案"
+
+msgid "Search names, places, years"
+msgstr "搜尋姓名、地點、年份"
+
+msgid "{shown} of {n} person"
+msgid_plural "{shown} of {n} people"
+msgstr[0] "{n} 人中的 {shown} 人"
+
+msgid "Not recorded"
+msgstr "沒有紀錄"
+
+msgid "Choose a person to see their ancestors."
+msgstr "選擇一個人來查看他的祖先。"
+
+msgid "Ancestors of {name}"
+msgstr "{name} 的祖先"
+
+msgid "Generations"
+msgstr "代數"
+
+msgid "Click someone to move them to the front. Double-click to see their family."
+msgstr "按一下某人可把他移到最前面。按兩下可查看他的家庭。"
+
+msgid "Print…"
+msgstr "列印…"
+
+msgid "Opens in your web browser, where you can print or save a PDF."
+msgstr "在網頁瀏覽器中開啟，可以列印或儲存為 PDF。"
+
+msgid "Save as web page…"
+msgstr "儲存為網頁…"
+
+msgid "Choose a person first."
+msgstr "請先選擇一個人。"
+
+msgid "Ready"
+msgstr "就緒"
+
+msgid "b. {year}"
+msgstr "生於 {year}"
+
+msgid "d. {year}"
+msgstr "卒於 {year}"
+
+msgid "Home person"
+msgstr "起始之人"
+
+msgid "generations"
+msgstr "代"

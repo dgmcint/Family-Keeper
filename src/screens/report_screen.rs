@@ -1,5 +1,6 @@
 //! The Reports screen. (Named so it is not confused with the reports themselves, in src/reports.rs.)
 
+use crate::i18n::tr;
 use crate::app::{Action, FamilyApp};
 use crate::reports;
 use crate::app::colors;
@@ -8,27 +9,27 @@ use eframe::egui::{self, CornerRadius, Margin, RichText, Stroke};
 pub(crate) fn reports_tab(app: &mut FamilyApp, ui: &mut egui::Ui) {
     ui.horizontal_wrapped(|ui| {
         egui::ComboBox::from_id_salt("report kind")
-            .selected_text(app.report.kind.label())
+            .selected_text(tr(app.report.kind.label()))
             .width(210.0)
             .show_ui(ui, |ui| {
                 for kind in reports::Kind::ALL {
-                    ui.selectable_value(&mut app.report.kind, kind, kind.label());
+                    ui.selectable_value(&mut app.report.kind, kind, tr(kind.label()));
                 }
             });
         if app.report.kind.uses_generations() {
-            ui.add(egui::DragValue::new(&mut app.report.generations).range(1..=12).suffix(" generations"));
+            ui.add(egui::DragValue::new(&mut app.report.generations).range(1..=12).suffix(format!(" {}", tr("generations"))));
         }
-        if ui.button("Print…").on_hover_text("Opens in your web browser, where you can print or save a PDF.").clicked() {
+        if ui.button(tr("Print…")).on_hover_text(tr("Opens in your web browser, where you can print or save a PDF.")).clicked() {
             app.actions.push(Action::PrintReport);
         }
-        if ui.button("Save as web page…").clicked() {
+        if ui.button(tr("Save as web page…")).clicked() {
             app.actions.push(Action::SaveReport);
         }
     });
     ui.add_space(6.0);
     app.refresh_report();
     let Some(report) = &app.report.built else {
-        ui.label(RichText::new("Choose a person first.").color(colors::pal().muted));
+        ui.label(RichText::new(tr("Choose a person first.")).color(colors::pal().muted));
         return;
     };
     egui::Frame::new()

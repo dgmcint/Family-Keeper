@@ -6,6 +6,7 @@
 //! - `data`: the family file and the records in it
 //! - `formats`: Family Keeper's own .fkf files and GEDCOM
 //! - `reports`: the printable reports
+//! - `i18n`: the menus and windows in other languages
 
 // No black console window behind the program on Windows.
 #![cfg_attr(all(windows, not(debug_assertions)), windows_subsystem = "windows")]
@@ -14,6 +15,7 @@ mod app;
 mod data;
 mod dialogs;
 mod formats;
+mod i18n;
 mod reports;
 mod screens;
 
@@ -36,6 +38,11 @@ fn main() -> eframe::Result {
             // Starts in a colour scheme by name, for pictures: Paper, Navy, Leather...
             if let Some(name) = args.next() {
                 colors::set_name(&name.to_string_lossy());
+            }
+        } else if arg == "--lang" {
+            // Starts in a language by code, for pictures: de, es, fr, ja, pt-BR, ru...
+            if let Some(code) = args.next() {
+                i18n::set_code(&code.to_string_lossy());
             }
         } else if arg == "--show" {
             // Starts on a given screen: pedigree, people, reports, edit-person...

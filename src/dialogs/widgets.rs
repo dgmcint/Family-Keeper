@@ -1,5 +1,6 @@
 //! Small building blocks the windows share.
 
+use crate::i18n::tr;
 use super::*;
 use crate::app::Action;
 use crate::data::*;
@@ -8,7 +9,7 @@ use eframe::egui::{self, vec2};
 use std::collections::BTreeMap;
 
 pub(crate) fn field(ui: &mut egui::Ui, label: &str, text: &mut String) {
-    ui.label(label);
+    ui.label(tr(label));
     ui.add(egui::TextEdit::singleline(text).desired_width(f32::INFINITY));
     ui.end_row();
 }
@@ -34,12 +35,12 @@ pub(crate) fn citations_editor(
                             ui.selectable_value(&mut c.source, s.id, title(s));
                         }
                     });
-                ui.add(egui::TextEdit::singleline(&mut c.page).hint_text("Page or where in the source").desired_width(170.0));
-                if ui.small_button("Remove").clicked() {
+                ui.add(egui::TextEdit::singleline(&mut c.page).hint_text(tr("Page or where in the source")).desired_width(170.0));
+                if ui.small_button(tr("Remove")).clicked() {
                     remove = Some(i);
                 }
             });
-            ui.add(egui::TextEdit::singleline(&mut c.text).hint_text("Words from the source (optional)").desired_width(f32::INFINITY));
+            ui.add(egui::TextEdit::singleline(&mut c.text).hint_text(tr("Words from the source (optional)")).desired_width(f32::INFINITY));
         });
     }
     if let Some(i) = remove {
@@ -47,12 +48,12 @@ pub(crate) fn citations_editor(
     }
     ui.horizontal(|ui| {
         let first = sources.keys().next().copied();
-        if ui.add_enabled(first.is_some(), egui::Button::new("Cite a source").small()).clicked() {
+        if ui.add_enabled(first.is_some(), egui::Button::new(tr("Cite a source")).small()).clicked() {
             if let Some(source) = first {
                 cites.push(Citation { source, ..Default::default() });
             }
         }
-        if ui.small_button("New source…").clicked() {
+        if ui.small_button(tr("New source…")).clicked() {
             actions.push(Action::NewSource);
         }
     });
@@ -77,25 +78,25 @@ pub(crate) fn events_editor(
                     egui::Layout::left_to_right(egui::Align::Center),
                     |ui| {
                         ui.set_width(150.0);
-                        ui.add(egui::Label::new(e.label()).truncate());
+                        ui.add(egui::Label::new(tr(&e.label())).truncate());
                     },
                 );
-                ui.add(egui::TextEdit::singleline(&mut e.date).hint_text("Date").desired_width(120.0));
+                ui.add(egui::TextEdit::singleline(&mut e.date).hint_text(tr("Date")).desired_width(120.0));
                 let right = 118.0;
                 let place_width = (ui.available_width() - right).max(80.0);
-                ui.add(egui::TextEdit::singleline(&mut e.place).hint_text("Place").desired_width(place_width));
+                ui.add(egui::TextEdit::singleline(&mut e.place).hint_text(tr("Place")).desired_width(place_width));
                 let open = *expanded == Some(i);
-                if ui.small_button(if open { "Less" } else { "More" }).clicked() {
+                if ui.small_button(tr(if open { "Less" } else { "More" })).clicked() {
                     *expanded = if open { None } else { Some(i) };
                 }
-                if !protected.contains(&e.tag.as_str()) && ui.small_button("Remove").clicked() {
+                if !protected.contains(&e.tag.as_str()) && ui.small_button(tr("Remove")).clicked() {
                     remove = Some(i);
                 }
             });
             if takes_details(&e.tag) || (!e.value.is_empty() && e.value != "Y") {
                 ui.horizontal(|ui| {
                     ui.add_space(158.0);
-                    ui.add(egui::TextEdit::singleline(&mut e.value).hint_text("Details").desired_width(f32::INFINITY));
+                    ui.add(egui::TextEdit::singleline(&mut e.value).hint_text(tr("Details")).desired_width(f32::INFINITY));
                 });
             }
             if *expanded == Some(i) {
@@ -105,12 +106,12 @@ pub(crate) fn events_editor(
                     .inner_margin(10)
                     .show(ui, |ui| {
                         if e.tag == "EVEN" || e.tag == "FACT" {
-                            ui.add(egui::TextEdit::singleline(&mut e.kind).hint_text("What kind of event").desired_width(f32::INFINITY));
+                            ui.add(egui::TextEdit::singleline(&mut e.kind).hint_text(tr("What kind of event")).desired_width(f32::INFINITY));
                         }
                         if is_lds_event(&e.tag) {
-                            ui.add(egui::TextEdit::singleline(&mut e.temple).hint_text("Temple").desired_width(f32::INFINITY));
+                            ui.add(egui::TextEdit::singleline(&mut e.temple).hint_text(tr("Temple")).desired_width(f32::INFINITY));
                         }
-                        ui.add(egui::TextEdit::multiline(&mut e.note).hint_text("Note about this event").desired_rows(2).desired_width(f32::INFINITY));
+                        ui.add(egui::TextEdit::multiline(&mut e.note).hint_text(tr("Note about this event")).desired_rows(2).desired_width(f32::INFINITY));
                         citations_editor(ui, sources, &mut e.citations, actions);
                     });
             }
@@ -122,14 +123,14 @@ pub(crate) fn events_editor(
     }
     ui.horizontal(|ui| {
         egui::ComboBox::from_id_salt("new event")
-            .selected_text(event_label(new_event))
+            .selected_text(tr(event_label(new_event)))
             .width(200.0)
             .show_ui(ui, |ui| {
                 for tag in offered {
-                    ui.selectable_value(new_event, *tag, event_label(tag));
+                    ui.selectable_value(new_event, *tag, tr(event_label(tag)));
                 }
             });
-        if ui.button("Add event").clicked() {
+        if ui.button(tr("Add event")).clicked() {
             events.push(Event::new(new_event));
             *expanded = Some(events.len() - 1);
         }

@@ -220,8 +220,8 @@ impl Person {
     pub fn lifespan(&self) -> String {
         match (self.birth_year(), self.death_year()) {
             (Some(b), Some(d)) => format!("{b}–{d}"),
-            (Some(b), None) => format!("b. {b}"),
-            (None, Some(d)) => format!("d. {d}"),
+            (Some(b), None) => crate::i18n::trf("b. {year}", &[("year", &b)]),
+            (None, Some(d)) => crate::i18n::trf("d. {year}", &[("year", &d)]),
             (None, None) => String::new(),
         }
     }

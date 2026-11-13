@@ -1,0 +1,225 @@
+# Family Keeper: Portuguese (Portugal).
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: pt-PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Deleted. Undo brings them back."
+msgstr "Eliminado. Desfazer traz de volta."
+
+msgid "Deleted the source."
+msgstr "A fonte foi eliminada."
+
+msgid "Saved the report."
+msgstr "O relatório foi guardado."
+
+msgid "Couldn't save the report"
+msgstr "Não foi possível guardar o relatório"
+
+msgid "Started a new family file"
+msgstr "Um novo ficheiro de família foi iniciado"
+
+msgid "Couldn't open that file"
+msgstr "Não foi possível abrir esse ficheiro"
+
+msgid "Couldn't save"
+msgstr "Não foi possível guardar"
+
+msgid "Saved the source."
+msgstr "A fonte foi guardada."
+
+msgid "Saved the changes."
+msgstr "As alterações foram guardadas."
+
+msgid "Saved the marriage."
+msgstr "O casamento foi guardado."
+
+msgid "Given names"
+msgstr "Nomes próprios"
+
+msgid "Surname"
+msgstr "Apelido"
+
+msgid "About Family Keeper"
+msgstr "Acerca do Family Keeper"
+
+msgid "Duplicates"
+msgstr "Duplicados"
+
+msgid "Burgundy"
+msgstr "Bordéus"
+
+msgid "Retirement"
+msgstr "Reforma"
+
+msgid "Marriage banns"
+msgstr "Banhos"
+
+msgid "Marriage settlement"
+msgstr "Convenção antenupcial"
+
+msgid "Family group record"
+msgstr "Registo de grupo familiar"
+
+msgid "All surnames"
+msgstr "Todos os apelidos"
+
+msgid "Unsaved changes"
+msgstr "Alterações não guardadas"
+
+msgid "All changes saved"
+msgstr "Todas as alterações guardadas"
+
+msgid "Sample, not saved"
+msgstr "Exemplo, não guardado"
+
+msgid "Alphabetical by surname"
+msgstr "Ordem alfabética do apelido"
+
+msgid "Save your changes?"
+msgstr "Guardar as alterações?"
+
+msgid "This family file has changes that haven't been saved."
+msgstr "Este ficheiro de família tem alterações que não foram guardadas."
+
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Don't save"
+msgstr "Não guardar"
+
+msgid "They'll be taken out of their families and their details removed. Undo brings them back until you close this file."
+msgstr "Serão retirados das famílias e os seus dados apagados. Desfazer os traz de volta até fechar este ficheiro."
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Delete this source?"
+msgstr "Eliminar esta fonte?"
+
+msgid "Save the report"
+msgstr "Guardar o relatório"
+
+msgid ""
+"Brought in {people}, {families} and {sources}. The original GEDCOM file wasn't changed.\n"
+"\n"
+"Choose File, then Save, to keep this as a family file."
+msgstr ""
+"Foram trazidos {people}, {families} e {sources}. O ficheiro GEDCOM original não foi alterado.\n"
+"\n"
+"Escolha Ficheiro e depois Guardar para mantê-lo como ficheiro de família."
+
+msgid "Open a family file"
+msgstr "Abrir um ficheiro de família"
+
+msgid "Family files and GEDCOM"
+msgstr "Ficheiros de família e GEDCOM"
+
+msgid "Import a GEDCOM file"
+msgstr "Importar um ficheiro GEDCOM"
+
+msgid "Save the family file"
+msgstr "Guardar o ficheiro de família"
+
+msgid "Family file"
+msgstr "Ficheiro de família"
+
+msgid "Saved {file}"
+msgstr "{file} guardado"
+
+msgid "Not saved yet"
+msgstr "Ainda não guardado"
+
+msgid "Delete {name}?"
+msgstr "Eliminar {name}?"
+
+msgid "{name} (ID {drop}) will be merged into {other} (ID {keep}). Their events, sources, notes and families carry over. Undo separates them again until you close this file."
+msgstr "{name} (ID {drop}) será combinado com {other} (ID {keep}). Eventos, fontes, notas e famílias são mantidos. Desfazer os separa de novo até fechar este ficheiro."
+
+msgid "None recorded"
+msgstr "Nada registado"
+
+msgid "Or choose someone already in this file:"
+msgstr "Ou escolha alguém que já está neste ficheiro:"
+
+msgid "Each person keeps their old ID, shown on their card and written to exported GEDCOM files. Undo puts everything back."
+msgstr "Cada pessoa mantém o seu ID antigo, que aparece no cartão e é gravado nos ficheiros GEDCOM exportados. Desfazer volta tudo como estava."
+
+msgid "{name} isn't a family file this program can read."
+msgstr "{name} não é um ficheiro de família que este programa consiga ler."
+
+msgid "{name} was saved by a newer version of this program. Please update it first."
+msgstr "{name} foi guardado por uma versão mais nova deste programa. Atualize o programa primeiro."
+
+msgid "Possible duplicates"
+msgstr "Possíveis duplicados"
+
+msgid "Finds people with the same name whose birth years don't rule out a match. You choose who to merge."
+msgstr "Encontra pessoas com o mesmo nome cujos anos de nascimento não descartam que sejam a mesma. Escolhe quem combinar."
+
+msgid "Check for duplicates"
+msgstr "Procurar duplicados"
+
+msgid "No possible duplicates found."
+msgstr "Não foi encontrado nenhum possível duplicado."
+
+msgid "This family file is empty"
+msgstr "Este ficheiro de família está vazio"
+
+msgid "Add the first person, or import a GEDCOM file."
+msgstr "Adicione a primeira pessoa ou importe um ficheiro GEDCOM."
+
+msgid "Delete…"
+msgstr "Eliminar…"
+
+msgid "Separates them. Nobody gets deleted."
+msgstr "Separa os dois. Ninguém é eliminado."
+
+msgid "Takes them out of this family. Nobody gets deleted."
+msgstr "Tira-os desta família. Ninguém é eliminado."
+
+msgid "No sources yet. Sources record where your information came from."
+msgstr "Ainda não há fontes. As fontes registam de onde vieram as suas informações."
+
+msgid "File"
+msgstr "Ficheiro"
+
+msgid "New family file"
+msgstr "Novo ficheiro de família"
+
+msgid "Save as…"
+msgstr "Guardar como…"
+
+msgid "Delete this person…"
+msgstr "Eliminar esta pessoa…"
+
+msgid "View"
+msgstr "Ver"
+
+msgid ""
+"Version {version}\n"
+"\n"
+"Keep your family history: people, marriages, events, sources, notes and photos. Share it with other family history programs using GEDCOM files."
+msgstr ""
+"Versão {version}\n"
+"\n"
+"Guarde a história da sua família: pessoas, casamentos, eventos, fontes, notas e fotos. Partilhe-a com outros programas de história da família usando ficheiros GEDCOM."
+
+msgid "Import my GEDCOM file"
+msgstr "Importar o meu ficheiro GEDCOM"
+
+msgid "Start a new file"
+msgstr "Começar um ficheiro novo"
+
+msgid "Not recorded"
+msgstr "Não registado"
+
+msgid "Click someone to move them to the front. Double-click to see their family."
+msgstr "Clique em alguém para trazê-lo para a frente. Faça duplo clique para ver a família."
+
+msgid "Opens in your web browser, where you can print or save a PDF."
+msgstr "Abre no seu navegador, onde pode imprimir ou guardar como PDF."
+
+msgid "Save as web page…"
+msgstr "Guardar como página da web…"

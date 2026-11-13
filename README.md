@@ -65,9 +65,20 @@ GitHub builds all three systems and attaches the downloads to a new release.
 - Files from other genealogy programs can't be opened directly. Export them as GEDCOM from that
   program first, then import the GEDCOM here.
 
+## Languages
+
+Menus and windows come in **English, Deutsch, Español (España and Latinoamérica), Français,
+Norsk, Português (Brasil and Portugal), Русский, Svenska, 日本語, 한국어 and 中文** (Traditional).
+Choose **View → Language**. Printed reports are in English.
+
+The translations are in the `lang` folder as standard `.po` files, sharing their key terms with
+PAF Classic (see `lang/GLOSSARY.md`). They haven't yet been reviewed by native speakers;
+corrections are welcome.
+
 ## Options
 
 - `--screenshot <file.png>` starts normally, draws 120 frames, saves a picture and exits.
+- `--lang <code>` starts in a language: de, es, es-419, fr, nb, pt-BR, pt-PT, ru, sv, ja, ko or zh-Hant.
 - `--show <screen>` starts on one screen: family, pedigree, people, marriages, sources, duplicates,
   reports, edit-person, edit-marriage, add-relative, edit-source, delete or empty.
 

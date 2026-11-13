@@ -1,5 +1,6 @@
 //! Opening, saving and exporting family files, and saving pictures.
 
+use crate::i18n::{tr, tr_n, trf};
 use super::*;
 use crate::data::*;
 use crate::formats::fkf;
@@ -31,23 +32,25 @@ impl FamilyApp {
                 let imported = loaded.imported;
                 let warnings = loaded.warnings;
                 self.install(loaded.db, loaded.path);
-                self.status = format!("Opened {}", path.file_name().unwrap_or_default().to_string_lossy());
+                self.status = trf("Opened {file}", &[("file", &path.file_name().unwrap_or_default().to_string_lossy())]);
                 if imported {
                     self.dirty = true;
-                    let mut text = format!(
-                        "Brought in {} people, {} families and {} sources. The original GEDCOM file wasn't changed.\n\nChoose File, then Save, to keep this as a family file.",
-                        self.db.people.len(),
-                        self.db.families.len(),
-                        self.db.sources.len()
+                    let mut text = trf(
+                        "Brought in {people}, {families} and {sources}. The original GEDCOM file wasn't changed.\n\nChoose File, then Save, to keep this as a family file.",
+                        &[
+                            ("people", &tr_n("{n} person", "{n} people", self.db.people.len(), &[])),
+                            ("families", &tr_n("{n} family", "{n} families", self.db.families.len(), &[])),
+                            ("sources", &tr_n("{n} source", "{n} sources", self.db.sources.len(), &[])),
+                        ],
                     );
                     if !warnings.is_empty() {
-                        text.push_str("\n\nThings to check:");
+                        text.push_str(&format!("\n\n{}", tr("Things to check:")));
                         for w in warnings.iter().take(20) {
                             text.push_str("\n• ");
                             text.push_str(w);
                         }
                         if warnings.len() > 20 {
-                            text.push_str(&format!("\n• and {} more", warnings.len() - 20));
+                            text.push_str(&format!("\n• {}", tr_n("and {n} more", "and {n} more", warnings.len() - 20, &[])));
                         }
                     }
                     self.message = Some(("Import finished".into(), text));
@@ -65,8 +68,8 @@ impl FamilyApp {
             }
             Pending::Open => {
                 let picked = rfd::FileDialog::new()
-                    .set_title("Open a family file")
-                    .add_filter("Family files and GEDCOM", &[fkf::FILE_EXTENSION, fkf::OLD_EXTENSION, "ged", "GED", "gedcom"])
+                    .set_title(tr("Open a family file"))
+                    .add_filter(tr("Family files and GEDCOM"), &[fkf::FILE_EXTENSION, fkf::OLD_EXTENSION, "ged", "GED", "gedcom"])
                     .pick_file();
                 if let Some(path) = picked {
                     self.load(&path);
@@ -74,8 +77,8 @@ impl FamilyApp {
             }
             Pending::Import => {
                 let picked = rfd::FileDialog::new()
-                    .set_title("Import a GEDCOM file")
-                    .add_filter("GEDCOM", &["ged", "GED", "gedcom"])
+                    .set_title(tr("Import a GEDCOM file"))
+                    .add_filter(tr("GEDCOM"), &["ged", "GED", "gedcom"])
                     .pick_file();
                 if let Some(path) = picked {
                     self.load(&path);
@@ -105,9 +108,9 @@ impl FamilyApp {
 
     pub fn save_as(&mut self) -> bool {
         let picked = rfd::FileDialog::new()
-            .set_title("Save the family file")
-            .set_file_name(format!("Family.{}", fkf::FILE_EXTENSION))
-            .add_filter("Family file", &[fkf::FILE_EXTENSION])
+            .set_title(tr("Save the family file"))
+            .set_file_name(format!("{}.{}", tr("Family"), fkf::FILE_EXTENSION))
+            .add_filter(tr("Family file"), &[fkf::FILE_EXTENSION])
             .save_file();
         match picked {
             Some(path) => self.save_to(with_extension(path, fkf::FILE_EXTENSION)),
@@ -118,7 +121,7 @@ impl FamilyApp {
     fn save_to(&mut self, path: PathBuf) -> bool {
         match fkf::save(&path, &self.db) {
             Ok(()) => {
-                self.status = format!("Saved {}", path.file_name().unwrap_or_default().to_string_lossy());
+                self.status = trf("Saved {file}", &[("file", &path.file_name().unwrap_or_default().to_string_lossy())]);
                 self.path = Some(path);
                 self.dirty = false;
                 self.is_sample = false;
@@ -133,14 +136,14 @@ impl FamilyApp {
 
     pub fn export_gedcom(&mut self) {
         let picked = rfd::FileDialog::new()
-            .set_title("Export as GEDCOM")
-            .set_file_name("Family.ged")
-            .add_filter("GEDCOM", &["ged"])
+            .set_title(tr("Export as GEDCOM"))
+            .set_file_name(format!("{}.ged", tr("Family")))
+            .add_filter(tr("GEDCOM"), &["ged"])
             .save_file();
         if let Some(path) = picked {
             let path = with_extension(path, "ged");
             match fkf::write_safely(&path, crate::formats::gedcom::export(&self.db).as_bytes()) {
-                Ok(()) => self.status = format!("Exported {}", path.file_name().unwrap_or_default().to_string_lossy()),
+                Ok(()) => self.status = trf("Exported {file}", &[("file", &path.file_name().unwrap_or_default().to_string_lossy())]),
                 Err(e) => self.message = Some(("Couldn't export".into(), e)),
             }
         }

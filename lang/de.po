@@ -1,0 +1,1025 @@
+# Family Keeper: German.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Removed from the family. Undo brings them back."
+msgstr "Aus der Familie entfernt. Rückgängig holt sie zurück."
+
+msgid "Removed from the marriage. Undo brings them back."
+msgstr "Aus der Ehe entfernt. Rückgängig holt sie zurück."
+
+msgid "Showing those parents first."
+msgstr "Diese Eltern werden jetzt zuerst gezeigt."
+
+msgid "Deleted. Undo brings them back."
+msgstr "Gelöscht. Rückgängig holt sie zurück."
+
+msgid "Deleted the source."
+msgstr "Quelle gelöscht."
+
+msgid "Renumbered everyone. Undo puts the old IDs back."
+msgstr "Alle wurden neu nummeriert. Rückgängig stellt die alten IDs wieder her."
+
+msgid "Merged. Undo separates them again."
+msgstr "Zusammengeführt. Rückgängig trennt sie wieder."
+
+msgid "The report opened in your web browser, ready to print."
+msgstr "Der Bericht wurde im Webbrowser geöffnet und kann gedruckt werden."
+
+msgid "Saved the report."
+msgstr "Bericht gespeichert."
+
+msgid "Couldn't open the report"
+msgstr "Der Bericht konnte nicht geöffnet werden"
+
+msgid "Couldn't save the report"
+msgstr "Der Bericht konnte nicht gespeichert werden"
+
+msgid "That person is gone."
+msgstr "Diese Person gibt es nicht mehr."
+
+msgid "Started a new family file"
+msgstr "Neue Familiendatei begonnen"
+
+msgid "Import finished"
+msgstr "Import abgeschlossen"
+
+msgid "Couldn't open that file"
+msgstr "Diese Datei konnte nicht geöffnet werden"
+
+msgid "Couldn't save"
+msgstr "Konnte nicht speichern"
+
+msgid "Couldn't export"
+msgstr "Konnte nicht exportieren"
+
+msgid "Finish or cancel the open window first."
+msgstr "Bitte zuerst das offene Fenster abschließen oder abbrechen."
+
+msgid "Undid the last change"
+msgstr "Letzte Änderung rückgängig gemacht"
+
+msgid "Redid the change"
+msgstr "Änderung wiederhergestellt"
+
+msgid "That can't be done"
+msgstr "Das geht nicht"
+
+msgid "Those are the same person."
+msgstr "Das ist dieselbe Person."
+
+msgid "One of them is an ancestor of the other, so they can't be merged."
+msgstr "Einer ist ein Vorfahr des anderen, daher können sie nicht zusammengeführt werden."
+
+msgid "A person can't be their own parent."
+msgstr "Eine Person kann nicht ihr eigener Elternteil sein."
+
+msgid "That parent is already filled in."
+msgstr "Dieser Elternteil ist schon eingetragen."
+
+msgid "That person is listed as a sibling in this family."
+msgstr "Diese Person ist in dieser Familie als Geschwister eingetragen."
+
+msgid "A person can't be their own spouse."
+msgstr "Eine Person kann nicht ihr eigener Ehepartner sein."
+
+msgid "They are already listed as a couple."
+msgstr "Sie sind schon als Paar eingetragen."
+
+msgid "That person is a child in this family."
+msgstr "Diese Person ist ein Kind in dieser Familie."
+
+msgid "A person can't be their own sibling."
+msgstr "Eine Person kann nicht ihr eigenes Geschwister sein."
+
+msgid "Saved the source."
+msgstr "Quelle gespeichert."
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Author"
+msgstr "Autor"
+
+msgid "Publication"
+msgstr "Veröffentlichung"
+
+msgid "Added a person."
+msgstr "Person hinzugefügt."
+
+msgid "Saved the changes."
+msgstr "Änderungen gespeichert."
+
+msgid "Saved the marriage."
+msgstr "Ehe gespeichert."
+
+msgid "Linked them."
+msgstr "Verknüpft."
+
+msgid "Given names"
+msgstr "Vornamen"
+
+msgid "Surname"
+msgstr "Nachname"
+
+msgid "Suffix"
+msgstr "Namenszusatz"
+
+msgid "That marriage is gone."
+msgstr "Diese Ehe gibt es nicht mehr."
+
+msgid "About Family Keeper"
+msgstr "Über Family Keeper"
+
+msgid "Born"
+msgstr "Geb."
+
+msgid "Christened"
+msgstr "Kleinkindtaufe"
+
+msgid "Died"
+msgstr "Gest."
+
+msgid "Buried"
+msgstr "Bestattet"
+
+msgid "PARENTS"
+msgstr "ELTERN"
+
+msgid "THIS PERSON AND SPOUSE"
+msgstr "DIESE PERSON UND EHEPARTNER"
+
+msgid "FATHER"
+msgstr "VATER"
+
+msgid "MOTHER"
+msgstr "MUTTER"
+
+msgid "SPOUSE"
+msgstr "EHEPARTNER"
+
+msgid "CHILDREN"
+msgstr "KINDER"
+
+msgid "BROTHERS AND SISTERS"
+msgstr "GESCHWISTER"
+
+msgid "Family"
+msgstr "Familie"
+
+msgid "Pedigree"
+msgstr "Stammbaum"
+
+msgid "People"
+msgstr "Personen"
+
+msgid "Marriages"
+msgstr "Eheschließungen"
+
+msgid "Sources"
+msgstr "Quellen"
+
+msgid "Duplicates"
+msgstr "Duplikate"
+
+msgid "Reports"
+msgstr "Berichte"
+
+msgid "Add father"
+msgstr "Vater hinzufügen"
+
+msgid "Add mother"
+msgstr "Mutter hinzufügen"
+
+msgid "Add spouse"
+msgstr "Ehepartner hinzufügen"
+
+msgid "Add child"
+msgstr "Kind hinzufügen"
+
+msgid "Add brother or sister"
+msgstr "Bruder oder Schwester hinzufügen"
+
+msgid "Add father for {name}"
+msgstr "Vater von {name} hinzufügen"
+
+msgid "Add mother for {name}"
+msgstr "Mutter von {name} hinzufügen"
+
+msgid "Add spouse for {name}"
+msgstr "Ehepartner von {name} hinzufügen"
+
+msgid "Add child for {name}"
+msgstr "Kind von {name} hinzufügen"
+
+msgid "Add brother or sister for {name}"
+msgstr "Bruder oder Schwester von {name} hinzufügen"
+
+msgid "Paper"
+msgstr "Papier"
+
+msgid "Original"
+msgstr "Original"
+
+msgid "Slate Blue"
+msgstr "Schieferblau"
+
+msgid "Tree pictures"
+msgstr "Baumbilder"
+
+msgid "Navy"
+msgstr "Marineblau"
+
+msgid "Parchment"
+msgstr "Pergament"
+
+msgid "Blue Linen"
+msgstr "Blaues Leinen"
+
+msgid "Leather"
+msgstr "Leder"
+
+msgid "Leaf Green"
+msgstr "Blattgrün"
+
+msgid "Genealogy sites"
+msgstr "Genealogie-Websites"
+
+msgid "Fresh Green"
+msgstr "Frisches Grün"
+
+msgid "Deep Green"
+msgstr "Tiefgrün"
+
+msgid "Sage"
+msgstr "Salbei"
+
+msgid "Earth tones"
+msgstr "Erdtöne"
+
+msgid "Olive"
+msgstr "Oliv"
+
+msgid "Moss"
+msgstr "Moos"
+
+msgid "Forest Green"
+msgstr "Waldgrün"
+
+msgid "Terracotta"
+msgstr "Terrakotta"
+
+msgid "Clay"
+msgstr "Ton"
+
+msgid "Burgundy"
+msgstr "Burgunder"
+
+msgid "Popular colors"
+msgstr "Beliebte Farben"
+
+msgid "Teal"
+msgstr "Petrol"
+
+msgid "Plum"
+msgstr "Pflaume"
+
+msgid "Charcoal"
+msgstr "Anthrazit"
+
+msgid "Midnight"
+msgstr "Mitternacht"
+
+msgid "Sky"
+msgstr "Himmelblau"
+
+msgid "Rose"
+msgstr "Rosé"
+
+msgid "Ivory"
+msgstr "Elfenbein"
+
+msgid "Neutrals"
+msgstr "Neutraltöne"
+
+msgid "Linen"
+msgstr "Leinen"
+
+msgid "Stone"
+msgstr "Stein"
+
+msgid "Taupe"
+msgstr "Taupe"
+
+msgid "Birth"
+msgstr "Geburt"
+
+msgid "Christening"
+msgstr "Kleinkindtaufe"
+
+msgid "Death"
+msgstr "Tod"
+
+msgid "Burial"
+msgstr "Bestattung"
+
+msgid "Cremation"
+msgstr "Einäscherung"
+
+msgid "Adoption"
+msgstr "Adoption"
+
+msgid "Baptism"
+msgstr "Taufe"
+
+msgid "Bar mitzvah"
+msgstr "Bar Mizwa"
+
+msgid "Bat mitzvah"
+msgstr "Bat Mizwa"
+
+msgid "Blessing"
+msgstr "Segnung"
+
+msgid "Adult christening"
+msgstr "Erwachsenentaufe"
+
+msgid "Confirmation"
+msgstr "Konfirmation"
+
+msgid "First communion"
+msgstr "Erstkommunion"
+
+msgid "Ordination"
+msgstr "Ordination"
+
+msgid "Naturalization"
+msgstr "Einbürgerung"
+
+msgid "Emigration"
+msgstr "Auswanderung"
+
+msgid "Immigration"
+msgstr "Einwanderung"
+
+msgid "Census"
+msgstr "Volkszählung"
+
+msgid "Probate"
+msgstr "Testamentseröffnung"
+
+msgid "Will"
+msgstr "Testament"
+
+msgid "Graduation"
+msgstr "Schulabschluss"
+
+msgid "Retirement"
+msgstr "Ruhestand"
+
+msgid "Residence"
+msgstr "Wohnort"
+
+msgid "Occupation"
+msgstr "Beruf"
+
+msgid "Education"
+msgstr "Ausbildung"
+
+msgid "Religion"
+msgstr "Religion"
+
+msgid "Nationality"
+msgstr "Staatsangehörigkeit"
+
+msgid "Caste"
+msgstr "Kaste"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "ID number"
+msgstr "Ausweisnummer"
+
+msgid "Property"
+msgstr "Besitz"
+
+msgid "Social Security number"
+msgstr "Sozialversicherungsnummer"
+
+msgid "Other event"
+msgstr "Anderes Ereignis"
+
+msgid "Other fact"
+msgstr "Andere Angabe"
+
+msgid "Baptism (LDS)"
+msgstr "Taufe (HLT)"
+
+msgid "Confirmation (LDS)"
+msgstr "Konfirmierung (HLT)"
+
+msgid "Endowment (LDS)"
+msgstr "Endowment (HLT)"
+
+msgid "Sealing to parents (LDS)"
+msgstr "Siegelung an die Eltern (HLT)"
+
+msgid "Sealing to spouse (LDS)"
+msgstr "Siegelung an den Ehepartner (HLT)"
+
+msgid "Marriage"
+msgstr "Eheschließung"
+
+msgid "Engagement"
+msgstr "Verlobung"
+
+msgid "Marriage banns"
+msgstr "Aufgebot"
+
+msgid "Marriage contract"
+msgstr "Ehevertrag"
+
+msgid "Marriage license"
+msgstr "Heiratserlaubnis"
+
+msgid "Marriage settlement"
+msgstr "Gütervereinbarung"
+
+msgid "Divorce"
+msgstr "Scheidung"
+
+msgid "Divorce filed"
+msgstr "Scheidungsantrag"
+
+msgid "Annulment"
+msgstr "Annullierung"
+
+msgid "Male"
+msgstr "Männlich"
+
+msgid "Female"
+msgstr "Weiblich"
+
+msgid "Unknown"
+msgstr "Unbekannt"
+
+msgid "Pedigree chart"
+msgstr "Ahnentafel"
+
+msgid "Family group record"
+msgstr "Familiengruppenbogen"
+
+msgid "Ancestors, numbered"
+msgstr "Vorfahren, nummeriert"
+
+msgid "Descendants"
+msgstr "Nachkommen von"
+
+msgid "Individual summary"
+msgstr "Personenblatt"
+
+msgid "All surnames"
+msgstr "Alle Familiennamen"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Large"
+msgstr "Groß"
+
+msgid "Extra large"
+msgstr "Sehr groß"
+
+msgid "Unsaved changes"
+msgstr "Ungespeicherte Änderungen"
+
+msgid "All changes saved"
+msgstr "Alle Änderungen gespeichert"
+
+msgid "Sample, not saved"
+msgstr "Beispiel, nicht gespeichert"
+
+msgid "Nobody here yet."
+msgstr "Noch niemand hier."
+
+msgid "No one matches that search."
+msgstr "Niemand passt zu dieser Suche."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Sex"
+msgstr "Geschlecht"
+
+msgid "Birth place"
+msgstr "Geburtsort"
+
+msgid "Husband"
+msgstr "Ehemann"
+
+msgid "Wife"
+msgstr "Ehefrau"
+
+msgid "Married"
+msgstr "Verheiratet"
+
+msgid "Place"
+msgstr "Ort"
+
+msgid "Children"
+msgstr "Kinder"
+
+msgid "Family order: the home person, then parents, grandparents and the rest of the family"
+msgstr "Familienreihenfolge: die Hauptperson, dann Eltern, Großeltern und die übrige Familie"
+
+msgid "Present order, closing the gaps"
+msgstr "Jetzige Reihenfolge, ohne Lücken"
+
+msgid "Alphabetical by surname"
+msgstr "Alphabetisch nach Familienname"
+
+msgid "Save your changes?"
+msgstr "Änderungen speichern?"
+
+msgid "This family file has changes that haven't been saved."
+msgstr "Diese Familiendatei hat Änderungen, die noch nicht gespeichert sind."
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Don't save"
+msgstr "Nicht speichern"
+
+msgid "They'll be taken out of their families and their details removed. Undo brings them back until you close this file."
+msgstr "Sie werden aus ihren Familien genommen und ihre Angaben entfernt. Rückgängig holt sie zurück, bis Sie diese Datei schließen."
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Delete this source?"
+msgstr "Diese Quelle löschen?"
+
+msgid "Merge these two people?"
+msgstr "Diese zwei Personen zusammenführen?"
+
+msgid "Merge"
+msgstr "Zusammenführen"
+
+msgid "Less"
+msgstr "Weniger"
+
+msgid "More"
+msgstr "Mehr"
+
+msgid "Add a source"
+msgstr "Quelle hinzufügen"
+
+msgid "Edit source"
+msgstr "Quelle bearbeiten"
+
+msgid " and "
+msgstr " und"
+
+msgid "(no title)"
+msgstr "(ohne Titel)"
+
+msgid "Save the report"
+msgstr "Bericht speichern"
+
+msgid "Web page"
+msgstr "Webseite"
+
+msgid "Opened {file}"
+msgstr "{file} geöffnet"
+
+msgid ""
+"Brought in {people}, {families} and {sources}. The original GEDCOM file wasn't changed.\n"
+"\n"
+"Choose File, then Save, to keep this as a family file."
+msgstr ""
+"{people}, {families} und {sources} übernommen. Die ursprüngliche GEDCOM-Datei wurde nicht verändert.\n"
+"\n"
+"Wählen Sie Datei und dann Speichern, um dies als Familiendatei zu behalten."
+
+msgid "{n} person"
+msgid_plural "{n} people"
+msgstr[0] "{n} Person"
+msgstr[1] "{n} Personen"
+
+msgid "{n} family"
+msgid_plural "{n} families"
+msgstr[0] "{n} Familie"
+msgstr[1] "{n} Familien"
+
+msgid "{n} source"
+msgid_plural "{n} sources"
+msgstr[0] "{n} Quelle"
+msgstr[1] "{n} Quellen"
+
+msgid "Things to check:"
+msgstr "Zu prüfen:"
+
+msgid "and {n} more"
+msgid_plural "and {n} more"
+msgstr[0] "und {n} weitere"
+msgstr[1] "und {n} weitere"
+
+msgid "Open a family file"
+msgstr "Familiendatei öffnen"
+
+msgid "Family files and GEDCOM"
+msgstr "Familiendateien und GEDCOM"
+
+msgid "Import a GEDCOM file"
+msgstr "GEDCOM-Datei importieren"
+
+msgid "GEDCOM"
+msgstr "GEDCOM"
+
+msgid "Save the family file"
+msgstr "Familiendatei speichern"
+
+msgid "Family file"
+msgstr "Familiendatei"
+
+msgid "Saved {file}"
+msgstr "{file} gespeichert"
+
+msgid "Export as GEDCOM"
+msgstr "Als GEDCOM exportieren"
+
+msgid "Exported {file}"
+msgstr "{file} exportiert"
+
+msgid "Sample family"
+msgstr "Beispielfamilie"
+
+msgid "Not saved yet"
+msgstr "Noch nicht gespeichert"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Delete {name}?"
+msgstr "{name} löschen?"
+
+msgid "{name} (ID {drop}) will be merged into {other} (ID {keep}). Their events, sources, notes and families carry over. Undo separates them again until you close this file."
+msgstr "{name} (ID {drop}) wird mit {other} (ID {keep}) zusammengeführt. Ereignisse, Quellen, Notizen und Familien bleiben erhalten. Rückgängig trennt sie wieder, bis Sie diese Datei schließen."
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Add a person"
+msgstr "Person hinzufügen"
+
+msgid "Edit person"
+msgstr "Person bearbeiten"
+
+msgid "Events"
+msgstr "Ereignisse"
+
+msgid "Dates can be written freely, such as 12 MAR 1850, ABT 1850 or BEF 1900."
+msgstr "Daten können frei geschrieben werden, etwa 12 MAR 1850, ABT 1850 oder BEF 1900."
+
+msgid "Notes"
+msgstr "Notizen"
+
+msgid "Sources for this person"
+msgstr "Quellen zu dieser Person"
+
+msgid "Photos"
+msgstr "Fotos"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "Add a photo…"
+msgstr "Foto hinzufügen…"
+
+msgid "Choose a photo"
+msgstr "Foto auswählen"
+
+msgid "Pictures"
+msgstr "Bilder"
+
+msgid "Edit marriage"
+msgstr "Ehe bearbeiten"
+
+msgid "Children, in order"
+msgstr "Kinder, der Reihe nach"
+
+msgid "None recorded"
+msgstr "Nichts eingetragen"
+
+msgid "Up"
+msgstr "Auf"
+
+msgid "Down"
+msgstr "Ab"
+
+msgid "Sources for this marriage"
+msgstr "Quellen zu dieser Ehe"
+
+msgid "Create a new person"
+msgstr "Neue Person anlegen"
+
+msgid "Or choose someone already in this file:"
+msgstr "Oder jemanden wählen, der schon in dieser Datei ist:"
+
+msgid "Search names"
+msgstr "Namen suchen"
+
+msgid "No one matches."
+msgstr "Niemand passt."
+
+msgid "Words from the source"
+msgstr "Wortlaut der Quelle"
+
+msgid "A source needs a title."
+msgstr "Eine Quelle braucht einen Titel."
+
+msgid "Renumber people"
+msgstr "Personen neu nummerieren"
+
+msgid "Gives everyone new ID numbers 1, 2, 3... with no gaps, and numbers the marriages to match. Every link between people stays the same."
+msgstr "Gibt allen neue ID-Nummern 1, 2, 3... ohne Lücken und nummeriert die Ehen passend dazu. Alle Verbindungen zwischen Personen bleiben gleich."
+
+msgid "Each person keeps their old ID, shown on their card and written to exported GEDCOM files. Undo puts everything back."
+msgstr "Jede Person behält ihre alte ID, die auf ihrer Karte gezeigt und in exportierte GEDCOM-Dateien geschrieben wird. Rückgängig stellt alles wieder her."
+
+msgid "First people after renumbering:"
+msgstr "Erste Personen nach dem Nummerieren:"
+
+msgid "New ID"
+msgstr "Neue ID"
+
+msgid "Now"
+msgstr "Jetzt"
+
+msgid "Renumber"
+msgstr "Neu nummerieren"
+
+msgid "Page or where in the source"
+msgstr "Seite oder Stelle in der Quelle"
+
+msgid "Words from the source (optional)"
+msgstr "Wortlaut der Quelle (freiwillig)"
+
+msgid "Cite a source"
+msgstr "Quelle angeben"
+
+msgid "New source…"
+msgstr "Neue Quelle…"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Details"
+msgstr "Einzelheiten"
+
+msgid "What kind of event"
+msgstr "Art des Ereignisses"
+
+msgid "Temple"
+msgstr "Tempel"
+
+msgid "Note about this event"
+msgstr "Notiz zu diesem Ereignis"
+
+msgid "Add event"
+msgstr "Ereignis hinzufügen"
+
+msgid "{name} isn't a family file this program can read."
+msgstr "{name} ist keine Familiendatei, die dieses Programm lesen kann."
+
+msgid "{name} was saved by a newer version of this program. Please update it first."
+msgstr "{name} wurde mit einer neueren Version dieses Programms gespeichert. Bitte aktualisieren Sie es zuerst."
+
+msgid "Possible duplicates"
+msgstr "Mögliche Duplikate"
+
+msgid "Finds people with the same name whose birth years don't rule out a match. You choose who to merge."
+msgstr "Findet Personen mit gleichem Namen, deren Geburtsjahre eine Übereinstimmung nicht ausschließen. Sie entscheiden, wer zusammengeführt wird."
+
+msgid "Check for duplicates"
+msgstr "Nach Duplikaten suchen"
+
+msgid "No possible duplicates found."
+msgstr "Keine möglichen Duplikate gefunden."
+
+msgid "Keep this one and merge"
+msgstr "Diese behalten und zusammenführen"
+
+msgid "These are different people"
+msgstr "Das sind verschiedene Personen"
+
+msgid "This family file is empty"
+msgstr "Diese Familiendatei ist leer"
+
+msgid "Add the first person, or import a GEDCOM file."
+msgstr "Fügen Sie die erste Person hinzu oder importieren Sie eine GEDCOM-Datei."
+
+msgid "Add the first person"
+msgstr "Erste Person hinzufügen"
+
+msgid "Also has parents: {names}"
+msgstr "Hat auch die Eltern: {names}"
+
+msgid "Show these first"
+msgstr "Diese zuerst zeigen"
+
+msgid " (old ID {old})"
+msgstr " (alte ID {old})"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Delete…"
+msgstr "Löschen…"
+
+msgid "Note: {note}"
+msgstr "Notiz: {note}"
+
+msgid "No marriage details"
+msgstr "Keine Angaben zur Ehe"
+
+msgid "Remove spouse"
+msgstr "Ehepartner entfernen"
+
+msgid "Separates them. Nobody gets deleted."
+msgstr "Trennt sie. Niemand wird gelöscht."
+
+msgid "Marriage {at} of {count}"
+msgstr "Ehe {at} von {count}"
+
+msgid "Unknown spouse"
+msgstr "Unbekannter Ehepartner"
+
+msgid "Add another spouse"
+msgstr "Weiteren Ehepartner hinzufügen"
+
+msgid "Takes them out of this family. Nobody gets deleted."
+msgstr "Nimmt sie aus dieser Familie. Niemand wird gelöscht."
+
+msgid "Nobody to show."
+msgstr "Niemand anzuzeigen."
+
+msgid "No marriages or families recorded yet."
+msgstr "Noch keine Ehen oder Familien eingetragen."
+
+msgid "No sources yet. Sources record where your information came from."
+msgstr "Noch keine Quellen. Quellen halten fest, woher Ihre Angaben stammen."
+
+msgid "Used {n} time"
+msgid_plural "Used {n} times"
+msgstr[0] "{n}-mal verwendet"
+msgstr[1] "{n}-mal verwendet"
+
+msgid "People or events still cite this source."
+msgstr "Personen oder Ereignisse verweisen noch auf diese Quelle."
+
+msgid "File"
+msgstr "Datei"
+
+msgid "New family file"
+msgstr "Neue Familiendatei"
+
+msgid "Open…"
+msgstr "Öffnen…"
+
+msgid "Save as…"
+msgstr "Speichern unter…"
+
+msgid "Import GEDCOM…"
+msgstr "GEDCOM importieren…"
+
+msgid "Export GEDCOM…"
+msgstr "GEDCOM exportieren…"
+
+msgid "Quit"
+msgstr "Beenden"
+
+msgid "Undo"
+msgstr "Rückgängig"
+
+msgid "Redo"
+msgstr "Wiederherstellen"
+
+msgid "Add a person…"
+msgstr "Person hinzufügen…"
+
+msgid "Edit this person…"
+msgstr "Diese Person bearbeiten…"
+
+msgid "Delete this person…"
+msgstr "Diese Person löschen…"
+
+msgid "Make this person the home person"
+msgstr "Diese Person zur Hauptperson machen"
+
+msgid "Renumber people…"
+msgstr "Personen neu nummerieren…"
+
+msgid "View"
+msgstr "Ansicht"
+
+msgid "Text size"
+msgstr "Textgröße"
+
+msgid "Colors"
+msgstr "Farben"
+
+msgid "Language"
+msgstr "Sprache"
+
+msgid "Help"
+msgstr "Hilfe"
+
+msgid ""
+"Version {version}\n"
+"\n"
+"Keep your family history: people, marriages, events, sources, notes and photos. Share it with other family history programs using GEDCOM files."
+msgstr ""
+"Version {version}\n"
+"\n"
+"Bewahren Sie Ihre Familiengeschichte: Personen, Ehen, Ereignisse, Quellen, Notizen und Fotos. Teilen Sie sie über GEDCOM-Dateien mit anderen Familienforschungsprogrammen."
+
+msgid "Back"
+msgstr "Zurück"
+
+msgid "Go to the home person, {name}"
+msgstr "Zur Hauptperson gehen, {name}"
+
+msgid "Home"
+msgstr "Start"
+
+msgid "{n} marriage"
+msgid_plural "{n} marriages"
+msgstr[0] "{n} Ehe"
+msgstr[1] "{n} Ehen"
+
+msgid "This is a made-up sample family, here to show how things work."
+msgstr "Dies ist eine erfundene Beispielfamilie, die zeigt, wie alles funktioniert."
+
+msgid "Import my GEDCOM file"
+msgstr "Meine GEDCOM-Datei importieren"
+
+msgid "Start a new file"
+msgstr "Neue Datei beginnen"
+
+msgid "Search names, places, years"
+msgstr "Namen, Orte, Jahre suchen"
+
+msgid "{shown} of {n} person"
+msgid_plural "{shown} of {n} people"
+msgstr[0] "{shown} von {n} Person"
+msgstr[1] "{shown} von {n} Personen"
+
+msgid "Not recorded"
+msgstr "Nicht eingetragen"
+
+msgid "Choose a person to see their ancestors."
+msgstr "Wählen Sie eine Person, um ihre Vorfahren zu sehen."
+
+msgid "Ancestors of {name}"
+msgstr "Vorfahren von {name}"
+
+msgid "Generations"
+msgstr "Generationen"
+
+msgid "Click someone to move them to the front. Double-click to see their family."
+msgstr "Klicken Sie auf jemanden, um ihn nach vorn zu holen. Doppelklick zeigt seine Familie."
+
+msgid "Print…"
+msgstr "Drucken…"
+
+msgid "Opens in your web browser, where you can print or save a PDF."
+msgstr "Öffnet sich im Webbrowser, wo Sie drucken oder als PDF speichern können."
+
+msgid "Save as web page…"
+msgstr "Als Webseite speichern…"
+
+msgid "Choose a person first."
+msgstr "Bitte zuerst eine Person wählen."
+
+msgid "Ready"
+msgstr "Bereit"
+
+msgid "b. {year}"
+msgstr "geb. {year}"
+
+msgid "d. {year}"
+msgstr "gest. {year}"
+
+msgid "Home person"
+msgstr "Hauptperson"
+
+msgid "generations"
+msgstr "Generationen"

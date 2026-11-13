@@ -1,0 +1,1032 @@
+# Family Keeper: Russian.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+msgid "Removed from the family. Undo brings them back."
+msgstr "Убрано из семьи. «Отменить» вернёт обратно."
+
+msgid "Removed from the marriage. Undo brings them back."
+msgstr "Убрано из брака. «Отменить» вернёт обратно."
+
+msgid "Showing those parents first."
+msgstr "Эти родители теперь показаны первыми."
+
+msgid "Deleted. Undo brings them back."
+msgstr "Удалено. «Отменить» вернёт обратно."
+
+msgid "Deleted the source."
+msgstr "Источник удалён."
+
+msgid "Renumbered everyone. Undo puts the old IDs back."
+msgstr "Все перенумерованы. «Отменить» вернёт старые ID."
+
+msgid "Merged. Undo separates them again."
+msgstr "Объединены. «Отменить» снова их разделит."
+
+msgid "The report opened in your web browser, ready to print."
+msgstr "Отчёт открыт в веб-браузере и готов к печати."
+
+msgid "Saved the report."
+msgstr "Отчёт сохранён."
+
+msgid "Couldn't open the report"
+msgstr "Не удалось открыть отчёт"
+
+msgid "Couldn't save the report"
+msgstr "Не удалось сохранить отчёт"
+
+msgid "That person is gone."
+msgstr "Этого человека больше нет."
+
+msgid "Started a new family file"
+msgstr "Начат новый семейный файл"
+
+msgid "Import finished"
+msgstr "Импорт завершён"
+
+msgid "Couldn't open that file"
+msgstr "Не удалось открыть этот файл"
+
+msgid "Couldn't save"
+msgstr "Не удалось сохранить"
+
+msgid "Couldn't export"
+msgstr "Не удалось экспортировать"
+
+msgid "Finish or cancel the open window first."
+msgstr "Сначала закончите работу в открытом окне или отмените её."
+
+msgid "Undid the last change"
+msgstr "Последнее изменение отменено"
+
+msgid "Redid the change"
+msgstr "Изменение возвращено"
+
+msgid "That can't be done"
+msgstr "Это невозможно"
+
+msgid "Those are the same person."
+msgstr "Это один и тот же человек."
+
+msgid "One of them is an ancestor of the other, so they can't be merged."
+msgstr "Один из них — предок другого, поэтому их нельзя объединить."
+
+msgid "A person can't be their own parent."
+msgstr "Человек не может быть родителем самому себе."
+
+msgid "That parent is already filled in."
+msgstr "Этот родитель уже указан."
+
+msgid "That person is listed as a sibling in this family."
+msgstr "Этот человек указан в этой семье как брат или сестра."
+
+msgid "A person can't be their own spouse."
+msgstr "Человек не может быть супругом самому себе."
+
+msgid "They are already listed as a couple."
+msgstr "Они уже указаны как пара."
+
+msgid "That person is a child in this family."
+msgstr "Этот человек — ребёнок в этой семье."
+
+msgid "A person can't be their own sibling."
+msgstr "Человек не может быть братом или сестрой самому себе."
+
+msgid "Saved the source."
+msgstr "Источник сохранён."
+
+msgid "Title"
+msgstr "Название"
+
+msgid "Author"
+msgstr "Автор"
+
+msgid "Publication"
+msgstr "Издание"
+
+msgid "Added a person."
+msgstr "Человек добавлен."
+
+msgid "Saved the changes."
+msgstr "Изменения сохранены."
+
+msgid "Saved the marriage."
+msgstr "Брак сохранён."
+
+msgid "Linked them."
+msgstr "Связи созданы."
+
+msgid "Given names"
+msgstr "Имена"
+
+msgid "Surname"
+msgstr "Фамилия"
+
+msgid "Suffix"
+msgstr "Суффикс"
+
+msgid "That marriage is gone."
+msgstr "Этого брака больше нет."
+
+msgid "About Family Keeper"
+msgstr "О программе Family Keeper"
+
+msgid "Born"
+msgstr "Родился"
+
+msgid "Christened"
+msgstr "Крещён(а)"
+
+msgid "Died"
+msgstr "Умер(ла)"
+
+msgid "Buried"
+msgstr "Похоронен(а)"
+
+msgid "PARENTS"
+msgstr "РОДИТЕЛИ"
+
+msgid "THIS PERSON AND SPOUSE"
+msgstr "ЭТОТ ЧЕЛОВЕК И СУПРУГ(А)"
+
+msgid "FATHER"
+msgstr "ОТЕЦ"
+
+msgid "MOTHER"
+msgstr "МАТЬ"
+
+msgid "SPOUSE"
+msgstr "СУПРУГ(А)"
+
+msgid "CHILDREN"
+msgstr "ДЕТИ"
+
+msgid "BROTHERS AND SISTERS"
+msgstr "БРАТЬЯ И СЁСТРЫ"
+
+msgid "Family"
+msgstr "Семья"
+
+msgid "Pedigree"
+msgstr "Древо"
+
+msgid "People"
+msgstr "Люди"
+
+msgid "Marriages"
+msgstr "Браки"
+
+msgid "Sources"
+msgstr "Источники"
+
+msgid "Duplicates"
+msgstr "Дубликаты"
+
+msgid "Reports"
+msgstr "Отчёты"
+
+msgid "Add father"
+msgstr "Добавить отца"
+
+msgid "Add mother"
+msgstr "Добавить мать"
+
+msgid "Add spouse"
+msgstr "Добавить супруга"
+
+msgid "Add child"
+msgstr "Добавить ребёнка"
+
+msgid "Add brother or sister"
+msgstr "Добавить брата или сестру"
+
+msgid "Add father for {name}"
+msgstr "Добавить отца: {name}"
+
+msgid "Add mother for {name}"
+msgstr "Добавить мать: {name}"
+
+msgid "Add spouse for {name}"
+msgstr "Добавить супруга: {name}"
+
+msgid "Add child for {name}"
+msgstr "Добавить ребёнка: {name}"
+
+msgid "Add brother or sister for {name}"
+msgstr "Добавить брата или сестру: {name}"
+
+msgid "Paper"
+msgstr "Бумага"
+
+msgid "Original"
+msgstr "Исходный"
+
+msgid "Slate Blue"
+msgstr "Сине-серый"
+
+msgid "Tree pictures"
+msgstr "Изображения деревьев"
+
+msgid "Navy"
+msgstr "Тёмно-синий"
+
+msgid "Parchment"
+msgstr "Пергамент"
+
+msgid "Blue Linen"
+msgstr "Синий лён"
+
+msgid "Leather"
+msgstr "Кожа"
+
+msgid "Leaf Green"
+msgstr "Зелёный лист"
+
+msgid "Genealogy sites"
+msgstr "Генеалогические сайты"
+
+msgid "Fresh Green"
+msgstr "Свежая зелень"
+
+msgid "Deep Green"
+msgstr "Тёмно-зелёный"
+
+msgid "Sage"
+msgstr "Шалфей"
+
+msgid "Earth tones"
+msgstr "Землистые тона"
+
+msgid "Olive"
+msgstr "Оливковый"
+
+msgid "Moss"
+msgstr "Мох"
+
+msgid "Forest Green"
+msgstr "Лесной зелёный"
+
+msgid "Terracotta"
+msgstr "Терракота"
+
+msgid "Clay"
+msgstr "Глина"
+
+msgid "Burgundy"
+msgstr "Бордовый"
+
+msgid "Popular colors"
+msgstr "Популярные цвета"
+
+msgid "Teal"
+msgstr "Сине-зелёный"
+
+msgid "Plum"
+msgstr "Сливовый"
+
+msgid "Charcoal"
+msgstr "Угольный"
+
+msgid "Midnight"
+msgstr "Полночь"
+
+msgid "Sky"
+msgstr "Небесный"
+
+msgid "Rose"
+msgstr "Розовый"
+
+msgid "Ivory"
+msgstr "Слоновая кость"
+
+msgid "Neutrals"
+msgstr "Нейтральные"
+
+msgid "Linen"
+msgstr "Лён"
+
+msgid "Stone"
+msgstr "Камень"
+
+msgid "Taupe"
+msgstr "Серо-коричневый"
+
+msgid "Birth"
+msgstr "Рождение"
+
+msgid "Christening"
+msgstr "Крещение младенца"
+
+msgid "Death"
+msgstr "Смерть"
+
+msgid "Burial"
+msgstr "Погребение"
+
+msgid "Cremation"
+msgstr "Кремация"
+
+msgid "Adoption"
+msgstr "Усыновление"
+
+msgid "Baptism"
+msgstr "Крещение"
+
+msgid "Bar mitzvah"
+msgstr "Бар-мицва"
+
+msgid "Bat mitzvah"
+msgstr "Бат-мицва"
+
+msgid "Blessing"
+msgstr "Благословение"
+
+msgid "Adult christening"
+msgstr "Крещение взрослого"
+
+msgid "Confirmation"
+msgstr "Конфирмация"
+
+msgid "First communion"
+msgstr "Первое причастие"
+
+msgid "Ordination"
+msgstr "Рукоположение"
+
+msgid "Naturalization"
+msgstr "Натурализация"
+
+msgid "Emigration"
+msgstr "Эмиграция"
+
+msgid "Immigration"
+msgstr "Иммиграция"
+
+msgid "Census"
+msgstr "Перепись"
+
+msgid "Probate"
+msgstr "Утверждение завещания"
+
+msgid "Will"
+msgstr "Завещание"
+
+msgid "Graduation"
+msgstr "Окончание учёбы"
+
+msgid "Retirement"
+msgstr "Выход на пенсию"
+
+msgid "Residence"
+msgstr "Место жительства"
+
+msgid "Occupation"
+msgstr "Род занятий"
+
+msgid "Education"
+msgstr "Образование"
+
+msgid "Religion"
+msgstr "Вероисповедание"
+
+msgid "Nationality"
+msgstr "Национальность"
+
+msgid "Caste"
+msgstr "Каста"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "ID number"
+msgstr "Идентификационный номер"
+
+msgid "Property"
+msgstr "Имущество"
+
+msgid "Social Security number"
+msgstr "Номер социального страхования"
+
+msgid "Other event"
+msgstr "Другое событие"
+
+msgid "Other fact"
+msgstr "Другой факт"
+
+msgid "Baptism (LDS)"
+msgstr "Крещение (СПД)"
+
+msgid "Confirmation (LDS)"
+msgstr "Конфирмация (СПД)"
+
+msgid "Endowment (LDS)"
+msgstr "Облечение (СПД)"
+
+msgid "Sealing to parents (LDS)"
+msgstr "Запечатывание с родителями (СПД)"
+
+msgid "Sealing to spouse (LDS)"
+msgstr "Запечатывание с супругом (СПД)"
+
+msgid "Marriage"
+msgstr "Брак"
+
+msgid "Engagement"
+msgstr "Помолвка"
+
+msgid "Marriage banns"
+msgstr "Оглашение"
+
+msgid "Marriage contract"
+msgstr "Брачный договор"
+
+msgid "Marriage license"
+msgstr "Разрешение на брак"
+
+msgid "Marriage settlement"
+msgstr "Брачное соглашение"
+
+msgid "Divorce"
+msgstr "Развод"
+
+msgid "Divorce filed"
+msgstr "Подан на развод"
+
+msgid "Annulment"
+msgstr "Аннулирование брака"
+
+msgid "Male"
+msgstr "Мужской"
+
+msgid "Female"
+msgstr "Женский"
+
+msgid "Unknown"
+msgstr "Неизвестно"
+
+msgid "Pedigree chart"
+msgstr "Родословная схема"
+
+msgid "Family group record"
+msgstr "Запись семейной группы"
+
+msgid "Ancestors, numbered"
+msgstr "Предки, с нумерацией"
+
+msgid "Descendants"
+msgstr "Потомки"
+
+msgid "Individual summary"
+msgstr "Сводка о человеке"
+
+msgid "All surnames"
+msgstr "Все фамилии"
+
+msgid "Normal"
+msgstr "Обычный"
+
+msgid "Large"
+msgstr "Крупный"
+
+msgid "Extra large"
+msgstr "Очень крупный"
+
+msgid "Unsaved changes"
+msgstr "Есть несохранённые изменения"
+
+msgid "All changes saved"
+msgstr "Все изменения сохранены"
+
+msgid "Sample, not saved"
+msgstr "Пример, не сохранён"
+
+msgid "Nobody here yet."
+msgstr "Пока никого нет."
+
+msgid "No one matches that search."
+msgstr "Никто не подходит под этот поиск."
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Sex"
+msgstr "Пол"
+
+msgid "Birth place"
+msgstr "Место рождения"
+
+msgid "Husband"
+msgstr "Муж"
+
+msgid "Wife"
+msgstr "Жена"
+
+msgid "Married"
+msgstr "Брак"
+
+msgid "Place"
+msgstr "Место"
+
+msgid "Children"
+msgstr "Дети"
+
+msgid "Family order: the home person, then parents, grandparents and the rest of the family"
+msgstr "Семейный порядок: основной человек, затем родители, бабушки и дедушки и остальная семья"
+
+msgid "Present order, closing the gaps"
+msgstr "Текущий порядок, без пропусков"
+
+msgid "Alphabetical by surname"
+msgstr "По алфавиту фамилий"
+
+msgid "Save your changes?"
+msgstr "Сохранить изменения?"
+
+msgid "This family file has changes that haven't been saved."
+msgstr "В этом семейном файле есть несохранённые изменения."
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Don't save"
+msgstr "Не сохранять"
+
+msgid "They'll be taken out of their families and their details removed. Undo brings them back until you close this file."
+msgstr "Их уберут из семей и удалят их данные. «Отменить» вернёт их, пока вы не закроете этот файл."
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete this source?"
+msgstr "Удалить этот источник?"
+
+msgid "Merge these two people?"
+msgstr "Объединить этих двух людей?"
+
+msgid "Merge"
+msgstr "Объединить"
+
+msgid "Less"
+msgstr "Меньше"
+
+msgid "More"
+msgstr "Больше"
+
+msgid "Add a source"
+msgstr "Добавить источник"
+
+msgid "Edit source"
+msgstr "Изменить источник"
+
+msgid " and "
+msgstr " и"
+
+msgid "(no title)"
+msgstr "(без названия)"
+
+msgid "Save the report"
+msgstr "Сохранить отчёт"
+
+msgid "Web page"
+msgstr "Веб-страница"
+
+msgid "Opened {file}"
+msgstr "Открыт {file}"
+
+msgid ""
+"Brought in {people}, {families} and {sources}. The original GEDCOM file wasn't changed.\n"
+"\n"
+"Choose File, then Save, to keep this as a family file."
+msgstr ""
+"Добавлено: {people}, {families} и {sources}. Исходный файл GEDCOM не изменён.\n"
+"\n"
+"Чтобы сохранить это как семейный файл, выберите «Файл», затем «Сохранить»."
+
+msgid "{n} person"
+msgid_plural "{n} people"
+msgstr[0] "{n} человек"
+msgstr[1] "{n} человека"
+msgstr[2] "{n} человек"
+
+msgid "{n} family"
+msgid_plural "{n} families"
+msgstr[0] "{n} семья"
+msgstr[1] "{n} семьи"
+msgstr[2] "{n} семей"
+
+msgid "{n} source"
+msgid_plural "{n} sources"
+msgstr[0] "{n} источник"
+msgstr[1] "{n} источника"
+msgstr[2] "{n} источников"
+
+msgid "Things to check:"
+msgstr "Что проверить:"
+
+msgid "and {n} more"
+msgid_plural "and {n} more"
+msgstr[0] "и ещё {n}"
+msgstr[1] "и ещё {n}"
+msgstr[2] "и ещё {n}"
+
+msgid "Open a family file"
+msgstr "Открыть семейный файл"
+
+msgid "Family files and GEDCOM"
+msgstr "Семейные файлы и GEDCOM"
+
+msgid "Import a GEDCOM file"
+msgstr "Импортировать файл GEDCOM"
+
+msgid "GEDCOM"
+msgstr "GEDCOM"
+
+msgid "Save the family file"
+msgstr "Сохранить семейный файл"
+
+msgid "Family file"
+msgstr "Семейный файл"
+
+msgid "Saved {file}"
+msgstr "Сохранён {file}"
+
+msgid "Export as GEDCOM"
+msgstr "Экспорт в GEDCOM"
+
+msgid "Exported {file}"
+msgstr "Экспортирован {file}"
+
+msgid "Sample family"
+msgstr "Пример семьи"
+
+msgid "Not saved yet"
+msgstr "Ещё не сохранено"
+
+msgid "OK"
+msgstr "ОК"
+
+msgid "Delete {name}?"
+msgstr "Удалить: {name}?"
+
+msgid "{name} (ID {drop}) will be merged into {other} (ID {keep}). Their events, sources, notes and families carry over. Undo separates them again until you close this file."
+msgstr "{name} (ID {drop}) будет объединён(а) с {other} (ID {keep}). События, источники, заметки и семьи сохранятся. «Отменить» снова их разделит, пока вы не закроете этот файл."
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Add a person"
+msgstr "Добавить человека"
+
+msgid "Edit person"
+msgstr "Изменить человека"
+
+msgid "Events"
+msgstr "События"
+
+msgid "Dates can be written freely, such as 12 MAR 1850, ABT 1850 or BEF 1900."
+msgstr "Даты можно писать свободно, например 12 MAR 1850, ABT 1850 или BEF 1900."
+
+msgid "Notes"
+msgstr "Заметки"
+
+msgid "Sources for this person"
+msgstr "Источники об этом человеке"
+
+msgid "Photos"
+msgstr "Фотографии"
+
+msgid "Remove"
+msgstr "Убрать"
+
+msgid "Add a photo…"
+msgstr "Добавить фотографию…"
+
+msgid "Choose a photo"
+msgstr "Выбрать фотографию"
+
+msgid "Pictures"
+msgstr "Изображения"
+
+msgid "Edit marriage"
+msgstr "Изменить брак"
+
+msgid "Children, in order"
+msgstr "Дети по порядку"
+
+msgid "None recorded"
+msgstr "Ничего не записано"
+
+msgid "Up"
+msgstr "Вверх"
+
+msgid "Down"
+msgstr "Вниз"
+
+msgid "Sources for this marriage"
+msgstr "Источники об этом браке"
+
+msgid "Create a new person"
+msgstr "Создать нового человека"
+
+msgid "Or choose someone already in this file:"
+msgstr "Или выберите того, кто уже есть в этом файле:"
+
+msgid "Search names"
+msgstr "Поиск по именам"
+
+msgid "No one matches."
+msgstr "Никто не подходит."
+
+msgid "Words from the source"
+msgstr "Текст из источника"
+
+msgid "A source needs a title."
+msgstr "У источника должно быть название."
+
+msgid "Renumber people"
+msgstr "Перенумеровать людей"
+
+msgid "Gives everyone new ID numbers 1, 2, 3... with no gaps, and numbers the marriages to match. Every link between people stays the same."
+msgstr "Присваивает всем новые номера ID 1, 2, 3... без пропусков и так же нумерует браки. Все связи между людьми остаются прежними."
+
+msgid "Each person keeps their old ID, shown on their card and written to exported GEDCOM files. Undo puts everything back."
+msgstr "Каждый сохраняет свой старый ID: он показан на карточке и записывается в экспортированные файлы GEDCOM. «Отменить» вернёт всё как было."
+
+msgid "First people after renumbering:"
+msgstr "Первые люди после перенумерации:"
+
+msgid "New ID"
+msgstr "Новый ID"
+
+msgid "Now"
+msgstr "Сейчас"
+
+msgid "Renumber"
+msgstr "Перенумеровать"
+
+msgid "Page or where in the source"
+msgstr "Страница или место в источнике"
+
+msgid "Words from the source (optional)"
+msgstr "Текст из источника (необязательно)"
+
+msgid "Cite a source"
+msgstr "Сослаться на источник"
+
+msgid "New source…"
+msgstr "Новый источник…"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Details"
+msgstr "Подробности"
+
+msgid "What kind of event"
+msgstr "Вид события"
+
+msgid "Temple"
+msgstr "Храм"
+
+msgid "Note about this event"
+msgstr "Заметка об этом событии"
+
+msgid "Add event"
+msgstr "Добавить событие"
+
+msgid "{name} isn't a family file this program can read."
+msgstr "{name} — не семейный файл, который может прочитать эта программа."
+
+msgid "{name} was saved by a newer version of this program. Please update it first."
+msgstr "{name} сохранён более новой версией этой программы. Сначала обновите её."
+
+msgid "Possible duplicates"
+msgstr "Возможные дубликаты"
+
+msgid "Finds people with the same name whose birth years don't rule out a match. You choose who to merge."
+msgstr "Находит людей с одинаковыми именами, у которых годы рождения не исключают совпадения. Кого объединять, решаете вы."
+
+msgid "Check for duplicates"
+msgstr "Искать дубликаты"
+
+msgid "No possible duplicates found."
+msgstr "Возможные дубликаты не найдены."
+
+msgid "Keep this one and merge"
+msgstr "Оставить этого и объединить"
+
+msgid "These are different people"
+msgstr "Это разные люди"
+
+msgid "This family file is empty"
+msgstr "Этот семейный файл пуст"
+
+msgid "Add the first person, or import a GEDCOM file."
+msgstr "Добавьте первого человека или импортируйте файл GEDCOM."
+
+msgid "Add the first person"
+msgstr "Добавить первого человека"
+
+msgid "Also has parents: {names}"
+msgstr "Другие родители: {names}"
+
+msgid "Show these first"
+msgstr "Показывать этих первыми"
+
+msgid " (old ID {old})"
+msgstr " (старый ID {old})"
+
+msgid "Edit"
+msgstr "Правка"
+
+msgid "Delete…"
+msgstr "Удалить…"
+
+msgid "Note: {note}"
+msgstr "Заметка: {note}"
+
+msgid "No marriage details"
+msgstr "Нет сведений о браке"
+
+msgid "Remove spouse"
+msgstr "Убрать супруга"
+
+msgid "Separates them. Nobody gets deleted."
+msgstr "Разделяет их. Никто не удаляется."
+
+msgid "Marriage {at} of {count}"
+msgstr "Брак {at} из {count}"
+
+msgid "Unknown spouse"
+msgstr "Неизвестный супруг"
+
+msgid "Add another spouse"
+msgstr "Добавить ещё одного супруга"
+
+msgid "Takes them out of this family. Nobody gets deleted."
+msgstr "Убирает их из этой семьи. Никто не удаляется."
+
+msgid "Nobody to show."
+msgstr "Некого показать."
+
+msgid "No marriages or families recorded yet."
+msgstr "Браков и семей пока нет."
+
+msgid "No sources yet. Sources record where your information came from."
+msgstr "Источников пока нет. Источники показывают, откуда взяты сведения."
+
+msgid "Used {n} time"
+msgid_plural "Used {n} times"
+msgstr[0] "Используется {n} раз"
+msgstr[1] "Используется {n} раза"
+msgstr[2] "Используется {n} раз"
+
+msgid "People or events still cite this source."
+msgstr "На этот источник ещё ссылаются люди или события."
+
+msgid "File"
+msgstr "Файл"
+
+msgid "New family file"
+msgstr "Новый семейный файл"
+
+msgid "Open…"
+msgstr "Открыть…"
+
+msgid "Save as…"
+msgstr "Сохранить как…"
+
+msgid "Import GEDCOM…"
+msgstr "Импорт GEDCOM…"
+
+msgid "Export GEDCOM…"
+msgstr "Экспорт GEDCOM…"
+
+msgid "Quit"
+msgstr "Выход"
+
+msgid "Undo"
+msgstr "Отменить"
+
+msgid "Redo"
+msgstr "Повторить"
+
+msgid "Add a person…"
+msgstr "Добавить человека…"
+
+msgid "Edit this person…"
+msgstr "Изменить этого человека…"
+
+msgid "Delete this person…"
+msgstr "Удалить этого человека…"
+
+msgid "Make this person the home person"
+msgstr "Сделать этого человека основным"
+
+msgid "Renumber people…"
+msgstr "Перенумеровать людей…"
+
+msgid "View"
+msgstr "Вид"
+
+msgid "Text size"
+msgstr "Размер текста"
+
+msgid "Colors"
+msgstr "Цвета"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Help"
+msgstr "Справка"
+
+msgid ""
+"Version {version}\n"
+"\n"
+"Keep your family history: people, marriages, events, sources, notes and photos. Share it with other family history programs using GEDCOM files."
+msgstr ""
+"Версия {version}\n"
+"\n"
+"Храните историю своей семьи: людей, браки, события, источники, заметки и фотографии. Делитесь ею с другими генеалогическими программами через файлы GEDCOM."
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Go to the home person, {name}"
+msgstr "Перейти к основному человеку: {name}"
+
+msgid "Home"
+msgstr "Основной"
+
+msgid "{n} marriage"
+msgid_plural "{n} marriages"
+msgstr[0] "{n} брак"
+msgstr[1] "{n} брака"
+msgstr[2] "{n} браков"
+
+msgid "This is a made-up sample family, here to show how things work."
+msgstr "Это вымышленная семья-пример, чтобы показать, как всё работает."
+
+msgid "Import my GEDCOM file"
+msgstr "Импортировать мой файл GEDCOM"
+
+msgid "Start a new file"
+msgstr "Начать новый файл"
+
+msgid "Search names, places, years"
+msgstr "Поиск по именам, местам, годам"
+
+msgid "{shown} of {n} person"
+msgid_plural "{shown} of {n} people"
+msgstr[0] "{shown} из {n} человека"
+msgstr[1] "{shown} из {n} человек"
+msgstr[2] "{shown} из {n} человек"
+
+msgid "Not recorded"
+msgstr "Не записано"
+
+msgid "Choose a person to see their ancestors."
+msgstr "Выберите человека, чтобы увидеть его предков."
+
+msgid "Ancestors of {name}"
+msgstr "Предки: {name}"
+
+msgid "Generations"
+msgstr "Поколения"
+
+msgid "Click someone to move them to the front. Double-click to see their family."
+msgstr "Щёлкните человека, чтобы переместить его вперёд. Дважды щёлкните, чтобы увидеть его семью."
+
+msgid "Print…"
+msgstr "Печать…"
+
+msgid "Opens in your web browser, where you can print or save a PDF."
+msgstr "Открывается в веб-браузере, откуда можно напечатать или сохранить PDF."
+
+msgid "Save as web page…"
+msgstr "Сохранить как веб-страницу…"
+
+msgid "Choose a person first."
+msgstr "Сначала выберите человека."
+
+msgid "Ready"
+msgstr "Готово"
+
+msgid "b. {year}"
+msgstr "р. {year}"
+
+msgid "d. {year}"
+msgstr "ум. {year}"
+
+msgid "Home person"
+msgstr "Основной человек"
+
+msgid "generations"
+msgstr "покол."
